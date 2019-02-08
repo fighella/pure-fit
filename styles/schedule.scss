@@ -1,0 +1,13 @@
+#tv #schedule { 
+  font-size: 1.6em;
+}
+
+#schedule {
+  padding: 2em 0 3em;
+  @include secondary-font;
+  .teacher-img img {
+    max-width: 40px;
+  }
+}
+.schedule-heading { text-align: center; }
+.popover-body { padding: 0; }

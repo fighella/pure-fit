@@ -1,0 +1,39 @@
+@mixin primary-font {
+  text-transform: none;
+  font-family: proxima-nova, sans-serif;
+  font-weight: 400;
+}
+@mixin futura {
+  font-family: futura-pt, sans-serif;
+  text-transform: uppercase;
+}
+@mixin secondary-font {
+  @include futura;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+@mixin big-heading { 
+  @include secondary-font;
+}
+
+@mixin highlight-font {
+  font-family: bodoni-urw, serif;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-style: italic;
+}
+
+@mixin pure-button {
+  @include futura;
+  background: $pure-red;
+  border-color: $pure-red;
+  color: #333;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-radius: 6px;
+
+  &:hover {
+    background: $pure-blue;
+    border-color: $pure-blue;
+  }
+}

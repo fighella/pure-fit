@@ -1,0 +1,18 @@
+#footer { 
+  background: #111;
+  color: #fff;
+  padding: 2em;
+  @include primary-font;
+  .footer-links { 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    a { 
+      color: #fff;
+      @include secondary-font;
+      font-size: 12px;
+
+    }
+  }
+}

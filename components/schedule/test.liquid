@@ -1,0 +1,38 @@
+Transactions
+{% for transaction in transactions %}
+  ...
+{% endfor %}
+
+Payment transactions
+{% for transaction in payment_transactions %}
+  ...
+{% endfor %}
+
+Refund transactions
+{% for transaction in refund_transactions %}
+  ...
+{% endfor %}
+
+Amount
+{{ transaction.amount | money }}
+
+Authorization
+{{ transaction.authorization }}
+
+Date
+{{ transaction.date }} or {{ transaction.created_at }}
+
+Gateway
+{{ transaction.gateway }}
+
+Payment method (eg: bank transfer, credit card)
+{{ transaction.gateway | payment_method }}
+
+Kind (eg: authorization, capture, refund)
+{{ transaction.kind }}
+
+Message
+{{ transaction.message }}
+
+Status
+{{ transaction.status }}

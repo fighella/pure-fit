@@ -1,0 +1,24 @@
+
+#sub-nav ul.sub-sub {
+  border-bottom: 1px solid #eee;
+  margin: 12px 0;
+  display: block;
+  max-width: 60%;
+  li {
+    border-top: 1px solid #eee;
+    padding: 3px 3px;
+    line-height: 1.6em;
+    text-transform: uppercase;
+  }
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: $pure-black;
+  font-weight: 600;
+}
+
+.nav-item:hover { 
+  cursor: pointer; color: $pure-blue;
+}
+.nav-item .nav-link { font-weight: 450; }
+.nav-item a.nav-link.active { border-bottom: 2px solid #333; }
