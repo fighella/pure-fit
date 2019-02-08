@@ -1,7 +1,7 @@
 import {withRouter} from 'next/router'
 import Layout from '../components/Layout'
 import Link from 'next/link'
-import fetch from 'isomorphic-unfetch'
+// import fetch from 'isomorphic-unfetch'
 import { AppHelpers } from '../utils/tools'
 
 const noFetchError = () => new Throw('Nope!');
