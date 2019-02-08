@@ -38,7 +38,8 @@
   "scripts": {
     "dev": "PORT=3002 node server.js",
     "build": "next build",
-    "start": "next start -p 8000"
+    "start": "next start -p 8000",
+    "now-build": "next build && next export -o dist"
   },
   "author": "",
   "license": "ISC"
