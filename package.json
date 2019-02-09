@@ -17,7 +17,7 @@
     "express": "^4.16.4",
     "mailto-link": "^1.0.0",
     "moment-timezone": "^0.5.23",
-    "next": "^7.0.2",
+    "next": "^8.0.0-canary.19",
     "node-sass": "^4.11.0",
     "prop-types": "^15.6.2",
     "react": "^16.8.0",
@@ -39,7 +39,7 @@
     "dev": "PORT=3002 node server.js",
     "build": "next build",
     "start": "next start -p 8000",
-    "now-build": "next build && next export -o dist"
+    "now-build": "next build"
   },
   "author": "",
   "license": "ISC"
