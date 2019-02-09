@@ -40,7 +40,7 @@ const AppNav = {
     },
     {
       name: 'Pricing',
-      link: '/members',
+      link: '/pricing',
       has_mega: true,
       mega: <NavMembers />
     },
