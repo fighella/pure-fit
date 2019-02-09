@@ -1,27 +1,24 @@
 import React, { Component } from 'react';
-import { navHeading } from '../utils/nav';
-import { withRouter } from 'react-router-dom';
+import { navHeading } from '../../utils/nav';
+import { withRouter } from 'next/router';
 import styled from 'styled-components';
-import Link from './utils';
+import Link from 'next/link';
 
 class Mini extends Component {
   isFull = () => {
     return this.props.size === 'full';
   };
-  routeChange = () => {
-    let path = Link(this.props.handle);
-    this.props.history.push(path);
-  };
   render() {
     var teaser = <p>{this.props.desc}</p>;
     var blogClassName = this.isFull() ? 'mini-blog flexCol' : 'mini-blog';
     var read_more = (
+      <Link  href={`/journals/${this.props.slug}`}>
       <a
         className="btn btn-primary btn-sm btn-red"
-        href={Link(this.props.slug)}
       >
         Read more...
       </a>
+      </Link>
     );
     const img = this.props.teaser_image ? (
       <img
@@ -34,7 +31,9 @@ class Mini extends Component {
     );
 
     return (
-      <BlogTeaser onClick={this.routeChange}>
+      <Link href={`/journals/${this.props.handle}`}>
+      <a>
+      <BlogTeaser>
         <div className={blogClassName} style={{ position: 'relative' }}>
           <ImageHolder isFull={this.isFull()}>
             {img}
@@ -74,6 +73,8 @@ class Mini extends Component {
           </div>
         </div>
       </BlogTeaser>
+      </a>
+      </Link>
     );
   }
 }

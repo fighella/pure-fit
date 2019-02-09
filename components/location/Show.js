@@ -5,7 +5,7 @@ import { AppLocations } from '../data/locations';
 import PureData from '../utils/src';
 import { Schedule } from '../Schedule';
 import ScheduleWrapper from '../ScheduleWrapper';
-import { MiniMap } from '../widgets/minimap';
+import { LocationMap } from '../components/LocationMap';
 import EvolveRow from '../evolve/row';
 import Hero from '../Hero';
 import { SubHeading, MainHeading } from '../utils/headings';
@@ -125,7 +125,7 @@ export default class Show extends Component {
                 <Section>
                   <span id="overview" />
                   <div style={{ background: '#fff' }}>
-                    <MiniMap
+                    <LocationMap
                       hideMap={false}
                       city={loc_data.city}
                       name={loc_data.name}

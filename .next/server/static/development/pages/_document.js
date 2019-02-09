@@ -2037,7 +2037,36 @@ function (_Document) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(MyDocument, [{
     key: "render",
     value: function render() {
-      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("html", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["Head"], null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("html", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["Head"], null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("meta", {
+        content: "Pure Yoga Ottawa",
+        name: "author"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("meta", {
+        content: "width=device-width, initial-scale=1.0",
+        name: "viewport"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("meta", {
+        name: "viewport",
+        content: "width=device-width, initial-scale=1, maximum-scale=1"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
+        rel: "shortcut icon",
+        href: "images/favicon.ico"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        href: "images/apple-touch-icon.png"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        sizes: "72x72",
+        href: "images/apple-touch-icon-72x72.png"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        sizes: "114x114",
+        href: "images/apple-touch-icon-114x114.png"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
+        rel: "apple-touch-icon",
+        sizes: "144x144",
+        href: "images/apple-touch-icon-144x144.png"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("script", {
+        src: "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/877987985/?random=1549744178340&cv=9&fst=1549744178340&num=1&label=T8OiCLGMwGgQkZHUogM&guid=ON&resp=GooglemKTybQhCsO&u_h=1050&u_w=1680&u_ah=1027&u_aw=1680&u_cd=24&u_his=3&u_tz=-300&u_java=false&u_nplug=3&u_nmime=4&gtm=2wg1r0&sendb=1&frm=0&url=https%3A%2F%2Fwww.pureyogaottawa.com%2F&ref=https%3A%2F%2Fwww.google.com%2F&tiba=Pure%20Yoga%20Ottawa%20-%20Westboro%2C%20Downtown%20and%20Centretown%20%7C%20Pure%20Yoga%20Ottawa&async=1&rfmt=3&fmt=4"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
         rel: "stylesheet",
         href: "https://use.fontawesome.com/releases/v5.4.1/css/all.css",
         integrity: "sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz",
@@ -2058,6 +2087,10 @@ function (_Document) {
         href: "https://use.typekit.net/wto6kkb.css"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("script", {
         src: "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("script", {
+        src: "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js",
+        integrity: "sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k",
+        crossorigin: "anonymous"
       }), this.props.styleTags), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["Main"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["NextScript"], null)));
     }
   }], [{

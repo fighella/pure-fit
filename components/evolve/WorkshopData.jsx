@@ -1,5 +1,5 @@
 import React from 'react';
-import { AppHelpers } from '../utils/tools';
+import { AppHelpers } from '../../utils/tools';
 
 const noFetchError = () => console.log('Did not fetch.');
 

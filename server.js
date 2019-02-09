@@ -9,23 +9,36 @@ app.prepare()
 .then(() => {
   const server = express()
 
-  server.get('/p/:id', (req, res) => {
-    const actualPage = '/post'
-    const queryParams = { title: req.params.id }
-    app.render(req, res, actualPage, queryParams)
-  })
-  
-  server.get('/location/:id', (req, res) => {
+  server.get('/location/:location', (req, res) => {
     const actualPage = '/location'
-    const queryParams = { title: req.params.id } 
+    const queryParams = { location: req.params.location }
     app.render(req, res, actualPage, queryParams)
   })
 
   server.get('/schedule/:location', (req, res) => {
     const actualPage = '/schedule'
-    const queryParams = { location: req.params.location } 
+    const queryParams = { location: req.params.location }
     app.render(req, res, actualPage, queryParams)
   })
+
+  server.get('/team/:handle', (req, res) => {
+    const actualPage = '/team_show'
+    const queryParams = { handle: req.params.handle }
+    app.render(req, res, actualPage, queryParams)
+  })
+
+  server.get('/evolve/:id/:title', (req, res) => {
+    const actualPage = '/evolve_show'
+    const queryParams = { id: req.params.id, title: req.params.title }
+    app.render(req, res, actualPage, queryParams)
+  })
+
+  server.get('/journals/:handle', (req, res) => {
+    const actualPage = '/journals_show'
+    const queryParams = { handle: req.params.handle }
+    app.render(req, res, actualPage, queryParams)
+  })
+
 
   server.get('*', (req, res) => {
     return handle(req, res)

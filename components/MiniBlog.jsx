@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { navHeading } from '../utils/nav';
 import styled from 'styled-components';
-import Link from 'next/link'
+import { withRouter } from 'next/router';
+import Link from 'next/link';
 
 class Mini extends Component {
   isFull = () => {
@@ -111,4 +112,4 @@ const ImageHolder = styled.div`
   padding: ${props => (props.isFull ? '0 10px 0 0' : '0')};
 `;
 
-export default Mini;
+export default withRouter(Mini);

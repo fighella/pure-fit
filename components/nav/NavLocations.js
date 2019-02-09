@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { MiniMap } from '../Minimap';
+import { LocationMap } from '../LocationMap';
 import { Row, Col } from 'reactstrap';
 import { AppLocations } from '../../data/locations';
 import { Schedule } from '../Schedule';
@@ -32,7 +32,7 @@ function allLocations(current, classes, loaded) {
     .filter(locationMatch, current)
     .map((_location, index) => (
       <Col key={index}>
-        <MiniMap
+        <LocationMap
           hideMap={true}
           city={_location.city}
           name={_location.name}

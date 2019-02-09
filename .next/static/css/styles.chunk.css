@@ -248,6 +248,9 @@ body * {
     opacity: 1;
     transition: opacity 250ms ease-in; }
 
+a:hover {
+  text-decoration: none; }
+
 img {
   max-width: 100%; }
 

@@ -8,7 +8,7 @@ import MiniBlog from './Mini';
 import Socials from '../Socials';
 import { AppHelpers } from '../utils/tools';
 import PureData from '../utils/src';
-import { fonts } from '../css_variables';
+import { fonts } from '../styles/variables';
 
 const noFetchError = () => console.log('Did not fetch.');
 const t = AppContent.journal;

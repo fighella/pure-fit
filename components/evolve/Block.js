@@ -10,7 +10,8 @@ class Block extends Component {
   // };
   render() {
     return (
-      <Link href={this.props.handle}><a>
+      <Link href={`/evolve/${this.props.id}/${this.props.handle}`}>
+      <a title={this.props.title}>
       <BlockWrapper
         bg={this.props.bg}
         blockWidth={this.props.blockWidth}

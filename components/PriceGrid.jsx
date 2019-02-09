@@ -6,7 +6,6 @@ import textile from 'textile-js';
 import { AppContent } from '../data/content';
 import Layout from '../components/Layout';
 import { fonts, colors } from '../styles/variables';
-import '../styles/custom.scss';
 
 const t = AppContent.members;
 

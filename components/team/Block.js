@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { AppHelpers } from '../utils/tools';
+import { AppHelpers } from '../../utils/tools';
 import TeacherCard from './Card';
 const noFetchError = () => console.log('Did not fetch.');
 

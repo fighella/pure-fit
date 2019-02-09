@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'next/router'
+import Link from 'next/link'
 import styled, { css } from 'styled-components';
-import Link from './utils';
+
 
 class TeacherCard extends Component {
   constructor(props) {
@@ -11,30 +12,14 @@ class TeacherCard extends Component {
     };
   }
 
-  loadTeacher = () => {
-    const path = Link(this.props.teacher.slug);
-    this.props.history.push(path);
-  };
-
-  // shuffleImages = () => {
-  //   const timages = [
-  //     this.props.teacher.pose_1.card.url,
-  //     this.props.teacher.pose_2.card.url,
-  //     this.props.teacher.pose_3.card.url
-  //   ].filter(function(el) {
-  //     return el != null;
-  //   });
-
-  //   this.setState({ bg: timages[Math.floor(Math.random() * timages.length)] });
-  // };
-
-  render() {
-    const teacher = this.props.teacher;
+       
+    render() {
+      const teacher = this.props.teacher;
     return (
+      <Link href={`/team/${this.props.teacher.slug}`}><a>
       <TeacherProfile
         // onMouseOver={() => this.shuffleImages()}
         dropped={this.props.dropped}
-        onClick={() => this.loadTeacher()}
       >
         <TeacherImg bg_img={this.state.bg} />
         <TeacherInfo>
@@ -43,7 +28,8 @@ class TeacherCard extends Component {
             <TeacherPosition>{teacher.position}</TeacherPosition>
           </TeacherName>
         </TeacherInfo>
-      </TeacherProfile>
+      </TeacherProfile></a>
+      </Link>
     );
   }
 }

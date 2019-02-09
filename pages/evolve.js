@@ -7,7 +7,6 @@ import EvolveRow from '../components/evolve/row';
 import Hero from '../components/Hero';
 import { EvolveConfig } from '../components/evolve/config';
 import { AppContent } from '../data/content';
-import '../styles/custom.scss';
 
 const [style] = [EvolveConfig.style];
 const t = AppContent.evolve;

@@ -6,8 +6,7 @@ import { fonts, colors } from '../styles/variables';
 import textile from 'textile-js';
 import { AppContent } from '../data/content';
 import { AppLocations } from '../data/locations';
-import '../styles/custom.scss';
-
+  
 const t = AppContent.new;
 
 class NewPage extends Component {

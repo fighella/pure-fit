@@ -1,17 +1,14 @@
 import React, { Component } from 'react';
+import Link from 'next/link'
 import styled from 'styled-components';
 import { fonts, colors } from '../../styles/variables';
-import Link from 'next/link'
 
 class Block extends Component {
-  // routeChange = () => {
-  //   let path = Link(this.props.handle);
-  //   this.props.history.push(path);
-  // };
+ 
   render() {
     return (
-      <Link href={this.props.handle}>
-      <a>
+      <Link href={`/journals/${this.props.handle}`}>
+      <a title={this.props.title}>
       <BlockWrapper
         onClick={this.routeChange}
         blockWidth={this.props.blockWidth}

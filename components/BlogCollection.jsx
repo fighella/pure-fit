@@ -12,7 +12,7 @@ const Blocks = props => {
 
   const cols = data.map(content => {
     let block;
-    if (content.workshop_type === 'Workshop') {
+    if (content.workshop_type === 'Workshop' || content.workshop_type === 'Training') {
       block = (
         <WorkshopBlock
           type={content.workshop_type}
