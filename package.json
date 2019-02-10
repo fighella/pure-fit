@@ -46,7 +46,8 @@
     "build": "next build",
     "start": "next start -p 8000",
     "now-build": "next build",
-    "deploy": "now && now alias && now rm pure-next --safe --yes"
+    "deploy": "now && now alias next.pureyogaottawa.com && now rm pure-next --safe --yes",
+    "deploy production": "now && now alias www.pureyogaottawa.com && now rm www --safe --yes"
   },
   "author": "",
   "license": "ISC"

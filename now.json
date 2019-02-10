@@ -4,5 +4,7 @@
     { "src": "package.json", "use": "@now/next" }
   ],
   "name": "pure-node",
-  "alias": "next.pureyogaottawa.com"
+  "alias": [
+    "next.pureyogaottawa.com",
+    "www.pureyogaottawa.com"]
 }
