@@ -10,7 +10,7 @@ class Block extends Component {
   // };
   render() {
     return (
-      <Link href={`/evolve/${this.props.id}/${this.props.handle}`}>
+      <Link as={`/evolve/${this.props.id}/${this.props.handle}`} href={`/evolve?id=${this.props.id}&title=${this.props.handle}`}>
       <a title={this.props.title}>
       <BlockWrapper
         bg={this.props.bg}
@@ -40,9 +40,7 @@ const BlockWrapper = styled.div`
   height: 100%;
   flex-direction: column;
   justify-content: center;
-  background-image: url(${props =>
-    props.bg ||
-    'https://s3.amazonaws.com/pureyogaottawa.com/website/default/evolve.jpg'});
+  background-image: url(${props => props.bg || 'https://s3.amazonaws.com/pureyogaottawa.com/website/default/evolve.jpg'});
   background-size: cover;
   background-position: center center;
   position: relative;

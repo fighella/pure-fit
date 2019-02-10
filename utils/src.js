@@ -122,10 +122,9 @@ export default class PureData {
   }
 
   get blog() {
-    console.log('Blog Prop', this.props);
     return {
       base: this.endpoint('blogs'),
-      filters: [{ blog: this.props.router.query.handle }]
+      filters: [{ blog: this.props.handle }]
     };
   }
 

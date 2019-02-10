@@ -3,14 +3,12 @@ import { Container, Row, Col } from 'reactstrap';
 import Disqus from 'disqus-react';
 import Zoom from 'react-reveal/Fade';
 import styled from 'styled-components';
-import DocumentTitle from 'react-document-title';
 import textile from 'textile-js';
-import PureData from '../utils/src';
 import Socials from '../components/Socials';
 import Layout from '../components/Layout'
 import { NewToYogaStrap } from '../components/NewToYogaStrap';
+import { AppHelpers } from '../utils/tools';
 import { withRouter } from 'next/router';
-
 import {
   JournalContent,
   JournalCategory,
@@ -22,54 +20,22 @@ import {
 import Favorite from '../components/Favorite';
 import BlogCollection from '../components/BlogCollection';
 
-class Show extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      blog: false,
-      loaded: true
-    };
-  }
-  componentDidMount() {
-    this.grabJournal();
-  }
-  grabJournal = () => {
-    var src = new PureData(this.props).blog,
-      params = [];
-    src.filters.map((filter, index) =>
-      params.push(
-        Object.values(src.filters[index])[0]
-          ? `&by_${Object.keys(src.filters[index])[0]}=${
-              Object.values(src.filters[index])[0]
-            }`
-          : ' '
-      )
-    );
-    var url = params.reduce((acc, cv) => {
-      return acc + cv;
-    }, src.base);
-    console.log('lugabugs', url);
-    fetch(url)
-      .then(response => response.json())
-      .then(data => this.setState({ blog: data.blogs[0], loaded: true }))
-      .catch(err => console.log('Did not fetch your things.' + err));
-  };
-  render() {
-    // var location = this.state.location
-    const disqusShortname = 'pureyogaottawa';
+const disqusShortname = 'pureyogaottawa';
+
+const Show = withRouter((props) => {
     const disqusConfig = {
       url:
-        'https://pureyogaottawa.com/journal/' + this.props.router.query.handle,
+        'https://www.pureyogaottawa.com/journals/' + props.router.query.handle,
       identifier: 123,
       title: 'Pure Journal.'
     };
-    const post = this.state.blog || {};
+    const post = props.blog || {};
     const author_link = (
       <AuthorLink href={'/team/' + post.author_handle}>
         {post.author}
       </AuthorLink>
     );
-    const post_id = this.state.blog.id;
+    const post_id = post.id;
     console.log('POST', post);
     const img_array = [
       post.blog_img_1,
@@ -101,9 +67,7 @@ class Show extends Component {
           );
         })
       : '';
-    var loaded = (
-      <DocumentTitle title={post.title}>
-
+    var content = (
         <div
           style={{
             background: '#f5f5f5',
@@ -164,11 +128,20 @@ class Show extends Component {
 
           <NewToYogaStrap />
         </div>
- 
-      </DocumentTitle>
     );
-    var content = this.state.loaded ? loaded : 'Loading';
-    return <Layout>{content}</Layout>;
+    return(<Layout>{content}</Layout>);
+})
+
+
+Show.getInitialProps = async function() {
+  try {
+    const response = await fetch(AppHelpers.mbParams({}, 'blog'));
+    let json = await response.json();
+    return {
+      blog: json.blogs[0]
+    }
+  } catch { 
+    console.log('noFetchError()');
   }
 }
 

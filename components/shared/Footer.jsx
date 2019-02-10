@@ -2,11 +2,14 @@ import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Socials from '../Socials';
 import AppNav from '../data/nav';
+import Link from 'next/link'
 
 const footerLinks = AppNav.footer.map(link => (
-  <a href={link.link} key={link.link} alt="Footer Link">
+  <Link href={link.link.href} as={link.link.as}>
+  <a key={link.link.as} alt="Footer Link">
     {link.name}
   </a>
+  </Link>
 ));
 
 const Footer = () => (

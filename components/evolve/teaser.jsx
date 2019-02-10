@@ -8,6 +8,7 @@ import { EvolveConfig } from './config';
 import styled from 'styled-components';
 import EvolveTeachers from './teachers';
 import Favorite from '../Favorite';
+import Link from 'next/link';
 
 const [zone, style] = [EvolveConfig.zone, EvolveConfig.style];
 const defaultTab = 'Overview';
@@ -161,14 +162,13 @@ class EvolveTeaser extends Component {
           dangerouslySetInnerHTML={{ __html: textile(desc) }}
         />
         <div style={style.flex}>
+        <Link href={`/evolve_show?id=${workShop.id}&title=${workShop.title.toLowerCase().replace(/ /g, '-')}`} as={`/evolve/${workShop.id}/${workShop.title.toLowerCase().replace(/ /g, '-')}`}>
           <a
-            href={`/evolve/${
-              workShop.id
-            }/${workShop.title.toLowerCase().replace(/ /g, '-')}`}
             style={style.teaser.more_info}
           >
             More info
           </a>
+          </Link>
           &nbsp;
           {bookNow}
           <Favorite id={[workShop.id].join('-')} favorite_type="ws" />

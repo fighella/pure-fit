@@ -27,9 +27,9 @@ app.prepare()
     app.render(req, res, actualPage, queryParams)
   })
 
-  server.get('/evolve/:id/:title', (req, res) => {
+  server.get('/evolve/:id/:handle', (req, res) => {
     const actualPage = '/evolve_show'
-    const queryParams = { id: req.params.id, title: req.params.title }
+    const queryParams = { id: req.params.id, handle: req.params.handle }
     app.render(req, res, actualPage, queryParams)
   })
 
