@@ -132,7 +132,7 @@ Show.getInitialProps = async function(context) {
       teacher: json.teachers,
       loaded_teachers: true
     }
-  } catch { 
+  } catch {
     console.log(handle)
     console.log('noFetchError();');
   }
