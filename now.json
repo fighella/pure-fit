@@ -1,9 +1,17 @@
 {
   "version": 2,
   "builds": [
-    { "src": "package.json", "use": "@now/next" }
+    { "src": "next.config.js", "use": "@now/next" }
   ],
   "name": "pure-node",
   "alias": [
-    "www.pureyogaottawa.com"]
+    "www.pureyogaottawa.com",
+    "next.pureyogaottawa.com"],
+  "routes": [
+    { "src": "/team/(?<id>[^/]*)", "dest": "/team_show.js?handle=$id" },
+    { "src": "/journals/(?<id>[^/]*)", "dest": "/journals_show.js?handle=$id" },
+    { "src": "/evolve/(?<id>[^/]*)/(?<title>[^/]*)", "dest": "/evolve_show.js?id=$id&title=title" },
+    { "src": "/schedule/(?<id>[^/]*)", "dest": "/schedule.js?handle=$id" },
+    { "src": "/location/(?<id>[^/]*)", "dest": "/location.js?handle=$id" }
+  ]
 }

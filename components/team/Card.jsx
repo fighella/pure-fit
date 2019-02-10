@@ -16,7 +16,7 @@ class TeacherCard extends Component {
     render() {
       const teacher = this.props.teacher;
     return (
-      <Link href={`/team/${this.props.teacher.slug}`}><a>
+      <Link href={`/team_show?handle=${this.props.teacher.slug}`} as={`/team/${this.props.teacher.slug}`}><a>
       <TeacherProfile
         // onMouseOver={() => this.shuffleImages()}
         dropped={this.props.dropped}
