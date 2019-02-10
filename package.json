@@ -42,12 +42,12 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "PORT=3000 node server.js",
+    "dev": "PORT=3001 node server.js",
     "build": "next build",
     "start": "next start -p 8000",
     "now-build": "next build",
-    "deploy": "now && now alias next.pureyogaottawa.com && now rm pure-next --safe --yes",
-    "deploy production": "now && now alias www.pureyogaottawa.com && now rm www --safe --yes"
+    "deploy": "now",
+    "deploy-production": "now && now alias www.pureyogaottawa.com && now rm pure-node --safe --yes"
   },
   "author": "",
   "license": "ISC"

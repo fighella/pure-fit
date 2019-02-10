@@ -5202,7 +5202,7 @@ var AppContent = {
     intro: {
       title: 'Introductory Offer',
       promo: 'Pure Yoga Intro Month Special',
-      price: '40',
+      price: '45',
       deal: '1 month of unlimited yoga (that’s right: any class, any time) for one whole month. You can start your month whenever you like, and you will get 30 days (from that day) to do try as many classes you want.',
       link: 'http://clients.mindbodyonline.com/ws.asp?studioid=21952&stype=41&prodid=60',
       contents: ['We welcome you to come and see how Pure Yoga can help you grow and transform.', 'Whether you come to Pure Yoga Ottawa for a workout or stress relief, we are completely dedicated to the evolution of our students. With our amazing team of highly trained teachers, you are always in the best hands.', '<a href="/faqs">Frequently Asked Questions</a>']
@@ -5307,7 +5307,7 @@ var AppContent = {
       answer: 'A yoga mat (available to rent), A couple of towels (available to rent). A water bottle<li>Comfortable clothing to wear to class. A change of clothes (you will get sweaty!)'
     }, {
       question: 'How much does it cost to come to Pure Yoga? ',
-      answer: 'If you’re new to Pure Yoga, we have an amazing “Intro Month” special where you can come to unlimited classes for just $40 for one month. We also have single class drop in fees, class packages and memberships available, as well as students and seniors discounts - please visit our pricing page for more information. '
+      answer: 'If you’re new to Pure Yoga, we have an amazing “Intro Month” special where you can come to unlimited classes for just $45 for one month. We also have single class drop in fees, class packages and memberships available, as well as students and seniors discounts - please visit our pricing page for more information. '
     }, {
       question: 'Do I need to buy a membership for each of your studios? ',
       answer: 'No, once you purchase a Pure Yoga membership you can choose to come to any of our studios '

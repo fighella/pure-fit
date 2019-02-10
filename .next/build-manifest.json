@@ -1,5 +1,7 @@
 {
-  "devFiles": [],
+  "devFiles": [
+    "static/development/dll/dll_38327ee5f44e8bfa0ffa.js"
+  ],
   "pages": {
     "/_app": [
       "static/runtime/webpack.js",
@@ -9,8 +11,20 @@
       "static/runtime/webpack.js",
       "static/runtime/main.js"
     ],
+    "/team_show": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
+      "static/runtime/main.js"
+    ],
     "/next/dist/pages/_error": [
       "static/runtime/webpack.js",
+      "static/runtime/main.js"
+    ],
+    "/team": [
+      "static/runtime/webpack.js",
+      "static/css/styles.chunk.css",
+      "static/chunks/styles.js",
       "static/runtime/main.js"
     ],
     "/index": [

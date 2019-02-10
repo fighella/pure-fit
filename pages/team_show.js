@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import textile from 'textile-js';
-import DocumentTitle from 'react-document-title';
 import PropTypes from 'prop-types';
 import Favorite from '../components/Favorite';
 import Hero from '../components/Hero';
@@ -9,6 +8,7 @@ import PureData from '../utils/src';
 import { AppHelpers } from '../utils/tools'
 import fetch from 'isomorphic-unfetch'
 import { fonts } from '../styles/variables';
+import Head from 'next/head';
 import { Schedule } from '../components/Schedule';
 import EvolveRow from '../components/evolve/row';
 import ScheduleWrapper from '../components/ScheduleWrapper';
@@ -42,8 +42,19 @@ function Teacher({ teacher }) {
     false
   );
   const loaded = teacher ? (
-    <DocumentTitle title={docTitle}>
-      <Layout>
+    <Layout>
+      <Head>
+        <title>
+          {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Yoga Ottawa
+        </title>
+        <meta property="og:title" content={`${teacher.name} ${teacher.position} | Pure Yoga Ottawa`}/>
+        <meta property="og:type" content="instructor" />
+        <meta property="og:type" content="pureyogaottawa:teacher" />
+        <meta property="og:description" content={`{teacher.first_name} is a  at Pure Yoga Ottawa. Come join Amber for some Hot Yoga`}/>
+        <meta property="og:url" content="http://cdn.pureyogaottawa.com/pure-team/amber-stratton" />
+        <meta property="og:image" content="https://pureyogaprod.s3.amazonaws.com/uploads/teacher/avatar/195/small_thumb_pyo-5479.jpg" />
+    
+      </Head>
         <Hero
           custom_imgs={[teacher.pose_1.background_image.url]}
           title=""
@@ -104,8 +115,7 @@ function Teacher({ teacher }) {
           &raquo;
           {teacher.title}
         </div>
-      </Layout>
-    </DocumentTitle>
+    </Layout>
   ) : (
     <span>Loadin</span>
   );
@@ -125,7 +135,7 @@ Show.getInitialProps = async function(context) {
   } catch { 
     console.log(handle)
     console.log('noFetchError();');
-  }  
+  }
 }
 
 // TeacherProfile.propTypes = {
@@ -179,7 +189,7 @@ const FlexCol = styled.div`
   padding: 3em;
   text-align: left;
   height: 100%;
-  p { 
+  p {
     font-size: 1.1em; line-height: 1.4em;
     white-space: pre-wrap;
     font-family: futura-pt;
@@ -188,8 +198,8 @@ const FlexCol = styled.div`
     letter-spacing: .05em;
     line-height: 2em;
     font-weight: 300;
-    }  
-  } 
+    }
+  }
     @media (max-width: 500px) {
       width: 100%;
     };

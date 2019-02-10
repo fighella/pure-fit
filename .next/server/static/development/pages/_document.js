@@ -2046,6 +2046,20 @@ function (_Document) {
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1, maximum-scale=1"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("meta", {
+        property: "og:site_name",
+        content: "Pure Yoga Ottawa"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("meta", {
+        property: "fb:admins",
+        content: "873990164"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("meta", {
+        property: "fb:app_id",
+        content: "312000085528745"
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
+        href: "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css",
+        rel: "stylesheet",
+        integrity: "sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS",
+        crossOrigin: "anonymous"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
         rel: "shortcut icon",
         href: "images/favicon.ico"
@@ -2072,11 +2086,6 @@ function (_Document) {
         integrity: "sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz",
         crossOrigin: "anonymous"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
-        href: "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css",
-        rel: "stylesheet",
-        integrity: "sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS",
-        crossOrigin: "anonymous"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
         rel: "stylesheet",
         href: "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("link", {
@@ -2087,10 +2096,6 @@ function (_Document) {
         href: "https://use.typekit.net/wto6kkb.css"
       }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("script", {
         src: "https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"
-      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("script", {
-        src: "https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js",
-        integrity: "sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k",
-        crossorigin: "anonymous"
       }), this.props.styleTags), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("body", null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["Main"], null), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(next_document__WEBPACK_IMPORTED_MODULE_7__["NextScript"], null)));
     }
   }], [{

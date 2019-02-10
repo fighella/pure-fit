@@ -124,7 +124,7 @@ export const AppContent = {
     intro: {
       title: 'Introductory Offer',
       promo: 'Pure Yoga Intro Month Special',
-      price: '40',
+      price: '45',
       deal:
         '1 month of unlimited yoga (that’s right: any class, any time) for one whole month. You can start your month whenever you like, and you will get 30 days (from that day) to do try as many classes you want.',
       link:
@@ -260,7 +260,7 @@ export const AppContent = {
       {
         question: 'How much does it cost to come to Pure Yoga? ',
         answer:
-          'If you’re new to Pure Yoga, we have an amazing “Intro Month” special where you can come to unlimited classes for just $40 for one month. We also have single class drop in fees, class packages and memberships available, as well as students and seniors discounts - please visit our pricing page for more information. '
+          'If you’re new to Pure Yoga, we have an amazing “Intro Month” special where you can come to unlimited classes for just $45 for one month. We also have single class drop in fees, class packages and memberships available, as well as students and seniors discounts - please visit our pricing page for more information. '
       },
       {
         question: 'Do I need to buy a membership for each of your studios? ',

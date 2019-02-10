@@ -6,12 +6,14 @@ import { Container, Col, Row } from 'reactstrap';
 import TeamBlock from '../components/team/Block';
 import { fonts } from '../styles/variables';
 import Hero from '../components/Hero';
+import Layout from '../components/Layout';
 import { AppContent } from '../data/content';
 // import Measure from 'react-measure';
 
 const t = AppContent.team;
 
 const Index = () => (
+  <Layout>
   <div style={{ background: '#fff' }}>
     <Hero
       imgs={['team_39']}
@@ -45,6 +47,7 @@ const Index = () => (
     <p style={{ display: 'block', textAlign: 'center' }}>Watch the video</p>
     <br />
   </div>
+  </Layout>
 );
 
 const VideoBlock = () => (
