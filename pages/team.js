@@ -8,12 +8,25 @@ import { fonts } from '../styles/variables';
 import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import { AppContent } from '../data/content';
+import Head from 'next/head';
 // import Measure from 'react-measure';
-
 const t = AppContent.team;
 
 const Index = () => (
   <Layout>
+   <Head>
+        <title>
+          Your Yoga Teachers | Pure Yogis and Instructors | Pure Yoga Ottawa
+        </title>
+        <meta property="og:title" content={`Ottawa's Favorite Yoga Team | Pure Yoga Ottawa`}/>
+        <meta property="og:type" content="instructor" />
+        <meta property="og:description" content={t.page_title}/>
+        <meta property="og:url" content="https://www.pureyogaottawa.com/team/" />
+        <meta property="og:image" content="https://pureyogaprod.s3.amazonaws.com/uploads/teacher/avatar/195/small_thumb_pyo-5479.jpg" />
+    
+      </Head>
+
+
   <div style={{ background: '#fff' }}>
     <Hero
       imgs={['team_39']}

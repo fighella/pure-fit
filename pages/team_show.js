@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import textile from 'textile-js';
-import PropTypes from 'prop-types';
 import Favorite from '../components/Favorite';
 import Hero from '../components/Hero';
 import PureData from '../utils/src';
@@ -16,6 +15,7 @@ import { Instafeed } from '../components/Instafeed';
 import Layout from '../components/Layout';
 import { SingleColWrapper } from '../components/SingleColWrapper';
 import {withRouter} from 'next/router'
+
 const InstafeedWrapped = SingleColWrapper(Instafeed);
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
@@ -24,10 +24,6 @@ const Show = (props) => (
     <Teacher teacher={props.teacher} />
   </div>
 );
-
-Show.propTypes = {
-  match: PropTypes.string.isRequired
-};
 
 // https://stackoverflow.com/questions/12931828/convert-returned-json-object-properties-to-lower-first-camelcase
 function Teacher({ teacher }) {
@@ -199,11 +195,10 @@ const FlexCol = styled.div`
     line-height: 2em;
     font-weight: 300;
     }
-  }
     @media (max-width: 500px) {
       width: 100%;
-    };
-`;
+    }
+`
 
 // const BlockQuote = styled.span`
 //   font-size: 2em;
