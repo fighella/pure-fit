@@ -1,44 +1,30 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { AppHelpers } from '../utils/tools';
-import { fonts, colors } from '../css_variables';
+import { AppHelpers } from '../../utils/tools';
+import { fonts, colors } from '../../styles/variables';
 import Link from 'next/link'
 
 const noFetchError = () => console.log('Did not fetch.');
 
 class Block extends Component {
-  static propTypes = {
-    prop: PropTypes
-  };
   constructor(props) {
     super(props);
     this.state = {
-      loaded: false,
-      class_styles: [],
       toShow: 4
     };
   }
   componentDidMount() {
-    this.fetchClassStyles();
     this.setState({ toShow: 100 });
   }
-  fetchClassStyles = async () => {
-    const response = await fetch(
-      AppHelpers.mbParams(this.props, 'classStyles')
-    ).catch(noFetchError);
-    const json = await response.json().catch(noFetchError);
-    this.setState({
-      class_styles: json.class_styles,
-      loaded: true
-    });
-  };
+ 
   render() {
-    var class_styles = this.state.class_styles
-      .slice(0, this.state.toShow)
+    const { classStyles } = this.props;
+    console.log(this.props)
+    const cs = classStyles.slice(0, this.state.toShow)
       .map((class_style, index) => {
         return (
-          <Link href={`${class_style.slug}`}>
+          <Link as={`/class_styles/${class_style.slug}`} href={`/class_styles_show?handle=${class_style.slug}`} key={class_style.slug}>
           <CsCol
             key={`teacherCol${index}`}
           >
@@ -53,7 +39,7 @@ class Block extends Component {
         );
       });
 
-    return <CsRow>{class_styles}</CsRow>;
+    return <CsRow>{cs}</CsRow>;
   }
 }
 

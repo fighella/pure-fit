@@ -116,7 +116,7 @@ const Show = ({ blog, router }) => {
                 <br />
               </Col>
               <Col xs={12} md={4}>
-                <BlogCollection blockWidth="100%" workshopsOnly />
+                <BlogCollection blockWidth="100%" workshopsOnly sideBar/>
                 <div style={{ textAlign: 'center', paddingTop: '4em ' }}>
                   -<br />
                   <strong>COMMUNITY</strong>
@@ -146,8 +146,7 @@ Show.getInitialProps = async function(context) {
     const json = await response.json();
     console.log('Bloggin',json);
     return {
-      blog: json.blogs[0],
-      someAttr: 'Hello World'
+      blog: json.blogs[0]
     }
   } catch {
     console.log('noFetchError()');

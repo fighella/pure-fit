@@ -45,7 +45,6 @@ const NavPricing = ({ name, sub_title, terms, price, description }) => (
 NavPricing.propTypes = {
   name: PropTypes.string.isRequired,
   sub_title: PropTypes.string.isRequired,
-  terms: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired
 };

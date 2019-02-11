@@ -107,10 +107,17 @@ export default class PureData {
     };
   }
 
-  get classStyles() {
+  get classStyle() {
     return {
       base: this.endpoint('class_styles'),
       filters: [{ class_style: this.props.class_style }]
+    };
+  }
+
+  get classStyles() { 
+    return {
+      base: this.endpoint('class_styles'),
+      filters: []
     };
   }
 

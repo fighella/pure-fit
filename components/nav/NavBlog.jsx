@@ -39,7 +39,7 @@ export class NavBlog extends Component {
         <Col xs={6}>
           {navHeading('Latest Posts')}
           <Row>{blogs}</Row>
-          {navHeading('View All', 'https://online.pureyogaottawa.com')}
+          {navHeading('View All', '/journals')}
         </Col>
       </Row>
     );

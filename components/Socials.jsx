@@ -9,7 +9,7 @@ function SocialIcon({ link, icon }) {
       <a href={link} target="_blank" rel="noreferrer noopener">
         <FontAwesomeIcon
           icon={icon}
-          style={{ margin: '1px 6px 0', fontWeight: 400, color: '#fff' }}
+          style={{ margin: '1px 6px 0', fontWeight: 400, color: '#999' }}
         />
       </a>
     );
@@ -18,7 +18,7 @@ function SocialIcon({ link, icon }) {
 
 const c = t.socialLinks;
 const Socials = () => (
-  <span>
+  <span> 
     {SocialIcon(c.instagram)}
     {SocialIcon(c.facebook)}
     {SocialIcon(c.twitter)}

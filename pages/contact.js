@@ -29,7 +29,7 @@ class ContactPage extends Component {
     const helpLinks = [
       { name: 'Faqs', link: '/faqs' },
       { name: 'New to Yoga', link: '/new' },
-      { name: 'Mindbody Login', link: '' }
+      { name: 'Mindbody Login', link: 'https://clients.mindbodyonline.com/asp/su1.asp?fl=true&tabID=2' }
     ];
 
     const form = (
@@ -90,16 +90,14 @@ class ContactPage extends Component {
     ));
     const locs = AppLocations.all.map((i, index) => {
       return (
-        <FlexStackCol>
+        <FlexStackCol key={i.phone}>
           <Loc>
-            <p>
               <h4>{i.name}</h4>
               {i.address}
               <br />
               {i.postcode}
               <br />
               {i.phone}
-            </p>
           </Loc>
         </FlexStackCol>
       );

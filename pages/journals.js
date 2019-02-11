@@ -10,11 +10,12 @@ import { AppHelpers } from '../utils/tools';
 import PureData from '../utils/src';
 import Layout from '../components/Layout';
 import { fonts } from '../styles/variables';
+import { withRouter } from 'next/router';
+import Link from 'next/link';
 
 const noFetchError = () => console.log('Did not fetch.');
 const t = AppContent.journal;
-
-export default class Index extends Component {
+class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -25,20 +26,8 @@ export default class Index extends Component {
   }
 
   componentDidMount() {
-    this.fetchYogaBlogs();
     this.grabWorkshops();
   }
-
-  fetchYogaBlogs = async () => {
-    const response = await fetch(AppHelpers.mbParams({}, 'blogs')).catch(
-      noFetchError
-    );
-    const json = await response.json().catch(noFetchError);
-    this.setState({
-      blogs: json.blogs,
-      loaded: true
-    });
-  };
 
   grabWorkshops = () => {
     const src = new PureData(this.props, 12).workshops;
@@ -53,16 +42,16 @@ export default class Index extends Component {
           : ''
       )
     );
-
     const url = params.reduce((acc, cv) => acc + cv, src.base);
     fetch(url)
       .then(response => response.json())
       .then(data => this.setState({ workshops: data.workshops, loaded: true }))
-      .catch(err => console.log('Did not fetch your things.'));
+      .catch(err => console.log('Did not fetch your things.', err));
   };
 
   render() {
-    const { blogs, workshops } = this.state;
+    const { workshops } = this.state;
+    const { blogs } = this.props;
     const workshopsList = workshops.map(ws => (
       <Workshop>
         <WorkshopTitle href={`/evolve/${ws.id}/${ws.slug}`}>
@@ -131,10 +120,18 @@ export default class Index extends Component {
   }
 }
 
+Index.getInitialProps = async function() {
+  try { 
+    const response = await fetch(AppHelpers.mbParams({}, 'blogs'))
+    const json = await response.json()
+    return { blogs: json.blogs }
+  } catch { 
+    noFetchError();
+  }
+}
+
 const rowWidth = '92%';
-const futura = '"Futura PT Medium", sans-serif';
-// const futura_light = '"Futura PT Light", sans-serif';
-// const lusty = 'lust-script, sans-serif';
+const futura = 'futura-pt-medium, sans-serif';
 const cortado = '"cortado", sans-serif';
 const hero_font = cortado;
 
@@ -147,7 +144,6 @@ export const style = {
   body: {
     background: `rgba(${whiteness},1)`
   },
-
   close: {
     color: '#fff',
     fontWeight: 'bold',
@@ -378,3 +374,7 @@ const WorkshopTitle = styled.a`
     text-decoration: none;
   }
 `;
+
+
+
+export default withRouter(Index);

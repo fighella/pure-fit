@@ -20,7 +20,6 @@ class NavList extends Component {
         <Link
           href={nav.link}
           ><a 
-          activeClassName="active"
           className="nav-link"
           onMouseOver={() => this.activateDropdown(nav.name)}
           onClick={() => this.hideDropdown()}

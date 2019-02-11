@@ -39,7 +39,7 @@ export class NavLogin extends Component {
             </div>
             {navHeading('New to Pure?')}
             <p>
-              <a className="btn btn-primary btn-red pureButton btn-sm" href="/">
+              <a className="btn btn-primary btn-red pureButton btn-sm" href="/new">
                 Sign Up
               </a>
             </p>

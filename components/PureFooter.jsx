@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Socials from '../components/Socials';
+import NewsletterStrap from './NewsletterStrap';
 import AppNav from '../data/nav';
 
 const footerLinks = AppNav.footer.map(link => (
@@ -10,6 +11,8 @@ const footerLinks = AppNav.footer.map(link => (
 ));
 
 const Footer = () => (
+  <React.Fragment>
+    <NewsletterStrap />
   <Container id="footer" fluid>
     <Row>
       <Col md={9} xs={12} className="footer-links">
@@ -36,6 +39,7 @@ const Footer = () => (
       </Col>
     </Row>
   </Container>
+  </React.Fragment>
 );
 
 export default Footer;

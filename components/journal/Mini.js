@@ -9,12 +9,13 @@ class Mini extends Component {
     return this.props.size === 'full';
   };
   render() {
+    console.log('MINI!', this.props)
     var teaser = <p>{this.props.desc}</p>;
     var blogClassName = this.isFull() ? 'mini-blog flexCol' : 'mini-blog';
     var read_more = (
-      <Link  href={`/journals/${this.props.slug}`}>
+      <Link as={`/journals/${this.props.handle}`} href={`/journals_show?handle=${this.props.handle}`}>
       <a
-        className="btn btn-primary btn-sm btn-red"
+        style={{ color: 'pink', border: '1px solid pink', background: '#fff', borderRadius: 3 }}
       >
         Read more...
       </a>
@@ -31,7 +32,7 @@ class Mini extends Component {
     );
 
     return (
-      <Link href={`/journals/${this.props.handle}`}>
+      <Link as={`/journals/${this.props.handle}`} href={`/journals_show?handle=${this.props.handle}`}>
       <a>
       <BlogTeaser>
         <div className={blogClassName} style={{ position: 'relative' }}>
@@ -53,21 +54,22 @@ class Mini extends Component {
               position: this.props.header ? 'absolute' : false,
               bottom: this.props.header ? 0 : false
             }}
-          >
+          > 
             {this.isFull() || this.props.header ? (
               <SubTitle>{this.props.category}</SubTitle>
-            ) : (
-              false
-            )}
+              ) : (
+                false
+                )}
             {this.isFull() ? (
               navHeading(this.props.name)
-            ) : (
-              <BlogTitle
+              ) : (
+                <BlogTitle
                 style={{ fontSize: this.props.header ? '1.8em' : false }}
-              >
+                >
                 {this.props.name}
               </BlogTitle>
             )}
+            <Author>{this.props.author_handle ? this.props.author_handle : '1'}</Author>
             {this.isFull() || this.props.header ? teaser : false}
             {this.isFull() ? read_more : false}
           </div>
@@ -82,8 +84,9 @@ class Mini extends Component {
 const BlogTitle = styled.strong`
   font-weight: 650;
   font-size: 0.9em;
-  line-height: 1.2em;
+  line-height: 1.12em;
   display: block;
+  color: #333;
 `;
 const BlogTeaser = styled.div`
   margin-bottom: 2.4em;
@@ -115,5 +118,10 @@ const ImageHolder = styled.div`
   margin-bottom: 12px;
   padding: ${props => (props.isFull ? '0 10px 0 0' : '0')};
 `;
+
+const Author = styled.span`
+  color: #ccc;
+  font-size: 11px;
+`
 
 export default withRouter(Mini);

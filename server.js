@@ -39,6 +39,11 @@ app.prepare()
     app.render(req, res, actualPage, queryParams)
   })
 
+  server.get('/class_styles/:handle', (req, res) => {
+    const actualPage = '/class_styles_show'
+    const queryParams = { handle: req.params.handle }
+    app.render(req, res, actualPage, queryParams)
+  })
 
   server.get('*', (req, res) => {
     return handle(req, res)

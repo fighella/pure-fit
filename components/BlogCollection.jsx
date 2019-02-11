@@ -22,6 +22,7 @@ const Blocks = props => {
           bg={content.hero_image.url}
           subtitle={content.custom_dates}
           blockWidth={blockWidth}
+
         />
       );
     } else {
@@ -38,7 +39,7 @@ const Blocks = props => {
         />
       );
     }
-    return <FlexCol>{block}</FlexCol>;
+    return <FlexCol sideBar={props.sideBar}>{block}</FlexCol>;
   });
 
   const header = customHeader ? (
@@ -97,12 +98,13 @@ const FlexRow = styled.div`
 `;
 
 const FlexCol = styled.div`
-  width: 30%;
+  width: ${props => props.sideBar ? '100%' : '30%'};
   min-height: 100%;
   margin-bottom: 1em;
   align-items: stretch;
+  a { color: #333; }
   @media (max-width: 700px) {
-    width: 50%;
+    width: ${props => props.sideBar ? '100%' : '50%'};
   }
   @media (max-width: 500px) {
     width: 100%;

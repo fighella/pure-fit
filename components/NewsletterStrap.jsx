@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import { AppContent as t } from './data/content';
-import { colors } from './css_variables';
+import { AppContent as t } from '../data/content';
+import { colors } from '../styles/variables';
 import styled from 'styled-components';
 
 const url =
   'https://Pureyogaottawa.us5.list-manage.com/subscribe/post?u=aecaba1342217654b91790ed1&id=3c7af5a2a1';
 
-export default class NewsletterSignup extends Component {
+class NewsletterStrap extends Component {
   render() {
     return (
       <NewsletterForm>
@@ -26,7 +26,7 @@ const CustomForm = () => (
       method="post"
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
-      class="validate"
+      className="validate"
       target="_blank"
       novalidate
     >
@@ -34,7 +34,7 @@ const CustomForm = () => (
         <input
           type="text"
           name="b_aecaba1342217654b91790ed1_3c7af5a2a1"
-          tabindex="-1"
+          tabIndex="-1"
           value=""
         />
       </div>
@@ -115,3 +115,6 @@ const SubscribeText = styled.h3`
     font-size: 16px;
   }
 `;
+
+
+export default NewsletterStrap;

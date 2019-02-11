@@ -81,6 +81,7 @@ const BlogTitle = styled.strong`
   font-size: 0.9em;
   line-height: 1.2em;
   display: block;
+  color: #333;
 `;
 const BlogTeaser = styled.div`
   margin-bottom: 2.4em;
@@ -93,6 +94,8 @@ const SubTitle = styled.div`
   font-size: 13px;
   letter-spacing: 1px;
   color: palevioletred;
+  a { color: #333; }
+
 `;
 
 const SubCategory = styled.span`
