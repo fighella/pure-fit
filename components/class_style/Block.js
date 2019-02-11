@@ -25,6 +25,7 @@ class Block extends Component {
       .map((class_style, index) => {
         return (
           <Link as={`/class_styles/${class_style.slug}`} href={`/class_styles_show?handle=${class_style.slug}`} key={class_style.slug}>
+          <a title={class_style.title}>
           <CsCol
             key={`teacherCol${index}`}
           >
@@ -35,6 +36,7 @@ class Block extends Component {
               <BlockLink href={class_style.slug}>Read More &raquo;</BlockLink>
             </Details>
           </CsCol>
+          </a>
           </Link>
         );
       });
@@ -63,6 +65,7 @@ const CsCol = styled.div`
   flex-direction: row;
   margin: 0.5em 0;
   border-radius: 4px;
+  color: #333;
   overflow: auto;
   background: #fff;
   &:hover {

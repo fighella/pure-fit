@@ -38,7 +38,7 @@ export const AppContent = {
   socialLinks,
   login,
   mindbody_link:
-    'https://clients.mindbodyonline.com/classic/ws?studioid=21952&sessionChecked=true',
+    'https://clients.mindbodyonline.com/classic/ws?studioid=21952',
   title: 'Ottawa Hot Yoga Studio',
   new_to_yoga: 'New to yoga? Find out more...',
   hot_yoga_schedule: 'Hot Yoga Schedule',
@@ -202,7 +202,7 @@ export const AppContent = {
     subtitle: 'Good Vibes'
   },
   members: {
-    path: '/members',
+    path: '/pricing',
     title: 'Community',
     page_title: `Join Our Community | Yoga for Everybody | ${brand}`,
     subtitle: 'Yoga, For Everyone',

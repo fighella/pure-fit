@@ -5,6 +5,10 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+const redirects = [
+  { from: '/workshops', to: '/evolve' },
+]
+
 app.prepare()
 .then(() => {
   const server = express()
@@ -13,6 +17,12 @@ app.prepare()
     const actualPage = '/location'
     const queryParams = { location: req.params.location }
     app.render(req, res, actualPage, queryParams)
+  })
+
+  redirects.forEach(({ from, to, type = 301, method = 'get' }) => {
+    server[method](from, (req, res) => {
+      res.redirect(type, to)
+    })
   })
 
   server.get('/schedule/:location', (req, res) => {
@@ -30,6 +40,12 @@ app.prepare()
   server.get('/evolve/:id/:handle', (req, res) => {
     const actualPage = '/evolve_show'
     const queryParams = { id: req.params.id, handle: req.params.handle }
+    app.render(req, res, actualPage, queryParams)
+  })
+  
+  server.get('/evolve', (req, res) => {
+    const actualPage = '/evolve'
+    const queryParams = { }
     app.render(req, res, actualPage, queryParams)
   })
 

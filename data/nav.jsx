@@ -57,7 +57,7 @@ const AppNav = {
     },
     {
       name: 'Pure Online',
-      link: 'https://onlinepureyoga.com',
+      link: 'https://app.Namastream.com/pureyogaottawa',
       has_mega: false,
       mega: false
     },
@@ -180,7 +180,7 @@ const AppNav = {
     {
       name: 'Mindbody Login',
       link:
-        'https://clients.mindbodyonline.com/classic/ws?studioid=21952&sessionChecked=true'
+        'https://clients.mindbodyonline.com/classic/ws?studioid=21952'
     },
     { name: 'Westboro', link: '/location/westboro' },
     { name: 'Centretown', link: '/location/centretown' },

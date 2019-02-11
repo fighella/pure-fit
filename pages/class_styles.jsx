@@ -6,9 +6,11 @@ import ClassStylesBlock from '../components/class_style/Block';
 import fetch from 'isomorphic-unfetch';
 import { fonts } from '../styles/variables';
 import { AppHelpers } from '../utils/tools';
+import Layout from '../components/Layout';
 const t = AppContent.class_styles;
 
 const Index = (props) => (
+  <Layout>
       <div style={{ background: '#fafafa' }}>
         <Hero
           imgs={['team_91']}
@@ -20,6 +22,7 @@ const Index = (props) => (
         <Header>{t.class_styles_heading}</Header>
         <ClassStylesBlock classStyles={props.classStyles} />
       </div>
+      </Layout>
     );
 
 Index.getInitialProps = async function() {

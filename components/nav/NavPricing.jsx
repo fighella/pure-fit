@@ -38,7 +38,7 @@ const NavPricing = ({ name, sub_title, terms, price, description }) => (
     <p>
       {terms} {price}
     </p>
-    <p>{pureButton('Learn More', '/members')}</p>
+    <p>{pureButton('Learn More', '/pricing')}</p>
   </div>
 );
 

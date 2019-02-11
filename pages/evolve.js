@@ -5,6 +5,7 @@ import styled, { css } from 'styled-components';
 import PureData from '../utils/src';
 import EvolveRow from '../components/evolve/row';
 import Hero from '../components/Hero';
+import fetch from 'isomorphic-unfetch';
 import { EvolveConfig } from '../components/evolve/config';
 import { AppContent } from '../data/content';
 import Head from 'next/head'

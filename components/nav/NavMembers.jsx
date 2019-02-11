@@ -66,9 +66,9 @@ class NavMembers extends Component {
           <ul>
             <SubNav locations={AppNav.classes} setLocation={this.setLocation} />
           </ul>
-          {navHeading('Student/Senior Discounts', '/members')}
+          {navHeading('Student/Senior Discounts', '/pricing')}
           <br />
-          {navHeading('Karma Program', '/members')}
+          {navHeading('Karma Program', '/pricing')}
         </Col>
         <Col xs={8}>{pricing}</Col>
       </Row>
@@ -84,7 +84,7 @@ const SubNav = ({ locations, setLocation }) => (
         onFocus={() => setLocation(item.name)}
         onMouseOver={() => setLocation(item.name)}
       >
-        <a href="/members">{item.name}</a>
+        <a href="/pricing">{item.name}</a>
       </li>
     ))}
   </ul>

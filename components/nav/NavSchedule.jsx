@@ -18,23 +18,24 @@ class NavSchedule extends Component {
   };
 
   render() {
-    const { loaded, classes } = this.props;
     const { location } = this.state;
     return (
       <Row>
         <Col xs={2}>
           {navHeading('Classes by Location')}
           <SubNav locations={AppNav.locations} setLocation={this.setLocation} />
-          {navHeading('Workshops', '/workshops')}
+          {navHeading('Workshops', '/evolve')}
           <br />
-          {navHeading('Class Styles', '/class-styles')}
+          {navHeading('Class Styles', '/class_styles')}
           <br />
           {navHeading('Classes by Teacher', '/team')}
           <br />
           {navHeading('New to Yoga?', '/new')}
         </Col>
         <Col xs={10}>
-          <NavLocations location={location} loaded={loaded} classes={classes} />
+          <p>Nav Under Temporary Maintenance...</p>
+          <span><a href="/schedule">See Full Schedule</a></span>
+          {/* <NavLocations location={location} /> */}
         </Col>
       </Row>
     );
