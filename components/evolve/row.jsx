@@ -10,8 +10,20 @@ import {
 import EvolveTeaser from './teaser';
 import MiniWorkshop from '../MiniWorkshop';
 import { EvolveConfig } from './config';
+import Link from 'next/link'
+import { withRouter } from 'next/router';
 
 const [style] = [EvolveConfig.style];
+
+const LinkWrapper = (props) => (
+  <div style={{ minWidth: '31%' }}>
+    <Link style={{ maxWidth: '100%' }} key={props.ws.id} href={`/evolve/?id=${props.ws.id}&title=${props.ws.title.toLowerCase().replace(/ /g, '-')}`} as={`/evolve/${props.ws.id}/${props.ws.title.toLowerCase().replace(/ /g, '-')}`}>
+    <a style={{ width: '100%' }}>
+      {props.children}
+    </a>
+  </Link>
+  </div>
+)
 
 class EvolveRow extends Component {
   constructor(props) {
@@ -33,11 +45,7 @@ class EvolveRow extends Component {
     const { isLink } = this.props;
     const { loadedWorkshop } = this.state;
 
-    if (isLink) {
-      alert(
-        `/evolve/${ws.id}/${ws.title.toLowerCase().replace(/ /g, '-')}`
-      );
-    } else {
+    if (!isLink) {
       this.setState({
         loadedWorkshop:
           loadedWorkshop && loadedWorkshop.id === ws.id ? (
@@ -127,21 +135,26 @@ class EvolveRow extends Component {
     if (not) {
       workshopsList = workshopsList.filter(this.notThisOne);
     }
+    
     const cols = workshopsList
       .slice(start, finish)
-      .map((ws, index) => (
-        <MiniWorkshop
-          workshop={ws}
-          noneActive={!loadedWorkshop}
-          isActive={loadedWorkshop === ws}
-          onClick={() => this.showDescription(ws)}
-          key={ws.id}
-          inView={index <= 2}
-          rowWidth={dimensions.width}
-          onMouseEnter={() => this.fadeOthers()}
-          onMouseLeave={() => this.unfadeOthers()}
-        />
-      ));
+      .map((ws,index) => {
+        const mw = <MiniWorkshop
+        workshop={ws}
+        noneActive={!loadedWorkshop}
+        isActive={loadedWorkshop === ws}
+        onClick={() => this.showDescription(ws)}
+        key={ws.id}
+        inView={index <= 2}
+        rowWidth={dimensions.width}
+        onMouseEnter={() => this.fadeOthers()}
+        onMouseLeave={() => this.unfadeOthers()}
+      />
+      return(
+        this.props.isLink ? <LinkWrapper ws={ws} index={index} children={mw} /> : mw
+      )}
+      );
+
     const scrollUp = this.shouldScrollUp(
       <ScrollRightButton role="button" onClick={() => this.scrollUp()}>
         <FontAwesomeIcon
@@ -236,4 +249,4 @@ const ScrollLeftButton = styled.button`
   }
 `;
 
-export default EvolveRow;
+export default withRouter(EvolveRow);

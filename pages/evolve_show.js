@@ -41,13 +41,13 @@ function Content({ workshops }) {
         <br />
         <Container fluid>
           <Row>
-            <Col xs={7}>
+            <Col xs={12} md={7}>
               <h3>
                 {workshop.title} {workshop.teaser_text}
               </h3>
               <div dangerouslySetInnerHTML={{ __html: textile(desc) }} />
             </Col>
-            <Col xs={5}>
+            <Col xs={12} md={5}>
               <EvolveTeachers id={workshop.id} header={false} />
               <p style={{ textAlign: 'center' }}>
                 <Favorite
@@ -154,6 +154,10 @@ const NavRow = styled.div`
   justify-content: space-between;
   border-bottom: 1px solid #ccc;
   border-top: 1px solid #ccc;
+  @media (max-width: 500px) {
+    display: block;
+    text-align: center;
+  }
 `;
 const NavItem = styled.div`
   color: #999;
@@ -161,6 +165,11 @@ const NavItem = styled.div`
   text-align: ${props => props.align};
   padding: 0.5em 0.8em;
   position: relative;
+  @media (max-width: 500px) {
+    text-align: center;
+    color: #333;
+  }
+ 
 `;
 
 const BookNow = styled.a`

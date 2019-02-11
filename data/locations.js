@@ -3,8 +3,7 @@ export const AppLocations = {
   all: [
     {
       name: 'Pure Yoga Westboro',
-      description:
-        'Some handy info about this place... How hot is the hot room? First location? Door opens when? Do I need a key etc... Facilities',
+      description: 'Come visit our original modern Hot Yoga Studio in conveniently located Westboro, Ottawa.',
       handle: 'westboro',
       address: '279A Richmond Road',
       phone: '613-680-PURE (7873)',
@@ -30,22 +29,21 @@ export const AppLocations = {
           link: 'http://www.octranspo.com/images/files/maps/area_map/WEB.pdf'
         }
       ],
-      where_to_park: '...missing...',
+      where_to_park: 'Please call us for the best information.',
       images: [''],
       map:
         'https://www.google.ca/maps/vt/data=qRx1kFp8Ep9FtRKPY9l198ZvqcX-352k2C62IuzPiQEXT9VPIbIWD9zSZqCyLMPdliMcQ2mrsvbd9eJpln08yj8xZ0EbEAkHWp7JhB4MkkrA9AGpU-sfeZU6lH8RUZud2PHjbXKeDHm9TM4ZgmHdBgFIRzDDNhpEsRDBcqDYeMq5PnEze4Lkw3q9Pro1g2sW3xNFv_FiibDAv34W0QBM37gRFXAo3QJcL90cbnBKGA'
     },
     {
       name: 'Pure Yoga Centretown',
-      description:
-        'Some handy info about this place... How hot is the hot room? First location? Door opens when? Do I need a key etc... Facilities',
+      description: 'Come visit our spacious and modern Hot Yoga Studio in conveniently located Centretown, Ottawa.',
       handle: 'centretown',
       address: '359 Bank Street',
       phone: '613-695-PURE (7873)',
       city: 'Ottawa, ON',
       postcode: 'K2P 1X9',
       info: 'centretown@pureyogaottawa.com',
-      where_to_park: '...missing...',
+      where_to_park: 'Please call us for the best information.',
       facilities: [
         "Women's and Men's change rooms",
         'Lockers (BYO padlock)',
@@ -78,7 +76,7 @@ export const AppLocations = {
     {
       name: 'Pure Yoga Downtown',
       description:
-        'Some handy info about this place... How hot is the hot room? First location? Door opens when? Do I need a key etc... Facilities',
+        'Come visit our modern Hot Yoga Studio in conveniently located Downtown, Ottawa.',
       handle: 'downtown',
       address: '71 Bank Street (Suite 3)',
       phone: '613-422-PURE (7873)',
@@ -97,7 +95,7 @@ export const AppLocations = {
       ],
       images: [''],
       city: 'Ottawa, ON',
-      where_to_park: '...missing...',
+      where_to_park: 'Please call us for the best information.',
       bus_schedules: [
         {
           name: 'Downtown OC Transpo',

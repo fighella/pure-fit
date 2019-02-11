@@ -38,7 +38,7 @@ class MiniWorkshop extends Component {
     const colWidth = {
       overflow: 'display',
       minWidth: hovered && noneActive ? widthizer : widthizer,
-      transition: 'all 0.5s',
+      transition: 'color 0.5s',
       marginTop: hovered && noneActive ? 0 : 5,
       borderColor: isActive ? 'pink' : 'transparent',
       opacity: isActive || hovered || noneActive ? 1 : 0.45
@@ -46,7 +46,7 @@ class MiniWorkshop extends Component {
 
     const openArrow = {
       opacity: hovered ? 1 : 0,
-      transition: 'all 0.5s'
+      transition: 'opacity 0.5s'
     };
     return hasImage ? (
       <div
@@ -62,7 +62,7 @@ class MiniWorkshop extends Component {
           src={data.teaser_image.url.replace('dev', 'prod')}
           alt={data.title}
           style={{
-            transition: 'all 0.4s',
+            transition: 'box-shadow 0.4s',
             boxShadow: hovered ? '0px 10px 50px #999' : false
           }}
         />

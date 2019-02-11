@@ -22,10 +22,10 @@ export function Schedule({ classes, location, mini, loaded, name, full_link }) {
     <tr>
       <td>
         {loaded ? (
-          'No classes at this location today.'
+          'No classes found.'
         ) : (
-          <div>
-            Spinner
+          <div>a
+            {loaded ? '...' : <img src="/static/ajax-loader.gif" />}
           </div>
         )}
       </td>
@@ -60,7 +60,7 @@ export function Schedule({ classes, location, mini, loaded, name, full_link }) {
         innerSchedule
       ) : (
         <LoadBlock>
-          Spinner
+            {loaded ? '...' : <img src="/static/ajax-loader.gif" />}
         </LoadBlock>
       )}
     </ScheduleBlock>

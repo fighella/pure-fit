@@ -40,7 +40,7 @@ function Teacher({ teacher }) {
     <Layout>
       <Head>
         <title>
-         HEAD TAG {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Yoga Ottawa
+          {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Yoga Ottawa
         </title>
         <meta property="og:title" content={`${teacher.name} ${teacher.position} | Pure Yoga Ottawa`}/>
         <meta property="og:type" content="instructor" />
@@ -48,7 +48,6 @@ function Teacher({ teacher }) {
         <meta property="og:description" content={`{teacher.first_name} is a  at Pure Yoga Ottawa. Come join Amber for some Hot Yoga`}/>
         <meta property="og:url" content="http://cdn.pureyogaottawa.com/pure-team/amber-stratton" />
         <meta property="og:image" content="https://pureyogaprod.s3.amazonaws.com/uploads/teacher/avatar/195/small_thumb_pyo-5479.jpg" />
-    
       </Head>
         <Hero
           custom_imgs={[teacher.pose_1.background_image.url]}
@@ -125,8 +124,6 @@ Show.getInitialProps = async function(context) {
     console.log('Teachin',json.teachers)
     return {
       teacher: json.teachers,
-      title: 'Init PRPPS | Teachers | Meet your Team | Pure Yoga Ottawa',
-      loaded_teachers: true
     }
   } catch {
     console.log(handle)

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Link from './utils';
-import { withRouter } from 'react-router-dom';
+import { withRouter } from 'next/router';
 import styled, { css } from 'styled-components';
 
 class TeacherCard extends Component {
