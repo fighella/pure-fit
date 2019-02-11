@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import textile from 'textile-js';
 import Favorite from '../components/Favorite';
 import Hero from '../components/Hero';
+import fetch from 'isomorphic-unfetch'
 import PureData from '../utils/src';
 import { AppHelpers } from '../utils/tools'
 import fetch from 'isomorphic-unfetch'
@@ -122,7 +123,7 @@ Show.getInitialProps = async function(context) {
   try {
     const response = await fetch(AppHelpers.mbParams({ teacher: handle }, 'teachers'));
     let json = await response.json();
-    console.log(json.teachers)
+    console.log('Teachin',json.teachers)
     return {
       teacher: json.teachers,
       loaded_teachers: true

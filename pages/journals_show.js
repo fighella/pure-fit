@@ -6,6 +6,8 @@ import styled from 'styled-components';
 import textile from 'textile-js';
 import Socials from '../components/Socials';
 import Layout from '../components/Layout'
+import fetch from 'isomorphic-unfetch';
+import Head from 'next/head';
 import { NewToYogaStrap } from '../components/NewToYogaStrap';
 import { AppHelpers } from '../utils/tools';
 import { withRouter } from 'next/router';
@@ -20,16 +22,16 @@ import {
 import Favorite from '../components/Favorite';
 import BlogCollection from '../components/BlogCollection';
 
-const disqusShortname = 'pureyogaottawa';
 
-const Show = (props) => {
+const Show = ({ blog, router }) => {
+    const disqusShortname = 'pureyogaottawa';
     const disqusConfig = {
       url:
-        'https://www.pureyogaottawa.com/journals/' + props.router.query.handle,
+        'https://www.pureyogaottawa.com/journals/' + router.query.handle,
       identifier: 123,
       title: 'Pure Journal.'
     };
-    const post = props.blog || {};
+    const post = blog || {};
     const author_link = (
       <AuthorLink href={'/team/' + post.author_handle}>
         {post.author}
@@ -128,15 +130,21 @@ const Show = (props) => {
           <NewToYogaStrap />
         </div>
     );
-    return(<Layout>{content}</Layout>);
+    return(<Layout> <Head>
+      <title>
+      Bloggy Post
+      </title>
+    </Head> {content}</Layout>);
 }
 
 
 Show.getInitialProps = async function(context) {
-  const { handle } = context.query;
+  const { handle } = context.query
+  console.log('ShowHandle',handle)
   try {
     const response = await fetch(AppHelpers.mbParams({ handle: handle }, 'blog'));
-    let json = await response.json();
+    const json = await response.json();
+    console.log('Bloggin',json);
     return {
       blog: json.blogs[0]
     }
