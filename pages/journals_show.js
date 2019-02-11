@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Disqus from 'disqus-react';
 import Zoom from 'react-reveal/Fade';
@@ -47,7 +47,6 @@ const Show = withRouter((props) => {
     const contents = post.body
       ? post.body.split('---').map((para, index) => {
           return (
-      
             <React.Fragment>
               {' '}
               <Zoom bottom>
@@ -141,7 +140,7 @@ Show.getInitialProps = async function(context) {
     return {
       blog: json.blogs[0]
     }
-  } catch { 
+  } catch {
     console.log('noFetchError()');
   }
 }

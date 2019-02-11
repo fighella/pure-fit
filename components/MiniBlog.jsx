@@ -11,8 +11,9 @@ class Mini extends Component {
   render() {
     var teaser = <p>{this.props.desc}</p>;
     var blogClassName = this.isFull() ? 'mini-blog flexCol' : 'mini-blog';
+    const { slug } = this.props;
     var read_more = (
-      <Link href={`/journal/${this.props.slug}`}>
+      <Link href={`/journals_show?handle=${slug}`} as={`/journals/${slug}`}>
       <a
         className="btn btn-primary btn-sm btn-red"
       >

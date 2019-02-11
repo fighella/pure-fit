@@ -335,8 +335,8 @@ export const AppContent = {
     what_is: {
       title: 'About Pure Yoga.',
       contents: [
-        'Pure Yoga was founded by lifelong best friends Amber Stratton and Jen Dalgleish. Their dream was to create a yoga studio of the same calibre as the ones they had visited in other big cities around the world, and a place for yogis to come and have fun, relax and grow the love of their practice both on and off the mat. ',
-        'The dream was realised with the opening of the Westboro studio in 2012. Ottawa finally had a world-class yoga studio. Pure Yoga quickly expanded to open the Centretown and Downtown locations, and Pure Ottawa grew further with the addition of the Pure Kitchen vegetarian restaurants.'
+        'Pure Yoga was founded by lifelong best friends Amber Stratton and Jen Dalgleish. Their vision was to bring their community not just a great yoga studio, but a lifestyle. A place where every student feels at home, a place to grow the love for the practice as well as give students the tools for healthy living both on and off the mat.',
+        'Pure is not just studio about yoga, it is about lifestyle and community. With the opening of their first studio in Westboro in 2012, this dream became a reality, and Ottawa finally had a world-class yoga studio. Pure Yoga quickly expanded to open the Centretown and Downtown locations and in 2015 Pure Kitchen Vegetarian Food and Juice Bar was born, followed quickly by 3 more locations in the city. This was the perfect compliment as to what it means to live the Pure way.'
       ],
       imgs: [
         'https://s3.amazonaws.com/pureyogaottawa.com/website/about/2.jpg',
@@ -356,12 +356,12 @@ export const AppContent = {
     benefits: {
       title: "Ottawa's Yogi Community",
       contents: [
-        'Today Pure Yoga remains a favourite destination for Ottawa’s yogi community. A huge range of class styles are taught across the different studio locations, led by experienced and passionate teachers from Ottawa and beyond, including founders Jen and Amber. As well as scheduled yoga classes, Pure Yoga also offers an exciting range of workshop events for yogis to expand their practice, as well as teacher training programs, both here in Ottawa and abroad. Pure Yoga leads a series of yoga retreats throughout the year, to exotic places such as Costa Rica and Australia as well as Canadian destinations. Pure Yoga classes can now also be streamed online for home practice.'
+        'Today Pure Yoga remains a favourite destination for Ottawa’s yogi community. A huge range of class styles are taught at all locations, led by experienced and passionate teachers from Ottawa and beyond, including founders Jen and Amber. As well as scheduled yoga classes, Pure Yoga also offers an exciting range of workshop events for yogis to evolve their practice, as well as teacher training programs, both here in Ottawa and abroad. Pure Yoga leads a series of yoga retreats throughout the year, with destinations including Costa Rica and Australia. Pure Yoga is also available online for you to practice with your favourite teachers at home, on your travels, or when you can’t make it into the studio.'
       ]
     },
     sweat: {
       contents: [
-        'Quite simply, we think yoga should be an uplifting, fun and enjoyable part of your life. We want to help you to develop your passion, and live and love the ‘Pure’ lifestyle. Whether you’re a local, a visitor, student, teenager or a grandparent, we want Pure Yoga to become YOUR happy place. Come and join our community, we look forward to welcoming you.'
+        'At Pure we feel yoga should be an uplifting, fun part of your life. We want to help you to develop your passion, and live and love the ‘Pure’ lifestyle. Whether you’re a local, a visitor, student, teenager or a grandparent, we want Pure Yoga to become YOUR happy place. Come and join our community, we look forward to welcoming you.'
       ],
       imgs: [
         'https://s3.amazonaws.com/pureyogaottawa.com/website/about/8.jpg',
