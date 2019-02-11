@@ -9,7 +9,6 @@ import { ClassSummary } from './Summary';
 import { isFuture } from '../Schedule';
 
 // import Favorite from '../Favorite';
-
 const zone = 'Etc/GMT';
 
 class ScheduleRow extends Component {
@@ -141,7 +140,7 @@ class ScheduleRow extends Component {
           </td>
           <td className="class-action">
             {isFuture(yoga_class.start_time) ? (
-              <a href="/" className="btn btn-sm book-class">
+              <a href={`https://clients.mindbodyonline.com/ws.asp?studioid=21952&stype=-7&sTG=22&sVT=5&sView=day&date=${moment.tz(yoga_class.start_time, zone).format('MM%2FDD%2FYYYY')}&sLoc=${yoga_class.class_details.location.id}`} target="_blank" className="btn btn-sm book-class">
                 BOOK
                 {this.isBooked() ? 'ED' : false}
               </a>
