@@ -133,9 +133,10 @@ const Show = withRouter((props) => {
 })
 
 
-Show.getInitialProps = async function() {
+Show.getInitialProps = async function(context) {
+  const { handle } = context.query;
   try {
-    const response = await fetch(AppHelpers.mbParams({}, 'blog'));
+    const response = await fetch(AppHelpers.mbParams({ handle: handle }, 'blog'));
     let json = await response.json();
     return {
       blog: json.blogs[0]
