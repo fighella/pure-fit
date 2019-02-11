@@ -28,7 +28,6 @@ const Show = (props) => (
 // https://stackoverflow.com/questions/12931828/convert-returned-json-object-properties-to-lower-first-camelcase
 function Teacher({ teacher }) {
   const workshops_data = []
-  const docTitle = [teacher.title, 'Yogi', 'Pure Yoga Ottawa'].join(' | ');
   const workshops = workshops_data ? (
     <EvolveRow
       title={`${teacher.first_name}'s Upcoming Workshops, Training & Retreats`}

@@ -22,7 +22,7 @@ import BlogCollection from '../components/BlogCollection';
 
 const disqusShortname = 'pureyogaottawa';
 
-const Show = withRouter((props) => {
+const Show = (props) => {
     const disqusConfig = {
       url:
         'https://www.pureyogaottawa.com/journals/' + props.router.query.handle,
@@ -129,7 +129,7 @@ const Show = withRouter((props) => {
         </div>
     );
     return(<Layout>{content}</Layout>);
-})
+}
 
 
 Show.getInitialProps = async function(context) {
