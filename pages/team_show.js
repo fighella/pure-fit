@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import textile from 'textile-js';
 import Favorite from '../components/Favorite';
 import Hero from '../components/Hero';
-import fetch from 'isomorphic-unfetch'
 import PureData from '../utils/src';
 import { AppHelpers } from '../utils/tools'
 import fetch from 'isomorphic-unfetch'
