@@ -20,6 +20,7 @@
     { "src": "/workshops", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/evolve" } },
     { "src": "/hot-yoga-schedule", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/schedule" } },
     { "src": "/pure-team", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/team" } },
+    { "src": "/pure-team/(?<id>[^/]*)", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/team/$id" } },
     { "src": "/p/contact-us", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/contact" } },
     { "src": "/yoga-class-styles/(?<id>[^/]*)", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/class_styles/$id" } }
   ]
