@@ -15,12 +15,10 @@ export default class MyApp extends App {
 
   render () {
     const {Component, pageProps} = this.props
-    console.log('pageProps',pageProps);
     return <Container>
       <Head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>PP!</title>
-        
+        <title>{pageProps ? pageProps.title : 'Pure Yoga Ottawa - Westboro, Centretown, Downtown'}</title>
       </Head>
       <Component {...pageProps} />
     </Container>

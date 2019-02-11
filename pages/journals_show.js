@@ -132,7 +132,7 @@ const Show = ({ blog, router }) => {
     );
     return(<Layout> <Head>
       <title>
-      Bloggy Post
+        {post.title} | Pure Yoga Ottawa Journal
       </title>
     </Head> {content}</Layout>);
 }
@@ -146,7 +146,8 @@ Show.getInitialProps = async function(context) {
     const json = await response.json();
     console.log('Bloggin',json);
     return {
-      blog: json.blogs[0]
+      blog: json.blogs[0],
+      someAttr: 'Hello World'
     }
   } catch {
     console.log('noFetchError()');

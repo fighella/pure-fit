@@ -10089,11 +10089,10 @@ function (_App) {
       var _this$props = this.props,
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
-      console.log('pageProps', pageProps);
       return react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_app__WEBPACK_IMPORTED_MODULE_7__["Container"], null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(next_server_head__WEBPACK_IMPORTED_MODULE_8___default.a, null, react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("meta", {
         name: "viewport",
         content: "width=device-width, initial-scale=1.0"
-      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("title", null, "PP!")), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Component, pageProps));
+      }), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement("title", null, pageProps ? pageProps.title : 'Pure Yoga Ottawa - Westboro, Centretown, Downtown')), react__WEBPACK_IMPORTED_MODULE_9___default.a.createElement(Component, pageProps));
     }
   }], [{
     key: "getInitialProps",

@@ -40,7 +40,7 @@ function Teacher({ teacher }) {
     <Layout>
       <Head>
         <title>
-          {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Yoga Ottawa
+         HEAD TAG {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Yoga Ottawa
         </title>
         <meta property="og:title" content={`${teacher.name} ${teacher.position} | Pure Yoga Ottawa`}/>
         <meta property="og:type" content="instructor" />
@@ -125,6 +125,7 @@ Show.getInitialProps = async function(context) {
     console.log('Teachin',json.teachers)
     return {
       teacher: json.teachers,
+      title: 'Init PRPPS | Teachers | Meet your Team | Pure Yoga Ottawa',
       loaded_teachers: true
     }
   } catch {
