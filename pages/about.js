@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { AppContent } from '../data/content';
 import { fonts, colors } from '../styles/variables';
 import { AppLocations } from '../data/locations';
+import Head from 'next/head'
 import Layout from '../components/Layout';
 
 const t = AppContent.about;
@@ -11,6 +12,15 @@ class AboutPage extends Component {
   render() {
     return (
       <Layout>
+       <Head>
+        <title>
+          About Pure Yoga Ottawa | Our Story | Pure Yoga Ottawa
+        </title>
+        <meta property="og:title" content={`Our Story | Ottawa's Favorite Yoga | Pure Yoga Ottawa`}/>
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="Discover the story behind Pure Yoga Ottawa" />
+        <meta property="og:url" content="https://www.pureyogaottawa.com/about/" />
+      </Head>
       <div style={{ background: '#fff' }}>
         <WhatIs />
         <Benefits />

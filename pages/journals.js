@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import Zoom from 'react-reveal/Fade';
 import styled from 'styled-components';
 import Hero from '../components/Hero';
+import fetch from 'isomorphic-unfetch';
 import { AppContent } from '../data/content';
 import MiniBlog from '../components/journal/Mini';
 import Socials from '../components/Socials';
@@ -12,6 +13,7 @@ import Layout from '../components/Layout';
 import { fonts } from '../styles/variables';
 import { withRouter } from 'next/router';
 import Link from 'next/link';
+import Head from 'next/head'
 
 const noFetchError = () => console.log('Did not fetch.');
 const t = AppContent.journal;
@@ -72,6 +74,15 @@ class Index extends Component {
     ));
     return (
       <Layout>
+          <Head>
+        <title>
+          Pure Yoga Community Journal | Yoga, Food, Wine, Life | Pure Yoga Ottawa
+        </title>
+        <meta property="og:title" content={`Pure Yoga Journal`}/>
+        <meta property="og:type" content="articles" />
+        <meta property="og:description" content="Discover the story behind Pure Yoga Ottawa" />
+        <meta property="og:url" content="https://www.pureyogaottawa.com/journals/" />
+      </Head>
       <div style={style.body}>
         <Hero
           imgs={['team_21']}
@@ -124,7 +135,9 @@ Index.getInitialProps = async function() {
   try { 
     const response = await fetch(AppHelpers.mbParams({}, 'blogs'))
     const json = await response.json()
-    return { blogs: json.blogs }
+    return { 
+      blogs: json.blogs
+    }
   } catch { 
     noFetchError();
   }

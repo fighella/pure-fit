@@ -7,6 +7,7 @@ import EvolveRow from '../components/evolve/row';
 import Hero from '../components/Hero';
 import { EvolveConfig } from '../components/evolve/config';
 import { AppContent } from '../data/content';
+import Head from 'next/head'
 
 const [style] = [EvolveConfig.style];
 const t = AppContent.evolve;
@@ -83,6 +84,15 @@ class Index extends Component {
     ));
     return (
       <Layout>
+        <Head>
+        <title>
+         Evolve Your Practice | Yoga Workshops, Teacher Training &amp; Retreats | Pure Yoga Ottawa
+        </title>
+        <meta property="og:title" content={`Evolve Your Practice With Us | Pure Yoga Ottawa`}/>
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="Yoga Workshops, Yoga Training, Teacher Training &amp; Retreats." />
+        <meta property="og:url" content="https://www.pureyogaottawa.com/evolve/" />
+      </Head>
       <div style={style.body}>
         <Hero
           imgs={['team_15']}

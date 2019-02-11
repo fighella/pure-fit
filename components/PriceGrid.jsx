@@ -6,7 +6,7 @@ import textile from 'textile-js';
 import { AppContent } from '../data/content';
 import Layout from '../components/Layout';
 import { fonts, colors } from '../styles/variables';
-
+import Head from 'next/head'
 const t = AppContent.members;
 
 const PriceGrid = props => {
@@ -23,6 +23,15 @@ const PriceGrid = props => {
   ));
   return (
     <Layout>
+      <Head>
+        <title>
+          Yoga Memberships &amp; Class Packs | Pricing, Student and Seniors Info | Pure Yoga Ottawa
+        </title>
+        <meta property="og:title" content={`Join the Pure Yoga Community | Pure Yoga Ottawa`}/>
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="Yoga for Everybody. Memberships and Class Packs to suit you." />
+        <meta property="og:url" content="https://www.pureyogaottawa.com/pricing/" />
+      </Head>
     <Container>
       <div className="page-header">
         <div className="schedule-heading">

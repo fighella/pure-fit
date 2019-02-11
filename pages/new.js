@@ -6,13 +6,22 @@ import { fonts, colors } from '../styles/variables';
 import textile from 'textile-js';
 import { AppContent } from '../data/content';
 import { AppLocations } from '../data/locations';
-  
+import Head from 'next/head'
 const t = AppContent.new;
 
 class NewPage extends Component {
   render() {
     return (
       <Layout>
+          <Head>
+        <title>
+          New To Yoga | Want to try Yoga, but Never Tried? | Pure Yoga Ottawa
+        </title>
+        <meta property="og:title" content={`Discover Hot Yoga | Ottawa's Favorite Yoga | Pure Yoga Ottawa`}/>
+        <meta property="og:type" content="article" />
+        <meta property="og:description" content="Discover the benefits of Hot Yoga." />
+        <meta property="og:url" content="https://www.pureyogaottawa.com/new/" />
+      </Head>
       <div style={{ background: '#fff' }}>
         <TopBanner />
         <WhatIs />

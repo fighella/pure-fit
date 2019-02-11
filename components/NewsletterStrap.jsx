@@ -28,7 +28,7 @@ const CustomForm = () => (
       name="mc-embedded-subscribe-form"
       className="validate"
       target="_blank"
-      novalidate
+      noValidate
     >
       <div style={{ position: 'absolute', left: '-5000px' }} aria-hidden="true">
         <input
@@ -38,14 +38,14 @@ const CustomForm = () => (
           value=""
         />
       </div>
-      <div id="mce-responses" class="clear">
+      <div id="mce-responses" className="clear">
         <div
-          class="response"
+          className="response"
           id="mce-error-response"
           style={{ display: 'none' }}
         />
         <div
-          class="response"
+          className="response"
           id="mce-success-response"
           style={{ display: 'none' }}
         />
@@ -54,7 +54,7 @@ const CustomForm = () => (
         <EmailInput
           type="email"
           name="EMAIL"
-          class="required email"
+          className="required email"
           id="mce-EMAIL"
         />
         <SignUpLink
