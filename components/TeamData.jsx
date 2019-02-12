@@ -62,7 +62,6 @@ function TeamData(WrappedComponent, PureData) {
         .then(data =>
           this.setState({ teacher: data.teachers, loaded_contents: true })
         )
-        .then(() => console.log('inside mount', this.state))
         .catch(err => console.log('Did not fetch your things.'));
     }
     render() {

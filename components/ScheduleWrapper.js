@@ -31,7 +31,6 @@ export default function ScheduleWrapper(WrappedComponent, PureData) {
         .then(data =>
           this.setState({ classes: data.classes, loaded_classes: true })
         )
-        .then(() => console.log('inside mount', this.state))
         .catch(err => console.log('Did not fetch your things.'));
     }
     render() {

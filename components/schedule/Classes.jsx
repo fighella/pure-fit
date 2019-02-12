@@ -30,7 +30,7 @@ class ScheduleClasses extends Component {
         );
 
       return (
-        <React.Fragment key={dateText}>
+        <React.Fragment key={dateText || `w${index}`}>
           {dateText}
           <ScheduleRow yoga_class={_class} index_key={index} mini={mini} />
         </React.Fragment>
@@ -47,9 +47,9 @@ class ScheduleClasses extends Component {
 }
 
 ScheduleClasses.propTypes = {
-  location: PropTypes.shape.isRequired,
-  classes: PropTypes.arrayOf.isRequired,
-  mini: PropTypes.shape.isRequired
+  // location: PropTypes.shape.isRequired,
+  // classes: PropTypes.arrayOf.isRequired,
+  // mini: PropTypes.shape.isRequired
 };
 
 export default ScheduleClasses;

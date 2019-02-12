@@ -19,6 +19,7 @@ class ContactPage extends Component {
       comment: '',
       name: '',
       honeypot: '',
+      secretcode: '123',
       username: 'username',
       from_page: 'pureyogaottawa',
       enquiry_type: 'Pure Yoga Westboro'

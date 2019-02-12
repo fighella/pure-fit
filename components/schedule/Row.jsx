@@ -160,11 +160,11 @@ class ScheduleRow extends Component {
 
 ScheduleRow.propTypes = {
   mini: PropTypes.bool.isRequired,
-  cookies: PropTypes.string.isRequired,
-  yoga_class: PropTypes.shape.isRequired,
-  id: PropTypes.number.isRequired,
-  hideTeacher: PropTypes.bool.isRequired,
-  index_key: PropTypes.string.isRequired
+  // cookies: PropTypes.string.isRequired,
+  // yoga_class: PropTypes.shape.isRequired,
+  // id: PropTypes.number.isRequired,
+  hideTeacher: PropTypes.bool,
+  index_key: PropTypes.number.isRequired
 };
 
 const PopoverButton = styled.button`

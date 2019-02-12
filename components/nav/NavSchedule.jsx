@@ -52,7 +52,7 @@ const SubNav = ({ locations, setLocation }) => (
         onFocus={() => setLocation(item.name)}
         onMouseOver={() => setLocation(item.name)}
       >
-        <Link href={`/location/${item.link}`}>{item.name}</Link>
+        <Link href={`/location/${item.link}`}><a>{item.name}</a></Link>
       </li>
     ))}
   </ul>
@@ -68,6 +68,6 @@ NavSchedule.propTypes = {
 };
 
 SubNav.propTypes = {
-  locations: PropTypes.arrayOf.isRequired,
+  // locations: PropTypes.arrayOf.isRequired,
   setLocation: PropTypes.func.isRequired
 };

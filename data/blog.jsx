@@ -29,7 +29,6 @@ export function BlogData(WrappedComponent, PureData) {
       fetch(url)
         .then(response => response.json())
         .then(data => this.setState({ blogs: data.blogs, loaded_blogs: true }))
-        .then(() => console.log('inside mount', this.state))
         .catch(err => console.log('Did not fetch your things.'));
     }
     render() {

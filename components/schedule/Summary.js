@@ -50,7 +50,6 @@ export class ClassSummary extends Component {
       .then(data =>
         this.setState({ teacher: data.teachers, loaded_teacher: true })
       )
-      .then(() => console.log('inside mount', this.state))
       .catch(err => console.log('Did not fetch your things.'));
   };
   render() {

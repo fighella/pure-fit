@@ -32,7 +32,6 @@ export function ContentData(WrappedComponent, PureData) {
         .then(data =>
           this.setState({ contents: data.contents, loaded_contents: true })
         )
-        .then(() => console.log('inside mount', this.state))
         .catch(err => console.log('Did not fetch your things.'));
     }
     render() {

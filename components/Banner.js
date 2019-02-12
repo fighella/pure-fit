@@ -45,7 +45,6 @@ export class Banner extends Component {
       .then(data =>
         this.setState({ items: data.contents, loaded_contents: true })
       )
-      .then(() => console.log('inside mount', this.state))
       .catch(err => console.log('Did not fetch your things.'));
   };
   onExiting() {

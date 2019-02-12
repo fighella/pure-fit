@@ -205,14 +205,14 @@ class EvolveRow extends Component {
   }
 }
 
-EvolveRow.propTypes = {
-  isLink: PropTypes.bool.isRequired,
-  not: PropTypes.bool.isRequired,
-  limit: PropTypes.number.isRequired,
-  skip: PropTypes.number.isRequired,
-  workshops: PropTypes.arrayOf.isRequired,
-  title: PropTypes.string.isRequired
-};
+// EvolveRow.propTypes = {
+//   isLink: PropTypes.bool.isRequired,
+//   not: PropTypes.bool.isRequired,
+//   limit: PropTypes.number.isRequired,
+//   skip: PropTypes.number.isRequired,
+//   workshops: PropTypes.arrayOf.isRequired,
+//   title: PropTypes.string.isRequired
+// };
 
 const ScrollRightButton = styled.button`
   position: absolute;

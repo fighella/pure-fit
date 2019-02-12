@@ -36,6 +36,7 @@ const CustomForm = () => (
           name="b_aecaba1342217654b91790ed1_3c7af5a2a1"
           tabIndex="-1"
           value=""
+          readOnly
         />
       </div>
       <div id="mce-responses" className="clear">

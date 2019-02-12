@@ -219,10 +219,10 @@ const LoadBlock = styled.div`
 `;
 
 Schedule.propTypes = {
-  location: PropTypes.arrayOf.isRequired,
-  classes: PropTypes.arrayOf.isRequired,
-  mini: PropTypes.bool.isRequired,
-  loaded: PropTypes.bool.isRequired,
+  // location: PropTypes.arrayOf,
+  // classes: PropTypes.arrayOf.isRequired,
+  mini: PropTypes.bool,
+  loaded: PropTypes.bool,
   name: PropTypes.string.isRequired,
   full_link: PropTypes.bool.isRequired,
 };

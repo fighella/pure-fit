@@ -1,21 +1,23 @@
 import React, { Component } from 'react';
-import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import styled from 'styled-components';
 import { fonts, colors } from '../styles/variables';
-import textile from 'textile-js';
-import { AppContent } from '../data/content';
-import { AppLocations } from '../data/locations';
 import Head from 'next/head'
-const t = AppContent.karma;
 
-class KarmaPage extends Component {
-  render() {
+const contentful = require('contentful');
+const SPACE_ID = 'hmbn1d6s90j4'
+const ACCESS_TOKEN = 'ad22c819dfadabb93437878e689131d7e64b841bc6d5ee52f333c02fcfee5d8f'
+const client = contentful.createClient({
+  space: SPACE_ID,
+  accessToken: ACCESS_TOKEN
+})
+
+const KarmaPage = () => {
     return (
       <Layout>
           <Head>
         <title>
-          New To Yoga | Want to try Yoga, but Never Tried? | Pure Yoga Ottawa
+          Karma Yogi | Work for Yoga | Pure Yoga Ottawa
         </title>
         <meta property="og:title" content={`Discover Hot Yoga | Ottawa's Favorite Yoga | Pure Yoga Ottawa`}/>
         <meta property="og:type" content="article" />
@@ -23,208 +25,16 @@ class KarmaPage extends Component {
         <meta property="og:url" content="https://www.pureyogaottawa.com/new/" />
       </Head>
       <div style={{ background: '#fff' }}>
-        <TopBanner />
-        <WhatIs />
-        <Offer />
-        <Benefits />
-        <Sweat />
-        <Where />
-        <IntroOffer />
-        <br />
+      KARMA PAGE
+     
       </div>
       </Layout>
     );
   }
-}
 
-const TopBanner = () => {
-  return (
-    <Hero
-      custom_imgs={[
-        'https://s3.amazonaws.com/pureyogaottawa.com/website/team-photos/pure_101.jpg'
-      ]}
-      title={t.title}
-      compact
-      faded={false}
-    />
-  );
-};
-
-const WhatIs = () => {
-  const c = t.what_is;
-  return (
-    <Centered>
-      <MainHeading>{c.title}</MainHeading>
-      <SubHeading>{c.sub_title}</SubHeading>
-      <div>
-        <FlexP>{c.contents[0]}</FlexP>
-      </div>
-      <Relative>
-        <Flare>Pure</Flare>
-        <ImgGrid height={320}>
-          <Block width={20} height={100}>
-            <MainHeading
-              style={{
-                position: 'absolute',
-                textAlign: 'right',
-                bottom: 0,
-                right: '-100%',
-                transformOrigin: 'bottom left',
-                transform: 'rotate(-90deg)'
-              }}
-            >
-              Flexibility
-            </MainHeading>
-          </Block>
-          <Block width={60} height={100} bg={c.imgs[3]} />
-        </ImgGrid>
-        <ImgGrid>
-          <Block width={100} height={52} bg={c.imgs[0]} />
-          <Block width={40} height={40}>
-            <Block width={100} height={100} bg={c.imgs[1]} />
-            <MainHeading style={{ textAlign: 'right' }}>Strength</MainHeading>
-          </Block>
-          <Block width={30} height={48} bg={c.imgs[2]} />
-          <Block width={10} height={48}>
-            <MainHeading
-              style={{
-                position: 'absolute',
-                top: '6%',
-                left: '-30%',
-                textAlign: 'right',
-                transform: 'rotate(90deg)'
-              }}
-            >
-              Tone
-            </MainHeading>
-          </Block>
-        </ImgGrid>
-      </Relative>
-      <div>
-        <FlexP>{c.contents[1]}</FlexP>
-      </div>
-      {try_intro}
-    </Centered>
-  );
-};
-
-const Where = () => {
-  const c = t.where;
-  const locs = AppLocations.all.map((i, index) => {
-    return (
-      <FlexCol>
-        <Loc>
-          <p>
-            <h4>{i.name}</h4>
-            {i.address}
-            <br />
-            {i.phone}
-          </p>
-        </Loc>
-      </FlexCol>
-    );
-  });
-  return (
-    <div>
-      <Centered>
-        <MainHeading>{c.title}</MainHeading>
-        <SubHeading>{c.sub_title}</SubHeading>
-        <FlexRow>{locs}</FlexRow>
-      </Centered>
-    </div>
-  );
-};
-
-const Offer = () => {
-  const c = t.offer;
-  return (
-    <div>
-      <FlexImg bg={c.imgs[0]} />
-    </div>
-  );
-};
-
-const Benefits = () => {
-  const c = t.benefits;
-  const contents = c.contents.map((p, index) => {
-    return <FlexP>{p}</FlexP>;
-  });
-  return (
-    <Centered>
-      <MainHeading>{c.title}</MainHeading>
-      <SubHeading>{c.sub_title}</SubHeading>
-      <div>{contents}</div>
-      {try_intro}
-    </Centered>
-  );
-};
-
-const Sweat = () => {
-  const c = t.sweat;
-  return (
-    <Centered>
-      <MainHeading>{c.title}</MainHeading>
-      <SubHeading>{c.sub_title}</SubHeading>
-      <br />
-      <Relative>
-        <Flare>Yoga</Flare>
-        <ImgGrid height={320}>
-          <Block width={60} height={100} bg={c.imgs[3]} />
-          <Block width={20} height={100} />
-        </ImgGrid>
-        <ImgGrid>
-          <Block width={100} height={52} bg={c.imgs[0]} />
-          <Block width={10} height={48} />
-          <Block width={30} height={48} bg={c.imgs[2]} />
-          <Block width={40} height={40}>
-            <Block width={100} height={100} bg={c.imgs[1]} />
-          </Block>
-        </ImgGrid>
-      </Relative>
-    </Centered>
-  );
-};
-
-const IntroOffer = () => {
-  const c = t.intro;
-  const contents = c.contents.map((p, index) => {
-    return <FlexP dangerouslySetInnerHTML={{ __html: textile(p) }} />;
-  });
-  return (
-    <FlexRow width={'80%'} id="intro">
-      <FlexCol width={'45%'}>
-        <SubHeading>{c.title}</SubHeading>
-        {contents}
-      </FlexCol>
-      <FlexCol width={'45%'}>
-        <PureForm>
-          <h4>Sign up for an Intro Month</h4>
-          <br />
-          <p>{c.deal}</p>
-          <Price>
-            <span>$</span>
-            {c.price}
-          </Price>
-
-          <br />
-          <p>
-            <LearnMoreLink href="/terms">
-              <span>&nbsp;Terms and Conditions&nbsp;</span>
-            </LearnMoreLink>
-          </p>
-          <BookNow
-            href={c.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ display: 'block' }}
-          >
-            Book Now
-          </BookNow>
-        </PureForm>
-      </FlexCol>
-    </FlexRow>
-  );
-};
+client.getEntry('6VZ0HEYiVwUxsGQdIuSGyL')
+.then((content) => console.log(content.fields.title))
+.catch(console.error)
 
 // Styles
 const FlexRow = styled.div`

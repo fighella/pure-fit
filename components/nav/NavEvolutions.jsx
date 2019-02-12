@@ -25,7 +25,7 @@ export default class NavEvolutions extends Component {
   }
 }
 
-NavEvolutions.propTypes = {
-  workshops: PropTypes.arrayOf.isRequired,
-  evolution: PropTypes.string.isRequired
-};
+// NavEvolutions.propTypes = {
+//   workshops: PropTypes.arrayOf.isRequired,
+//   evolution: PropTypes.string.isRequired
+// };

@@ -6,10 +6,12 @@ class ContactForm {
     phone,
     message,
     from_page,
+    secretcode,
     enquiry_type
   }) {
     this.data = {
       email,
+      secretcode,
       name,
       username,
       phone,
