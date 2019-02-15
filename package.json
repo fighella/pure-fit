@@ -1,6 +1,6 @@
 {
   "name": "pure-next",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "index.js",
   "dependencies": {
@@ -43,7 +43,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "dev": "PORT=3004 node server.js",
+    "dev": "PORT=3000 node server.js",
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "now-build": "next build",

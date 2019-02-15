@@ -31,6 +31,12 @@ app.prepare()
     app.render(req, res, actualPage, queryParams)
   })
 
+  server.get('/location/:id', (req, res) => {
+    const actualPage = '/location'
+    const queryParams = { location: req.params.id }
+    app.render(req, res, actualPage, queryParams)
+  })
+
   server.get('/team/:handle', (req, res) => {
     const actualPage = '/team_show'
     const queryParams = { handle: req.params.handle }

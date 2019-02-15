@@ -33,9 +33,8 @@ class NavSchedule extends Component {
           {navHeading('New to Yoga?', '/new')}
         </Col>
         <Col xs={10}>
-          <p>Nav Under Temporary Maintenance...</p>
+          <NavLocations location={location} />
           <span><a href="/schedule">See Full Schedule</a></span>
-          {/* <NavLocations location={location} /> */}
         </Col>
       </Row>
     );
@@ -52,7 +51,7 @@ const SubNav = ({ locations, setLocation }) => (
         onFocus={() => setLocation(item.name)}
         onMouseOver={() => setLocation(item.name)}
       >
-        <Link href={`/location/${item.link}`}><a>{item.name}</a></Link>
+        <Link href={`/schedule/${item.link}`}><a>{item.name}</a></Link>
       </li>
     ))}
   </ul>

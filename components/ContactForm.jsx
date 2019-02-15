@@ -4,7 +4,7 @@ class ContactForm {
     name,
     username,
     phone,
-    message,
+    comment,
     from_page,
     secretcode,
     enquiry_type
@@ -15,7 +15,7 @@ class ContactForm {
       name,
       username,
       phone,
-      message,
+      comment,
       from_page,
       enquiry_type
     };

@@ -23,21 +23,21 @@ class Block extends Component {
     console.log(this.props)
     const cs = classStyles.slice(0, this.state.toShow)
       .map((class_style, index) => {
-        return (
+        return ( <CsCol
+          key={`teacherCol${index}`}
+        >
           <Link as={`/class_styles/${class_style.slug}`} href={`/class_styles_show?handle=${class_style.slug}`} key={class_style.slug}>
           <a title={class_style.title}>
-          <CsCol
-            key={`teacherCol${index}`}
-          >
+         
             <ImgTease bg={class_style.hero.url} />
             <Details>
               <StyleTitle children={class_style.title} />
               <BlockTeaser children={class_style.teaser} />
               <BlockLink href={class_style.slug}>Read More &raquo;</BlockLink>
             </Details>
-          </CsCol>
+          
           </a>
-          </Link>
+          </Link></CsCol>
         );
       });
 

@@ -8,6 +8,7 @@ import { EvolveConfig } from './config';
 import styled from 'styled-components';
 import EvolveTeachers from './teachers';
 import Favorite from '../Favorite';
+import EvolvePresenter from '../../presenters/EvolvePresenter'
 import Link from 'next/link';
 
 const [zone, style] = [EvolveConfig.zone, EvolveConfig.style];

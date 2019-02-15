@@ -14,6 +14,7 @@ class ContactPage extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      submitted: false,
       email: '',
       phone: '',
       comment: '',
@@ -37,6 +38,7 @@ class ContactPage extends Component {
       <Form
         id="state-form"
         onChange={formState => this.setState(formState.values)}
+        onSubmit={() => this.setState({ submitted: true })}
       >
         {({ formState }) => (
           <div>
@@ -56,11 +58,11 @@ class ContactPage extends Component {
               <Text field="phone" id="state-phone" />
             </p>
             <p>
-              <label htmlFor="state-message">Message</label>
+              <label htmlFor="state-comment">Comment</label>
               <br />
               <TextArea
-                field="message"
-                id="state-message"
+                field="comment"
+                id="state-comment"
                 cols={36}
                 rows={10}
                 style={{ border: '1px solid #ccc', width: '95%' }}
@@ -113,7 +115,7 @@ class ContactPage extends Component {
             <div>
               <MainHeading>{t.subtitle}</MainHeading>
               <p>{t.content}</p>
-              {form}
+              {this.state.submitted ? 'Thank you for your message. Someone will get back to you shortly.' : form}
             </div>
           </FlexCol>
           <FlexCol>

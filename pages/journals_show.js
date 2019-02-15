@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
 import Disqus from 'disqus-react';
-import Zoom from 'react-reveal/Fade';
 import styled from 'styled-components';
 import textile from 'textile-js';
 import Socials from '../components/Socials';
@@ -28,7 +27,7 @@ const Show = ({ blog, router }) => {
     const disqusConfig = {
       url:
         'https://www.pureyogaottawa.com/journals/' + router.query.handle,
-      identifier: 123,
+      identifier: router.query.handle,
       title: 'Pure Journal.'
     };
     const post = blog || {};
@@ -51,7 +50,6 @@ const Show = ({ blog, router }) => {
           return (
             <React.Fragment>
               {' '}
-              <Zoom bottom>
                 <JournalContent
                   dangerouslySetInnerHTML={{ __html: textile(para) }}
                 />
@@ -62,7 +60,6 @@ const Show = ({ blog, router }) => {
                     ''
                   )}
                 </ImgHolder>
-              </Zoom>
             </React.Fragment>
         
           );

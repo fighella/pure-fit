@@ -8,6 +8,7 @@ import NavMembers from '../components/nav/NavMembers';
 import NavSchedule from '../components/nav/NavSchedule';
 import { NavLogin } from '../components/nav/NavLogin';
 import { NavEvolve } from '../components/nav/NavEvolve';
+import NavSearch from '../components/nav/NavSearch';
 // import { NavStream } from '../nav/NavStream';
 import NavPricing from '../components/nav/NavPricing';
 import { NavBlog } from '../components/nav/NavBlog';
@@ -75,7 +76,8 @@ const AppNav = {
         />
       ),
       link: '/search',
-      has_mega: false
+      has_mega: true,
+      mega: <NavSearch />
     },
     {
       name: 'User',
@@ -156,7 +158,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Class Packs"
-          price="5 Classes: $82. 10 Classes: $152"
+          price="5 Classes: $85. 10 Classes: $157"
           sub_title="5 or 10 Class Packs Available."
           description="Any Class. Any Studio. Any Time."
         />

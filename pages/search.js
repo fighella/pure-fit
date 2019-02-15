@@ -44,7 +44,7 @@ const Autocomplete = ({ hits, currentRefinement, refine, searchState }) => (
         {searchState && searchState.query && hits.length >= 1 ? (
           hits.map(hit => (
             <SearchResult key={hit.objectID}>
-              <a href={hit.slug}>&nbsp;</a>
+              <a href={`/${hit.slug}`}>&nbsp;</a>
               <img src={hit.thumb} alt="..." />
               <div>
                 <strong>{hit.title}</strong>

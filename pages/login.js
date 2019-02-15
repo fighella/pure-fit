@@ -96,7 +96,7 @@ class LoginPage extends Component {
     );
     return (
       <Layout>
-      <div style={{ padding: '2em' }}>
+        <div style={{ padding: '2em' }}>
         <MainHeading>{t.title}</MainHeading>
         <SubHeading>{t.subtitle}</SubHeading>
         <Helper>{this.state.action}</Helper>
@@ -106,6 +106,9 @@ class LoginPage extends Component {
           uid:
           {this.state.logged_in}
         </small>
+        <p>
+          <a href="https://clients.mindbodyonline.com/classic/ws?studioid=21952"></a>Login to Mindbody Direct here.
+        </p>
       </div>
       </Layout>
     );

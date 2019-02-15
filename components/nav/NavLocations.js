@@ -2,24 +2,25 @@ import React, { Component } from 'react';
 import { LocationMap } from '../LocationMap';
 import { Row, Col } from 'reactstrap';
 import { AppLocations } from '../../data/locations';
-import { Schedule } from '../Schedule';
+// import { Schedule } from '../ScheduleA';
 import { ScheduleCustom } from '../schedule/Custom';
+import PureData from '../../utils/src';
 import moment from 'moment-timezone';
+import ScheduleWrapper from '../../components/ScheduleWrapper';
+
+const ScheduleWrapped = ScheduleWrapper(ScheduleCustom, PureData);
+
 export class NavLocations extends Component {
   render() {
     const loc =
       this.props.location !== 'all' ? (
         singleLocation(
-          this.props.location,
-          this.props.classes,
-          this.props.loaded
+          this.props.location
         )
       ) : (
         <Row>
           {allLocations(
-            this.props.location,
-            this.props.classes,
-            this.props.loaded
+            this.props.location
           )}
         </Row>
       );
@@ -27,7 +28,7 @@ export class NavLocations extends Component {
   }
 }
 
-function allLocations(current, classes, loaded) {
+function allLocations(current) {
   return AppLocations.all
     .filter(locationMatch, current)
     .map((_location, index) => (
@@ -41,19 +42,18 @@ function allLocations(current, classes, loaded) {
           map={_location.map}
           place_id={_location.google_place_id}
         />
-        <Schedule
+        <ScheduleWrapped
           name={_location.name}
           location={_location.name}
           mini={true}
           day={'Today'}
-          classes={classes}
-          loaded={loaded}
+        
         />
       </Col>
     ));
 }
 
-function singleLocation(current, classes, loaded) {
+function singleLocation(current) {
   const today = moment(new Date());
   const tomorrow = moment(new Date()).add(1, 'days');
   const the_next_day = moment(new Date()).add(2, 'days');
@@ -63,33 +63,30 @@ function singleLocation(current, classes, loaded) {
       <div>
         <Row key={index}>
           <Col>
-            <ScheduleCustom
+            <ScheduleWrapped
               name={_location.name}
               location={_location.name}
               mini={true}
               day={today.format('YYYY-MM-DD')}
-              loaded={loaded}
               days={1}
             />
           </Col>
           <Col>
-            <ScheduleCustom
+            <ScheduleWrapped
               name={_location.name}
               location={_location.name}
               mini={true}
               day={tomorrow.format('YYYY-MM-DD')}
-              loaded={loaded}
               days={1}
               hide_title={true}
             />
           </Col>
           <Col>
-            <ScheduleCustom
+            <ScheduleWrapped
               name={_location.name}
               location={_location.name}
               mini={true}
               day={the_next_day.format('YYYY-MM-DD')}
-              loaded={loaded}
               days={1}
               hide_title={true}
             />

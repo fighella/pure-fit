@@ -122,7 +122,7 @@ const SubNav = props => {
   ) {
     mega_display = (
       <div
-        onClick={() => props.active('')}
+        // onClick={() => props.active('')}
         id="sub-nav"
         onMouseLeave={() => props.active('')}
       >

@@ -8,14 +8,14 @@ export const AppDownload = () => {
       <Row>
         <Col style={{ textAlign: 'center' }}>
           <h4>{t.apps}</h4>
-          <a href="/">
+          <a href="https://itunes.apple.com/ca/app/pure-yoga-ottawa/id656301363?mt=8" target="_blank">
             <img
               src="/static/app_store.png"
               alt="Download on iPhone"
               style={{ maxWidth: 200, margin: 10 }}
             />
           </a>
-          <a href="/">
+          <a href="https://play.google.com/store/apps/details?id=com.fitnessmobileapps.pureyogaottawa&hl=en_CA" target="_blank">
             <img
               src="/static/google_store.png"
               alt="Download on Google Play"

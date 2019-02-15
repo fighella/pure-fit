@@ -21,7 +21,10 @@ export class NavLogin extends Component {
           {navHeading('Mindbody')}
           <p>{t.sub_title}</p>
           <p>
-            {t.account_difficulties} <a href="/">Contact Us</a>
+            {t.account_difficulties} <a href="/contact">Contact Us</a>
+          </p>
+          <p>
+            MindBody <a href="https://clients.mindbodyonline.com/classic/ws?studioid=21952">Login</a>
           </p>
         </Col>
         <Col xs={3}>

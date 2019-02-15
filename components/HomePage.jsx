@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from 'reactstrap';
 import { Banner } from './Banner';
 import { Schedule } from './Schedule';
 import { AppContent as t } from '../data/content';

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import { navHeading } from '../../utils/nav';
+import Link from 'next/link';
 import MiniBlog from '../../components/MiniBlog';
 
 export class NavBlog extends Component {
@@ -12,12 +13,16 @@ export class NavBlog extends Component {
     blogs = blog_data.slice(1, 4).map((blog, index) => {
       return (
         <Col key={blog.slug}>
+        <Link as={`/journals/${blog.slug}`} href={`/journals_show?handle=${blog.slug}`}>
+        <a>
           <MiniBlog
             name={blog.title}
             category={blog.category}
             teaser_image={blog.teaser_image}
             slug={blog.slug}
           />
+          </a>
+          </Link>
         </Col>
       );
     });

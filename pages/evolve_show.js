@@ -3,6 +3,7 @@ import { Container, Row, Col } from 'reactstrap';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
+import EvolvePresenter from '../presenters/EvolvePresenter';
 import {withRouter} from 'next/router'
 import textile from 'textile-js';
 import Hero from '../components/Hero';
@@ -18,8 +19,10 @@ import { fonts, colors } from '../styles/variables';
 const [style] = [EvolveConfig.style];
 const t = AppContent.evolve.show;
 
+
 function Content({ workshops }) {
   const workshop = workshops ? workshops[0] : {};
+  const pWorkshop = new EvolvePresenter(workshop)
   const WorkshopContents = WorkshopData(EvolveRow, PureData);
   const desc = workshop ? workshop.description : false;
 
@@ -29,14 +32,14 @@ function Content({ workshops }) {
         <Hero
           custom_imgs={[workshop.hero_image.url]}
           imgs={[]}
-          title={workshop.title}
+          title={pWorkshop.title}
           subtitle=""
           compact
         />
         <HeroSubNav
-          dates={workshop.custom_dates}
-          location={workshop.custom_location || workshop.location}
-          teachers={workshop.custom_teacher_text || workshop.teacher_text}
+          dates={pWorkshop.datesText}
+          location={pWorkshop.location}
+          teachers={pWorkshop.teacherText}
         />
         <br />
         <Container fluid>
@@ -95,15 +98,20 @@ function Content({ workshops }) {
   return <div>{loaded}</div>;
 }
 
-const HeroSubNav = ({ dates, location, teachers }) => (
+const HeroSubNav = ({ dates, location, teachers }) => { 
+  function hasData(d){
+    return d.data 
+  }
+  const subs = [
+    { data: dates, align: 'left', separator: '️+'},
+    { data: teachers, align: 'center', separator: 'w/' },
+    { data: location, align: 'right', separator: '@'},
+  ].filter(hasData)
+  return(
   <NavRow>
-    <NavItem align="left">{dates}</NavItem>
-    <NavSpacer />
-    <NavItem align="center">{location} Location</NavItem>
-    <NavSpacer />
-    <NavItem align="right">with {teachers}</NavItem>
+    {subs.map((d) => { return(<NavItem align={d.align}><span>{d.separator}</span> {d.data}</NavItem>)})}
   </NavRow>
-);
+)};
 
 HeroSubNav.propTypes = {
   location: PropTypes.string.isRequired,
@@ -165,9 +173,12 @@ const NavItem = styled.div`
   text-align: ${props => props.align};
   padding: 0.5em 0.8em;
   position: relative;
+  width: 33%;
   @media (max-width: 500px) {
     text-align: center;
-    color: #333;
+    width: 100%;
+    color: #666;
+    padding: 0.2em;
   }
  
 `;
