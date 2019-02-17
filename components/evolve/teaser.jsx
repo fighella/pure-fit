@@ -52,6 +52,8 @@ class EvolveTeaser extends Component {
 
   render() {
     const { workShop, hideDescription } = this.props;
+    const pWorkshop = new EvolvePresenter(workShop)
+
     const { view, height } = this.state;
     const infoTabs = [
       defaultTab,
@@ -153,7 +155,8 @@ class EvolveTeaser extends Component {
         </span>
         <h1 style={style.teaser.heading}>{workShop.title}</h1>
         <strong style={style.teaser.details}>
-          {AppHelpers.slashJoin([dates, times, location])}
+        {pWorkshop.location}
+
         </strong>
         <p>
           <strong>{workShop.subtitle}</strong>

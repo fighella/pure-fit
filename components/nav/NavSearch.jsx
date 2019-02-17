@@ -22,7 +22,7 @@ class NavSearch extends Component {
             hitsPerPage={4}
             distinct
           >
-            <CustomAutocomplete defaultRefinement={'yoga'} />
+            <CustomAutocomplete  />
           </InstantSearch>
         </Col>
       </Row>

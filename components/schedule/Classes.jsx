@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import ScheduleRow from './Row';
+import ScheduleInstaRow from './InstaRow';
 
 class ScheduleClasses extends Component {
   render() {
-    let { dateText } = false;
-    const { location, classes, mini } = this.props;
+    let { dateText, dateHead } = false;
+    const { location, classes, mini, view } = this.props;
 
     const classList = location
       ? classes.filter(function f(_class) {
@@ -28,11 +29,26 @@ class ScheduleClasses extends Component {
         ) : (
           false
         );
+        dateHead =
+        index === 0 || classes[index - 1].day !== _class.day ? (
+          <tr key={`class_${_class.id}`}>
+            <td colSpan={3}>
+              <span
+              className='instaDate'
+                style={{ display: 'inline-block', fontWeight: 'bold', padding: '3px' }}
+              >
+                {_class.day}
+              </span>
+            </td>
+          </tr>
+        ) : (
+          false
+        );
 
       return (
         <React.Fragment key={dateText || `w${index}`}>
-          {dateText}
-          <ScheduleRow yoga_class={_class} index_key={index} mini={mini} />
+          {view ? dateHead : dateText}
+          {view ? <ScheduleInstaRow yoga_class={_class} index_key={index} mini={mini} view={view} /> : <ScheduleRow yoga_class={_class} index_key={index} mini={mini} view={view} />}
         </React.Fragment>
       );
     });
@@ -43,7 +59,7 @@ class ScheduleClasses extends Component {
         No classes were loaded for this period.
       </p>
     );
-  }
+    }
 }
 
 ScheduleClasses.propTypes = {

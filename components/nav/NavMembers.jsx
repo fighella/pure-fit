@@ -68,7 +68,7 @@ class NavMembers extends Component {
           </ul>
           {navHeading('Student/Senior Discounts', '/pricing')}
           <br />
-          {navHeading('Karma Program', '/pricing')}
+          {navHeading('Karma Program', '/karma')}
         </Col>
         <Col xs={8}>{pricing}</Col>
       </Row>

@@ -11,12 +11,13 @@ const hasClasses = c => c.length >= 1;
 const isMiniSchedule = m => m === true;
 
 // eslint-disable-next-line camelcase
-export function Schedule({ classes, location, mini, loaded, name, full_link }) {
+export function Schedule({ classes, location, mini, loaded, name, full_link, view }) {
   const schedule = hasClasses(classes) ? (
     <ScheduleClasses
       classes={classes}
       location={location}
       mini={isMiniSchedule(mini)}
+      view={view}
     />
   ) : (
     <tr>
@@ -31,9 +32,10 @@ export function Schedule({ classes, location, mini, loaded, name, full_link }) {
       </td>
     </tr>
   );
+  const schedHead = view ? false : <div className="schedule-heading">{navHeading(name)}</div>
   const innerSchedule = (
     <div className="schedule-container">
-      <div className="schedule-heading">{navHeading(name)}</div>
+      {schedHead}
       <table>
         <tbody>{schedule}</tbody>
       </table>
@@ -55,7 +57,7 @@ export function Schedule({ classes, location, mini, loaded, name, full_link }) {
   );
 
   return (
-    <ScheduleBlock className="schedule">
+    <ScheduleBlock className="schedule" view={view}>
       {hasClasses(classes) >= 1 ? (
         innerSchedule
       ) : (
@@ -107,8 +109,8 @@ const secondaryFont = css`
 `;
 
 const ScheduleBlock = styled.div`
-  background: rgba(255, 255, 255, 0.9);
-  border: 1px solid #efefef;
+  background: ${(props) => props.view ? 'none' : 'rgba(255, 255, 255, 0.9)'};
+  border: ${(props) => props.view ? 'none' : '1px solid #efefef'};
   border-radius: 6px;
   width: 100%;
   tr {
@@ -118,7 +120,7 @@ const ScheduleBlock = styled.div`
     background: #eee;
   }
   tr td {
-    border-bottom: 1px solid #eee;
+    border-bottom: ${(props) => props.view ? 'none' :  '1px solid #eee'};
     padding-bottom: 0.3em;
   }
   td.class-times {

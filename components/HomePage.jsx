@@ -45,7 +45,7 @@ const HomePage = props => {
     );
   });
   const schedule = (
-    <div id="schedule">
+    <div id="schedule" style={{ maxWidth: '98%', margin: '0 auto' }}>
       <div className="page-header">
         <div className="schedule-heading">
           <h2 className="superHeader">{t.hot_yoga_schedule}</h2>

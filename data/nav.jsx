@@ -179,6 +179,7 @@ const AppNav = {
   footer: [
     { name: 'About Pure Yoga', link: '/about' },
     { name: 'Faqs', link: '/faqs' },
+    { name: 'Karma', link: '/karma' },
     {
       name: 'Mindbody Login',
       link:
@@ -187,6 +188,7 @@ const AppNav = {
     { name: 'Westboro', link: '/location/westboro' },
     { name: 'Centretown', link: '/location/centretown' },
     { name: 'Downtown', link: '/location/downtown' },
+    { name: 'Toronto', link: 'https://www.pureyogatoronto.com' },
     { name: 'Contact', link: '/contact' }
   ]
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import textile from 'textile-js';
 import Favorite from '../components/Favorite';
@@ -8,6 +8,7 @@ import { AppHelpers } from '../utils/tools'
 import fetch from 'isomorphic-unfetch'
 import { fonts } from '../styles/variables';
 import Head from 'next/head';
+import Instaview from '../components/Instaview';
 import { Schedule } from '../components/Schedule';
 import EvolveRow from '../components/evolve/row';
 import ScheduleWrapper from '../components/ScheduleWrapper';
@@ -18,6 +19,7 @@ import {withRouter} from 'next/router'
 
 const InstafeedWrapped = SingleColWrapper(Instafeed);
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
+
 
 const Show = (props) => (
   <div style={{ background: '#f5f5f5' }}>
@@ -36,6 +38,16 @@ function Teacher({ teacher }) {
   ) : (
     false
   );
+  const iv = <Instaview bg={teacher.pose_2.background_image.url} name={teacher.first_name}><ScheduleWrapped
+      name={false}
+      teacher={teacher.title}
+      days={7}
+      full_link={false}
+      view={'insta'}
+    /></Instaview>
+  
+  const [insta, setInsta] = useState(false);
+
   const loaded = teacher ? (
     <Layout>
       <Head>
@@ -48,8 +60,12 @@ function Teacher({ teacher }) {
         <meta property="og:description" content={`{teacher.first_name} is a  at Pure Yoga Ottawa. Come join Amber for some Hot Yoga`}/>
         <meta property="og:url" content="http://cdn.pureyogaottawa.com/pure-team/amber-stratton" />
         <meta property="og:image" content="https://pureyogaprod.s3.amazonaws.com/uploads/teacher/avatar/195/small_thumb_pyo-5479.jpg" />
+        <style>
+          @import url('https://fonts.googleapis.com/css?family=Comfortaa');
+        </style>
       </Head>
-        <Hero
+        {insta ? <span onClick={() => setInsta(false)}>{iv}</span> : false}
+         <Hero
           custom_imgs={[teacher.pose_1.background_image.url]}
           title=""
           subtitle=""
@@ -80,6 +96,7 @@ function Teacher({ teacher }) {
               full_link={false}
             />
             <br />
+            <span onClick={() => setInsta(true)}>📷</span>
           </FlexCol>
         </FlexRow>
         {workshops}

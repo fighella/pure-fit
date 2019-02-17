@@ -109,7 +109,7 @@ export default class Show extends Component {
               paddingTop: '2em'
             }}
           >
-            <Col xs={6}>
+            <Col xs={12} md={6}>
               <span id="classes" />
               <ScheduleWrapped
                 name={'Upcoming Classes in ' + loc_pretty}
@@ -120,7 +120,7 @@ export default class Show extends Component {
               />
               <br />
             </Col>
-            <Col xs={6}>
+            <Col xs={12} md={6}>
               <Block>
                 <Section>
                   <span id="overview" />
@@ -199,6 +199,7 @@ const NavRow = styled.div`
   border-bottom: 1px solid #bbb;
   ul {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     justify-content: center;
     margin: 0;
