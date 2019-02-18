@@ -3,12 +3,12 @@ import Measure from 'react-measure';
 import styled from 'styled-components';
 import MiniWorkshop from '../MiniWorkshop';
 import Link from 'next/link'
-import { withRouter } from 'next/router';
+import { withRouter, Router } from 'next/router';
 
 
 const LinkWrapper = (props) => (
-    <Link style={{ minWidth: '31%' }} key={props.ws.id} href={`/evolve/?id=${props.ws.id}&title=${props.ws.title.toLowerCase().replace(/ /g, '-')}`} as={`/evolve/${props.ws.id}/${props.ws.title.toLowerCase().replace(/ /g, '-')}`}>
-    <a style={{ width: '100%' }}>
+    <Link key={props.ws.id} href={`/evolve/?id=${props.ws.id}&title=${props.ws.title.toLowerCase().replace(/ /g, '-')}`} as={`/evolve/${props.ws.id}/${props.ws.title.toLowerCase().replace(/ /g, '-')}`}>
+    <a> 
       {props.children}
     </a>
   </Link>
@@ -28,6 +28,12 @@ class EvolveCollection extends Component {
       }
     };
   }
+  goToLink = (wp) => {
+    Router.push({
+      pathname: wp,
+    })
+  }
+
 
   render() {
     const { loadedWorkshop, start, finish, dimensions } = this.state;
@@ -38,10 +44,10 @@ class EvolveCollection extends Component {
     if (not) {
       workshopsList = workshopsList.filter(this.notThisOne);
     }
-    
     const cols = workshopsList
-      .slice(start, finish)
-      .map((ws,index) => {
+    .slice(start, finish)
+    .map((ws,index) => {
+      const workShopPath = `/evolve/${ws.id}/${ws.title.toLowerCase().replace(/ /g, '-')}`
         const mw =<MiniWorkshop
         workshop={ws}
         noneActive={!loadedWorkshop}
@@ -51,7 +57,7 @@ class EvolveCollection extends Component {
         rowWidth={dimensions.width}
         onMouseEnter={() => this.fadeOthers()}
         onMouseLeave={() => this.unfadeOthers()}
-      />
+        onClick={() => this.goToLink(workShopPath)} />
       return(
         <Col cols={this.props.cols}><LinkWrapper ws={ws} index={index} children={mw} /></Col>
       )}
