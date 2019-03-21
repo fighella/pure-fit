@@ -1,5 +1,5 @@
 import { AppHelpers } from '../utils/tools';
-
+import { withCookies, Cookies } from 'react-cookie';
 class Favorites {
   constructor(props, context) {
     this.cookies = props.cookies;
@@ -63,4 +63,4 @@ class Favorites {
   }
 }
 
-export default Sessions; //esioithRouter(withCookies(Sessions))e;
+export default withCookies(Sessions);

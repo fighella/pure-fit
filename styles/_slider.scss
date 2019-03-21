@@ -9,6 +9,10 @@
   width: 100%;
   min-height: 70vh;
   max-height: 90vh;
+  @media (max-width: 500px) {
+    min-height: 50vh;
+    max-height: 60vh;
+  }
   background-size: cover;
 }
 
@@ -38,6 +42,9 @@
 .sliderActions {
   position: absolute;
   bottom: 10%;
+  @media (max-width: 500px) {
+    bottom: 20%;
+  }
   margin: 0 auto;
   a {
     @include pure-button;

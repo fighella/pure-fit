@@ -82,7 +82,7 @@ class ScheduleRow extends Component {
     const withe = hideTeacher || (
       <React.Fragment>
         <span style={{ fontSize: 12 }}>/w </span>
-        {yoga_class.teacher.split(' ')[0]}
+        {yoga_class.teacher.split(' ')[0]} {RegExp('Jen*|Kate*|Katie*','g').test(yoga_class.teacher.split(' ')[0]) && yoga_class.teacher.split(' ')[1][0] ? `${yoga_class.teacher.split(' ')[1][0]}.` : false}
         {yoga_class.class_details.substitute ? (
           <span
             style={{

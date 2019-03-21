@@ -53,6 +53,7 @@ const PriceGrid = props => {
           <h2 className="superHeader">{t.students_seniors}</h2>
           <br />
           <p>{t.discounts}</p>
+          <p>{t.age}</p>
         </div>
       </div>
     </Container>

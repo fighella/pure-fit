@@ -54,12 +54,12 @@ function Teacher({ teacher }) {
         <title>
           {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Yoga Ottawa
         </title>
-        <meta property="og:title" content={`${teacher.name} ${teacher.position} | Pure Yoga Ottawa`}/>
-        <meta property="og:type" content="instructor" />
-        <meta property="og:type" content="pureyogaottawa:teacher" />
-        <meta property="og:description" content={`{teacher.first_name} is a  at Pure Yoga Ottawa. Come join Amber for some Hot Yoga`}/>
-        <meta property="og:url" content="http://cdn.pureyogaottawa.com/pure-team/amber-stratton" />
-        <meta property="og:image" content="https://pureyogaprod.s3.amazonaws.com/uploads/teacher/avatar/195/small_thumb_pyo-5479.jpg" />
+        <meta property="og:title" content={`${teacher.first_name} ${teacher.last_name} | ${teacher.position} | Pure Yoga Ottawa`}/>
+        <meta property="og:type" content="profile" />
+        <meta property="profile:first_name" content={teacher.first_name} />
+        <meta property="og:description" content={`Hi, I'm ${teacher.first_name} - ${teacher.position} at Pure Yoga Ottawa. Come join me for some Hot Yoga.`}/>
+        <meta property="og:url" content={`https://www.pureyogaottawa.com/team/${teacher.slug}`} />
+        <meta property="og:image" content={teacher.headshot.card.url} />
         <style>
           @import url('https://fonts.googleapis.com/css?family=Comfortaa');
         </style>

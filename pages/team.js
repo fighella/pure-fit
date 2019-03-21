@@ -19,10 +19,10 @@ const Index = () => (
           Your Yoga Teachers | Pure Yogis and Instructors | Pure Yoga Ottawa
         </title>
         <meta property="og:title" content={`Ottawa's Favorite Yoga Team | Pure Yoga Ottawa`}/>
-        <meta property="og:type" content="instructor" />
+        <meta property="og:type" content="profile" />
         <meta property="og:description" content={t.page_title}/>
-        <meta property="og:url" content="https://www.pureyogaottawa.com/team/" />
-        <meta property="og:image" content="https://pureyogaprod.s3.amazonaws.com/uploads/teacher/avatar/195/small_thumb_pyo-5479.jpg" />
+        <meta property="og:url" content="https://www.pureyogaottawa.com/team" />
+        <meta property="og:image" content="https://s3.amazonaws.com/pureyogaottawa.com/website/team-photos/team_457.jpg" />
     
       </Head>
 

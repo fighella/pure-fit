@@ -29,11 +29,8 @@ class Block extends Component {
           <Link as={`/class_styles/${class_style.slug}`} href={`/class_styles_show?handle=${class_style.slug}`} key={class_style.slug}>
           <a title={class_style.title}>
          
-            <ImgTease bg={class_style.hero.url} />
-            <Details>
+            <Details bg={class_style.hero.url}>
               <StyleTitle children={class_style.title} />
-              <BlockTeaser children={class_style.teaser} />
-              <BlockLink href={class_style.slug}>Read More &raquo;</BlockLink>
             </Details>
           
           </a>
@@ -48,7 +45,8 @@ class Block extends Component {
 export default Block;
 
 const CsRow = styled.div`
-  width: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -57,50 +55,49 @@ const CsRow = styled.div`
 `;
 
 const CsCol = styled.div`
-  width: 40%;
+  width: 31%;
   transition: all 0.5s;
   min-height: 160px;
   border: 1px solid #eee;
   display: flex;
   flex-direction: row;
   margin: 0.5em 0;
-  border-radius: 4px;
   color: #333;
   overflow: auto;
   background: #fff;
-  &:hover {
-    border-color: ${colors.red};
+  a { width: 100%;}
+  @media (max-width: 700px) {
+    width: 100%;
   }
+ 
 `;
 
 const Details = styled.div`
-  width: 68%;
-  padding: 4% 0;
-  padding-left: 3%;
-`;
-
-const ImgTease = styled.div`
-  width: 31.8%;
-  background-color: #ccc;
-  background-size: cover;
+  width: 100%;
+  padding-bottom: 85%;
+  position: relative;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  background-size: auto 100%;
   background-position: center center;
   background-repeat: none;
-  position: relative;
-
   ${props => (props.bg ? 'background-image: url(' + props.bg + ');' : false)}
+  transition: background-size 0.4s;
+  &:hover { 
+    background-size: auto 105%;
+  }
 `;
 
 const StyleTitle = styled.h4`
+  position: absolute;
+  bottom: 1%;
+  text-shadow: 0 0 30px #333;
+  width: 100%;
   ${fonts.primary};
-  font-size: 22px;
-  text-transform: none;
-  font-weight: 300;
-`;
-
-const BlockTeaser = styled.p`
-  color: #999;
-`;
-
-const BlockLink = styled.a`
-  color: ${colors.blue};
+  font-size: 42px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 450;
 `;

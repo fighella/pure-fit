@@ -82,9 +82,9 @@ class Favorite extends Component {
 }
 
 Favorite.propTypes = {
-  cookies: PropTypes.string.isRequired,
+  // cookies: PropTypes.string.isRequired,
   favorite_type: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.string.isRequired,
   size: PropTypes.string.isRequired,
   showText: PropTypes.bool.isRequired
 };

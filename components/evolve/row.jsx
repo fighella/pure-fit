@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import Measure from 'react-measure';
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -14,16 +13,6 @@ import Link from 'next/link'
 import { withRouter } from 'next/router';
 
 const [style] = [EvolveConfig.style];
-
-const LinkWrapper = (props) => (
-  <div style={{ minWidth: '31%' }}>
-    <Link style={{ maxWidth: '100%' }} key={props.ws.id} href={`/evolve/?id=${props.ws.id}&title=${props.ws.title.toLowerCase().replace(/ /g, '-')}`} as={`/evolve/${props.ws.id}/${props.ws.title.toLowerCase().replace(/ /g, '-')}`}>
-    <a style={{ width: '100%' }}>
-      {props.children}
-    </a>
-  </Link>
-  </div>
-)
 
 class EvolveRow extends Component {
   constructor(props) {
@@ -45,7 +34,6 @@ class EvolveRow extends Component {
     const { isLink } = this.props;
     const { loadedWorkshop } = this.state;
 
-    if (!isLink) {
       this.setState({
         loadedWorkshop:
           loadedWorkshop && loadedWorkshop.id === ws.id ? (
@@ -60,7 +48,6 @@ class EvolveRow extends Component {
           ),
         wsTab: 'Overview'
       });
-    }
   };
 
   hideDescription = () => {
@@ -151,7 +138,7 @@ class EvolveRow extends Component {
         onMouseLeave={() => this.unfadeOthers()}
       />
       return(
-        this.props.isLink ? <LinkWrapper ws={ws} index={index} children={mw} /> : mw
+        mw
       )}
       );
 

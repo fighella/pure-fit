@@ -7,6 +7,7 @@ import {
   CarouselIndicators
 } from 'reactstrap';
 import PureData from '../utils/src';
+import styled from 'styled-components';
 
 export class Banner extends Component {
   constructor(props) {
@@ -97,7 +98,7 @@ export class Banner extends Component {
             <div className="sliderOverlay" />
           </div>
           <div className="sliderActions carousel-caption">
-            <h3>{item.caption}</h3>
+            <BannerTitle>{item.caption}</BannerTitle>
             <h4>{item.sub}</h4>
             <a className="btn" href={item.button_action}>
               {item.button_text}
@@ -136,3 +137,12 @@ export class Banner extends Component {
     );
   }
 }
+
+
+const BannerTitle = styled.h3`
+    @media (max-width: 376px) {
+      font-size: 60px !important;
+      letter-spacing: 2px !important;
+    }
+
+`

@@ -106,7 +106,7 @@ const HeroSubNav = ({ dates, location, teachers }) => (
 HeroSubNav.propTypes = {
   location: PropTypes.string.isRequired,
   dates: PropTypes.string.isRequired,
-  teachers: PropTypes.arrayOf.isRequired
+  // teachers: PropTypes.arrayOf.isRequired
 };
 
 Content.propTypes = {

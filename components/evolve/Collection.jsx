@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Measure from 'react-measure';
 import styled from 'styled-components';
-import MiniWorkshop from '../MiniWorkshop';
+import Thumbnail from '../evolve/Thumbnail';
 import Link from 'next/link'
 import { withRouter, Router } from 'next/router';
 
 
 const LinkWrapper = (props) => (
-    <Link key={props.ws.id} href={`/evolve/?id=${props.ws.id}&title=${props.ws.title.toLowerCase().replace(/ /g, '-')}`} as={`/evolve/${props.ws.id}/${props.ws.title.toLowerCase().replace(/ /g, '-')}`}>
+    <Link key={props.ws.id} href={`/evolve_show?id=${props.ws.id}&handle=${props.ws.title.toLowerCase().replace('/','-').replace(/ /g, '-')}`} as={`/evolve/${props.ws.id}/${props.ws.title.toLowerCase().replace('/','-').replace(/ /g, '-')}`}>
     <a> 
       {props.children}
     </a>
@@ -28,13 +28,7 @@ class EvolveCollection extends Component {
       }
     };
   }
-  goToLink = (wp) => {
-    Router.push({
-      pathname: wp,
-    })
-  }
-
-
+  
   render() {
     const { loadedWorkshop, start, finish, dimensions } = this.state;
     const { limit, skip, workshops, not, title } = this.props;
@@ -47,8 +41,7 @@ class EvolveCollection extends Component {
     const cols = workshopsList
     .slice(start, finish)
     .map((ws,index) => {
-      const workShopPath = `/evolve/${ws.id}/${ws.title.toLowerCase().replace(/ /g, '-')}`
-        const mw =<MiniWorkshop
+        const mw =<Thumbnail
         workshop={ws}
         noneActive={!loadedWorkshop}
         isActive={loadedWorkshop === ws}
@@ -57,7 +50,7 @@ class EvolveCollection extends Component {
         rowWidth={dimensions.width}
         onMouseEnter={() => this.fadeOthers()}
         onMouseLeave={() => this.unfadeOthers()}
-        onClick={() => this.goToLink(workShopPath)} />
+        />
       return(
         <Col cols={this.props.cols}><LinkWrapper ws={ws} index={index} children={mw} /></Col>
       )}
@@ -108,4 +101,4 @@ const Col = styled.div`
   }
 `
 
-export default withRouter(EvolveCollection);
+export default EvolveCollection;

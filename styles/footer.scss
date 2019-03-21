@@ -10,6 +10,7 @@
     flex-wrap: wrap;
     a { 
       color: #fff;
+      &:hover { color: palevioletred; }
       @include secondary-font;
       font-size: 12px;
 

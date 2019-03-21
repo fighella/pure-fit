@@ -16,7 +16,7 @@ class EvolvePresenter {
   }
 
   get datesText(){
-    return this.cleanDates();
+    return [this.cleanDates(),this.cleanTimes()].join(' | ');
   }
 
   get teacherText(){
@@ -32,9 +32,9 @@ class EvolvePresenter {
   }
 
   cleanTimes() {
-    const times =  [ ...new Set([this.startTime(), this.endTime()].filter(Boolean)) ]
+    // const times =  [ ...new Set([this.startTime(), this.endTime()].filter(Boolean)) ]
     return(
-      this.workshop.customTimes || times.join(' - ')
+      this.workshop.custom_times || ''
     )
   }
 

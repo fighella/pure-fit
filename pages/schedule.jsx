@@ -11,7 +11,8 @@ export default () => <Layout>
         <meta property="og:title" content={`Hot Yoga Schedule | Pure Yoga Ottawa`}/>
         <meta property="og:type" content="article" />
         <meta property="og:description" content="Discover the class for you." />
-        <meta property="og:url" content="https://www.pureyogaottawa.com/schedule/" />
+        <meta property="og:url" content="https://www.pureyogaottawa.com/schedule" />
+        <meta property="og:image" content="https://s3.amazonaws.com/pureyogaottawa.com/website/team-photos/team_147.jpg" />
       </Head>
   <SchedulePage />
   </Layout>

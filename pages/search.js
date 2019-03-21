@@ -67,7 +67,7 @@ const StateResults = connectStateResults(Autocomplete);
 const CustomAutocomplete = connectAutoComplete(StateResults);
 
 const SearchResults = styled.div`
-  width: 100%
+  width: 100%;
   z-index: 100;
   background: #fff;
   border: 1px solid #efefef;
@@ -123,7 +123,7 @@ const SearchInput = styled.input`
 const SearchBar = styled.div`
   padding: 2em;
   position: relative;
-  width: 800px;
+  max-width: 800px;
   margin: 0 auto;
   display: block;
   min-height: 80vh;

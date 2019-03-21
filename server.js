@@ -49,11 +49,7 @@ app.prepare()
     app.render(req, res, actualPage, queryParams)
   })
   
-  server.get('/evolve', (req, res) => {
-    const actualPage = '/evolve'
-    const queryParams = { }
-    app.render(req, res, actualPage, queryParams)
-  })
+ 
 
   server.get('/journals/:handle', (req, res) => {
     const actualPage = '/journals_show'

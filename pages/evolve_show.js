@@ -15,6 +15,7 @@ import EvolveTeachers from '../components/evolve/teachers';
 import EvolveRow from '../components/evolve/row';
 import Favorite from '../components/Favorite';
 import { fonts, colors } from '../styles/variables';
+import EmbedForm from '../components/EmbedForm';
 
 const [style] = [EvolveConfig.style];
 const t = AppContent.evolve.show;
@@ -68,6 +69,7 @@ function Content({ workshops }) {
               >
                 Book Now
               </BookNow>
+              <EmbedForm title={`${workshop.title}`} />
             </Col>
           </Row>
         </Container>
@@ -135,6 +137,7 @@ class EvolveShow extends Component {
     const WorkshopContents = WorkshopData(Content, PureData);
     const loaded = (
       <Layout>
+
       <div style={style.body}>
         <WorkshopContents id={this.props.router.query.id} />
       </div>
@@ -144,14 +147,6 @@ class EvolveShow extends Component {
     return content;
   }
 }
-
-const NavSpacer = styled.div`
-  min-height: 100%;
-  display: block;
-  position: relative;
-  width: 1px;
-  background: #ccc;
-`;
 
 const NavRow = styled.div`
   z-index: 22;

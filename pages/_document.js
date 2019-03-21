@@ -34,6 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
           <meta content="width=device-width, initial-scale=1.0" name="viewport" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta property="og:site_name" content="Pure Yoga Ottawa" />
+         
           <meta property="fb:admins" content="873990164" />
           <meta property="fb:app_id" content="312000085528745" />
           <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossOrigin="anonymous"></link>

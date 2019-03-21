@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
 import { navHeading } from '../../utils/nav';
 import AppNav from '../../data/nav';
-import EvolveRow from '../evolve/row';
+import EvolveCollection from '../evolve/Collection';
 import NavEvolutions from './NavEvolutions';
 import { AppHelpers } from '../../utils/tools';
 const noFetchError = () => console.log('Did not fetch.');
@@ -36,13 +36,13 @@ export class NavEvolve extends Component {
       {
         title: 'Upcoming Workshops',
         workshops: this.state.workshops,
-        limit: 3,
+        limit: 2,
         skip: 0
       },
-      { title: false, workshops: this.state.workshops, limit: 3, skip: 3 }
+      { title: false, workshops: this.state.workshops, limit: 2, skip: 3 }
     ].map((evolve, index) => {
       return (
-        <EvolveRow
+        <EvolveCollection
           limit={evolve.limit}
           skip={evolve.skip}
           title={evolve.title}

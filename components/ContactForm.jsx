@@ -7,7 +7,8 @@ class ContactForm {
     comment,
     from_page,
     secretcode,
-    enquiry_type
+    enquiry_type,
+    subscribed
   }) {
     this.data = {
       email,
@@ -17,7 +18,8 @@ class ContactForm {
       phone,
       comment,
       from_page,
-      enquiry_type
+      enquiry_type,
+      subscribed
     };
   }
 

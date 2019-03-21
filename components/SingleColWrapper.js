@@ -16,4 +16,8 @@ export function SingleColWrapper(WrappedComponent) {
 
 const CustomContainer = styled(Container)`
   padding: ${props => (props.fullWidth ? 0 : false)};
+  @media (max-width: 800px) {
+    min-width: 98% !important;
+    max-width: 98% !important;
+  }
 `;

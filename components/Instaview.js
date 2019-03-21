@@ -45,19 +45,22 @@ const Title = styled.div`
 
   font-weight: 100;
   font-size: 0.8em;
-  transform: rotate(-1deg);
 `
 
 const Classes = styled.div`
-  .instaDate { margin-top: 1.2em;font-weight: 600;  font-family: 'Comfortaa', cursive; letter-spacing: -1px; }
-  transform: rotate(-1deg);
-
-  padding: 0.15em;
-  color: #333;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  max-width: 100%;
+  .instaDate { 
+    margin-top: 1.2em;
+    font-weight: 600;  
+    font-family: 'Comfortaa', cursive; 
+    letter-spacing: -1px; 
+    
+    }
+    padding: 0.15em;
+    color: #333;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    max-width: 100%;
   * { font-size: 3.5vw;}
 
 `

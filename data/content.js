@@ -213,7 +213,8 @@ export const AppContent = {
     call_to_action: 'Book Now',
     students_seniors: 'STUDENT/SENIOR DISCOUNTS',
     discounts:
-      'Full time students and seniors receive $15 off of any class package.  Check in studio for student auto renew membership prices. Valid Student ID must be provided.'
+      'Full time students and seniors receive $15 off of any class package.  Check in studio for student auto renew membership prices. Valid Student ID must be provided.',
+      age: 'Age 14 and older. 17 and under require parent/guardian signature.',
   },
   stream: {
     title: 'Anywhere',
@@ -326,7 +327,12 @@ export const AppContent = {
         question: 'What can I expect from Pure Yoga?',
         answer:
           'We’re a fun, friendly and inclusive place. When you come to practice with us, we’ll encourage you along your yoga path, and provide a happy place that you’ll use to support your healthy and positive lifestyle. What you’ll find at Pure Yoga is a welcoming environment where classes are tailored to all levels, led by some of Canada’s most experienced and passionate teachers.'
-      }
+      },
+      {
+        question: 'How old do I need to be to do yoga at Pure Yoga?',
+        answer:
+          'You must be over 14 years or older. Between 14 to 17 you will need a parent/guardian to sign off.',
+      },
     ]
   },
   about: {

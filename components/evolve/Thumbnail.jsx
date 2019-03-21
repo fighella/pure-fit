@@ -1,18 +1,17 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import { EvolveConfig } from './evolve/config';
+import { EvolveConfig } from './config';
+import { withCookies } from 'react-cookie';
+import Favorite from '../../components/Favorite'
+import styled from 'styled-components'
 const [style] = [EvolveConfig.style];
+;
 
-class MiniWorkshop extends Component {
+class Thumbnail extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      hovered: false
-    };
-  }
-
-  componentWillUnmount() {
-    this.setState({ hovered: false });
+      hovered: false,
+    }
   }
 
   expandElement = () => {
@@ -24,13 +23,8 @@ class MiniWorkshop extends Component {
     this.setState({ hovered: false });
   };
 
-  handleKeyPress = () => {
-    // eslint-disable-next-line no-console
-    console.log('Keys Were Pressed');
-  };
-
   render() {
-    const { workshop, isActive, noneActive, onClick, rowWidth } = this.props;
+    const { workshop, isActive, noneActive, rowWidth } = this.props;
     const { hovered } = this.state;
     const [data] = [workshop];
     const hasImage = data.teaser_image.url;
@@ -43,21 +37,15 @@ class MiniWorkshop extends Component {
       borderColor: isActive ? 'pink' : 'transparent',
       opacity: isActive || hovered || noneActive ? 1 : 0.45
     };
-
-    const openArrow = {
-      opacity: hovered ? 1 : 0,
-      transition: 'opacity 0.5s'
-    };
     return hasImage ? (
       <div
         style={{ ...style.row.col, ...colWidth }}
-        onFocus={() => this.expandElement()}
         onMouseOver={() => this.expandElement()}
         onMouseLeave={() => this.despandElement()}
-        onClick={() => onClick()}
-        onKeyPress={this.handleKeyPress}
-        role="presentation"
       >
+        <FavPosition>
+          <Favorite id={[data.id].join('-')} favorite_type="ws" />
+        </FavPosition>
         <img
           src={data.teaser_image.url.replace('dev', 'prod')}
           alt={data.title}
@@ -66,7 +54,6 @@ class MiniWorkshop extends Component {
             boxShadow: hovered ? '0px 10px 50px #999' : false
           }}
         />
-        <div style={{ ...style.row.openArrow, ...openArrow }}>V</div>
       </div>
     ) : (
       false
@@ -74,12 +61,12 @@ class MiniWorkshop extends Component {
   }
 }
 
-MiniWorkshop.propTypes = {
-  inView: PropTypes.bool.isRequired,
-  // workshop: PropTypes.arrayOf.isRequired,
-  isActive: PropTypes.bool.isRequired,
-  noneActive: PropTypes.bool.isRequired,
-  onClick: PropTypes.func.isRequired
-};
+export default withCookies(Thumbnail);
 
-export default MiniWorkshop;
+const FavPosition = styled.div`
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  z-index: 1000;
+  * { color: #fff;}
+`

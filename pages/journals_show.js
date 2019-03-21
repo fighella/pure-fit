@@ -131,6 +131,8 @@ const Show = ({ blog, router }) => {
       <title>
         {post.title} | Pure Yoga Ottawa Journal
       </title>
+      <meta property="og:image" content={post.hero_image ? post.hero_image.url : ''} />
+      <meta property="og:type" content="article" />
     </Head> {content}</Layout>);
 }
 
