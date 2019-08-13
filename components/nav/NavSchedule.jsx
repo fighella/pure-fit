@@ -29,7 +29,8 @@ class NavSchedule extends Component {
           {navHeading('Class Styles', '/class_styles')}
           <br />
           {navHeading('Classes by Teacher', '/team')}
-          <br />
+          <br/>
+         
           {navHeading('New to Yoga?', '/new')}
         </Col>
         <Col xs={10}>

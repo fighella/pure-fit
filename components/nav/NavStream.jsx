@@ -1,72 +1,90 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
-import { navHeading } from '../utils/nav';
+import { navHeading } from '../../utils/nav';
 import ReactPlayer from 'react-player';
+import Link from 'next/link'
+
+const contentful = require('contentful');
+const SPACE_ID = 'hmbn1d6s90j4'
+const ACCESS_TOKEN = 'ad22c819dfadabb93437878e689131d7e64b841bc6d5ee52f333c02fcfee5d8f'
+const client = contentful.createClient({
+  space: SPACE_ID,
+  accessToken: ACCESS_TOKEN
+})
 
 export class NavStream extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      videos: []
+    }
+  }
+  componentDidMount() {
+    this.fetchVideos();
+  }
+  fetchVideos = async () => {
+    console.log('Grabbin')
+    try {
+      const response = await client.getEntries(
+        { 
+          content_type: 'video',
+          'fields.active[ne]': 'false'
+        }
+      )
+      let json = await response;
+      this.setState({
+        videos: json.items.reverse()
+      })
+    } catch { 
+      console.log('noFetchError()')
+    } 
+  
+  }
   render() {
+    console.log('Vid Dropdown');
+    console.log(this.state.videos);
+    console.log('/Vid Dropdown');
+    const vids = this.state.videos.slice(0,3).map((item, index) => (
+      <Col xs={3} id={item.fields.title}>
+       <MiniVideo
+                name={item.fields.title}
+                url={item.fields.vimeo}
+              />
+      </Col> 
+    ))
     return (
       <Row>
         <Col xs={3}>
-          Pure Yoga Online
-          <p>Lorem Ipsum...Free trial</p>
-          {navHeading('View All', 'https://online.pureyogaottawa.com')}
+          <h3>+ Pure Yoga Online</h3>
+          <p>
+            <ul>
+              <li>
+                + Unlimited access to all regular online classes  
+              </li>
+              <li>
+              + New classes added regularly
+              </li>
+              <li>
+                + Join the Pure Yoga FB Community
+              </li>
+              <li>
+                </li>
+                <li>
+                  + 5 min. tutorials to 90 min. advanced classes to prenatal
+                </li>
+                <li>
+            + Practice Anywhere, Anytime.
+                  </li>
+            </ul>
+          </p>
+          {navHeading('View All', '/online')}
         </Col>
         <Col xs={9}>
-          Latest Classes
+          <h4>Online Class Samples</h4>
           <Row>
-            <Col>
-              <MiniVideo
-                name="15 Minute Sculpt"
-                url="https://s3.amazonaws.com/pureyogaottawa.com/videos/15+minute+sculpt-Andrea+R.mp4"
-              />
-            </Col>
-            <Col>
-              <MiniVideo
-                name="Advanced Techniques w/ Mike"
-                url="https://s3.amazonaws.com/pureyogaottawa.com/videos/Advanced-M.Dynie.mp4"
-              />
-            </Col>
-            <Col>
-              <MiniVideo
-                name="Dolphin Post"
-                url="https://s3.amazonaws.com/pureyogaottawa.com/videos/Dolphin+Pose.mp4"
-              />
-            </Col>
-            <Col>
-              <MiniVideo
-                name="Core Flow w/ Amber"
-                url="https://s3.amazonaws.com/pureyogaottawa.com/videos/Core+Flow-Amber.mp4"
-              />
-            </Col>
+            {vids}
           </Row>
           <br />
-          <Row>
-            <Col>
-              <MiniVideo
-                name="15 Minute Sculpt"
-                url="https://s3.amazonaws.com/pureyogaottawa.com/videos/15+minute+sculpt-Andrea+R.mp4"
-              />
-            </Col>
-            <Col>
-              <MiniVideo
-                name="Advanced Techniques w/ Mike"
-                url="https://s3.amazonaws.com/pureyogaottawa.com/videos/Advanced-M.Dynie.mp4"
-              />
-            </Col>
-            <Col>
-              <MiniVideo
-                name="Dolphin Post"
-                url="https://s3.amazonaws.com/pureyogaottawa.com/videos/Dolphin+Pose.mp4"
-              />
-            </Col>
-            <Col>
-              <MiniVideo
-                name="Core Flow w/ Amber"
-                url="https://s3.amazonaws.com/pureyogaottawa.com/videos/Core+Flow-Amber.mp4"
-              />
-            </Col>
-          </Row>
         </Col>
       </Row>
     );
@@ -80,7 +98,9 @@ export default class MiniVideo extends Component {
         <ReactPlayer
           url={this.props.url}
           width="100%"
-          height="100%"
+          height="200px"
+          light
+          controls={false}
           style={{ maxWidth: '100%' }}
         />
         {this.props.name}

@@ -9,7 +9,7 @@ import NavSchedule from '../components/nav/NavSchedule';
 import { NavLogin } from '../components/nav/NavLogin';
 import { NavEvolve } from '../components/nav/NavEvolve';
 import NavSearch from '../components/nav/NavSearch';
-// import { NavStream } from '../nav/NavStream';
+import { NavStream } from '../components/nav/NavStream';
 import NavPricing from '../components/nav/NavPricing';
 import { NavBlog } from '../components/nav/NavBlog';
 import { BlogData } from './blog';
@@ -33,7 +33,7 @@ const AppNav = {
       mega: <NavSchedule />
     },
     {
-      name: 'Evolve',
+      name: 'Workshops',
       link: '/evolve',
       has_mega: true,
       mega: <NavEvolve />,
@@ -58,9 +58,9 @@ const AppNav = {
     },
     {
       name: 'Pure Online',
-      link: 'https://app.Namastream.com/pureyogaottawa',
-      has_mega: false,
-      mega: false
+      link: '/online',
+      has_mega: true,
+      mega: <NavStream />
     },
     {
       name: 'Contact',
@@ -149,7 +149,7 @@ const AppNav = {
           price="$110/mo"
           description="Any Class. Any Studio. Any Time."
           sub_title="Save over 30% for unlimited Yoga."
-          terms="4 months (Automatic auto-renew Payment)."
+          terms="(Automatic auto-renew Payment)."
         />
       )
     },

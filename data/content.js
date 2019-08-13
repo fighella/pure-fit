@@ -215,6 +215,7 @@ export const AppContent = {
     discounts:
       'Full time students and seniors receive $15 off of any class package.  Check in studio for student auto renew membership prices. Valid Student ID must be provided.',
       age: 'Age 14 and older. 17 and under require parent/guardian signature.',
+      gift_cards: 'Pure Yoga Gift Cards make the perfect gift. Our Gift Cards can be used on classes, workshops and in-studio merch like yoga gear and clothing. They can be purchased online @ Mindbody or in studio.'
   },
   stream: {
     title: 'Anywhere',

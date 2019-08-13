@@ -48,12 +48,15 @@ const PriceGrid = props => {
         </div>
       </div>
       <Row>{standard}</Row>
-      <div className="page-header">
+      <div className="page-header" style={{ maxWidth: 800, margin: '0 auto' }}>
         <div className="schedule-heading">
           <h2 className="superHeader">{t.students_seniors}</h2>
           <br />
           <p>{t.discounts}</p>
+          <h2 className="superHeader">Ages 14+ Welcome.</h2>
           <p>{t.age}</p>
+          <h2 className="superHeader">Gift Cards</h2>
+          <p>{t.gift_cards} <a href="/gift-cards" style={{ color: 'palevioletred' }}>Learn more &raquo;</a></p>
         </div>
       </div>
     </Container>

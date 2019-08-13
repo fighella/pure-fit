@@ -4,7 +4,10 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import EvolvePresenter from '../presenters/EvolvePresenter';
-import {withRouter} from 'next/router'
+import {withRouter} from 'next/router';
+import fetch from 'isomorphic-unfetch';
+import { AppHelpers } from '../utils/tools';
+import Head from 'next/head';
 import textile from 'textile-js';
 import Hero from '../components/Hero';
 import { EvolveConfig } from '../components/evolve/config';
@@ -17,6 +20,7 @@ import Favorite from '../components/Favorite';
 import { fonts, colors } from '../styles/variables';
 import EmbedForm from '../components/EmbedForm';
 
+const noFetchError = () => console.log('Did not fetch.');
 const [style] = [EvolveConfig.style];
 const t = AppContent.evolve.show;
 
@@ -25,18 +29,19 @@ function Content({ workshops }) {
   const workshop = workshops ? workshops[0] : {};
   const pWorkshop = new EvolvePresenter(workshop)
   const WorkshopContents = WorkshopData(EvolveRow, PureData);
-  const desc = workshop ? workshop.description : false;
-
+   const desc = workshop ? workshop.description : false;
+  const hero = workshop.hero_image ? <Hero
+  custom_imgs={[workshop.hero_image.url]}
+  imgs={[]}
+  title={pWorkshop.title}
+  subtitle=""
+  compact
+/> : false
   const loaded =
     workshops.length >= 1 ? (
       <React.Fragment>
-        <Hero
-          custom_imgs={[workshop.hero_image.url]}
-          imgs={[]}
-          title={pWorkshop.title}
-          subtitle=""
-          compact
-        />
+        {hero}
+        
         <HeroSubNav
           dates={pWorkshop.datesText}
           location={pWorkshop.location}
@@ -69,7 +74,7 @@ function Content({ workshops }) {
               >
                 Book Now
               </BookNow>
-              <EmbedForm title={`${workshop.title}`} />
+              <EmbedForm title={`${workshop.title}`} from={`${workshop.title}`} />
             </Col>
           </Row>
         </Container>
@@ -125,26 +130,38 @@ Content.propTypes = {
   workshops: PropTypes.arrayOf.isRequired
 };
 
-class EvolveShow extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      loaded: true
-    };
-  }
-
-  render() {
-    const WorkshopContents = WorkshopData(Content, PureData);
+const EvolveShow = ({ workshops, id, router }) => {
+    // const WorkshopContents = WorkshopData(Content, PureData);
     const loaded = (
       <Layout>
-
-      <div style={style.body}>
-        <WorkshopContents id={this.props.router.query.id} />
+        <Head>
+          <title>
+            {workshops[0].title} | Pure Yoga Ottawa Workshops, Events and Training
+          </title>
+          <meta property="og:image" content={workshops[0].hero_image ? workshops[0].hero_image.url : ''} />
+          <meta property="og:type" content="article" />
+        </Head>
+        <div style={style.body}>
+          <Content workshops={workshops} id={id} />
       </div>
-      </Layout>
-    );
-    const content = this.state.loaded ? loaded : 'Loading';
-    return content;
+    </Layout>
+  );
+  const content = loaded ;
+  return content;
+}
+
+EvolveShow.getInitialProps = async function(context) {
+  const { id, handle } = context.query
+  try {
+    const response = await fetch(AppHelpers.mbParams({ id: id, handle: handle }, 'workshop'));
+    const json = await response.json();
+    return {
+      workshops:json.workshops,
+      id: id,
+      loaded: true
+    }
+  } catch {
+    noFetchError();
   }
 }
 

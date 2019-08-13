@@ -4,6 +4,6 @@ import Footer from './PureFooter';
 import '../styles/custom.scss';
 
 
-export default ({children}) => <div>
-    <Header/>{children}<Footer/>
+export default ({children,hideLayout}) => <div>
+    {hideLayout || <Header/>}{children}{hideLayout || <Footer/>}
   </div>

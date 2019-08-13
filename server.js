@@ -37,6 +37,12 @@ app.prepare()
     app.render(req, res, actualPage, queryParams)
   })
 
+  server.get('/team/:handle/embed', (req, res) => {
+    const actualPage = '/team_frame'
+    const queryParams = { handle: req.params.handle }
+    app.render(req, res, actualPage, queryParams)
+  })
+
   server.get('/team/:handle', (req, res) => {
     const actualPage = '/team_show'
     const queryParams = { handle: req.params.handle }
@@ -48,8 +54,6 @@ app.prepare()
     const queryParams = { id: req.params.id, handle: req.params.handle }
     app.render(req, res, actualPage, queryParams)
   })
-  
- 
 
   server.get('/journals/:handle', (req, res) => {
     const actualPage = '/journals_show'
@@ -59,6 +63,13 @@ app.prepare()
 
   server.get('/class_styles/:handle', (req, res) => {
     const actualPage = '/class_styles_show'
+    const queryParams = { handle: req.params.handle }
+    app.render(req, res, actualPage, queryParams)
+  })
+
+
+  server.get('/online/:handle', (req, res) => {
+    const actualPage = '/online_show'
     const queryParams = { handle: req.params.handle }
     app.render(req, res, actualPage, queryParams)
   })

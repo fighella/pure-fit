@@ -43,6 +43,7 @@ const PriceGrid = props => {
           <br />
           <p>{t.discounts}</p>
           <p>{t.age}</p>
+          <p><Link target="_blank" href='/gift-cards'>Gift Cards also available</Link> for use on any class, workshop or merch.</p>
         </div>
       </div>
     </Container>

@@ -20,7 +20,7 @@ class EmbedForm extends Component {
       secretcode: '123',
       subscribed: true,
       username: 'username',
-      from_page: window.location.pathname,
+      from_page: props.from || window.location.pathname,
       enquiry_type: this.props.enquiry_type || 'General'
     };
   }

@@ -11,6 +11,7 @@ import Head from 'next/head';
 import Instaview from '../components/Instaview';
 import { Schedule } from '../components/Schedule';
 import EvolveRow from '../components/evolve/row';
+import { Contentful } from '../components/Contentful';
 import ScheduleWrapper from '../components/ScheduleWrapper';
 import { Instafeed } from '../components/Instafeed';
 import Layout from '../components/Layout';
@@ -100,6 +101,7 @@ function Teacher({ teacher }) {
           </FlexCol>
         </FlexRow>
         {workshops}
+        <Contentful content_type='video' title={`Can't make a class? Find ${teacher.first_name} on Pure Online`} teacher={teacher.title}/>
         {teacher.instagram_token ? (
           <InstafeedWrapped
             title={`${teacher.first_name} on Instagram`}

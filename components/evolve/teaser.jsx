@@ -3,7 +3,6 @@ import React, { Component } from 'react';
 import moment from 'moment-timezone';
 import PropTypes from 'prop-types';
 import textile from 'textile-js';
-import { AppHelpers } from '../../utils/helpers';
 import { EvolveConfig } from './config';
 import styled from 'styled-components';
 import EvolveTeachers from './teachers';

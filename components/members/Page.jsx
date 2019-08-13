@@ -1,7 +1,6 @@
 import React from 'react';
 import { Container } from 'reactstrap';
 import PureData from '../utils/src';
-import { AppContent } from '../data/content';
 import PriceGrid from './PriceGrid';
 import PricingData from './PricingData';
 

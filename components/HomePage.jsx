@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'reactstrap';
+import { ScheduleBanner } from './schedule/Banner';
 import { Banner } from './Banner';
 import { Schedule } from './Schedule';
 import { AppContent as t } from '../data/content';
@@ -51,6 +52,7 @@ const HomePage = props => {
           <h2 className="superHeader">{t.hot_yoga_schedule}</h2>
           <p>{t.one_pass}</p>
         </div>
+        <ScheduleBanner />
       </div>
       <Row>
       {schedule_columns}

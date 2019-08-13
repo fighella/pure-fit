@@ -11,7 +11,7 @@ const hasClasses = c => c.length >= 1;
 const isMiniSchedule = m => m === true;
 
 // eslint-disable-next-line camelcase
-export function Schedule({ classes, location, mini, loaded, name, full_link, view }) {
+export function Schedule({ classes, location, mini, loaded_classes, name, full_link, view }) {
   const schedule = hasClasses(classes) ? (
     <ScheduleClasses
       classes={classes}
@@ -22,11 +22,11 @@ export function Schedule({ classes, location, mini, loaded, name, full_link, vie
   ) : (
     <tr>
       <td>
-        {loaded ? (
+        {loaded_classes ? (
           'No classes found.'
         ) : (
-          <div>a
-            {loaded ? '...' : <img src="/static/ajax-loader.gif" />}
+          <div>
+            {loaded_classes ? 'No classes for this period. Schedule under maintenance - please check the iPhone/Android App' : <img src="/static/ajax-loader.gif" />}
           </div>
         )}
       </td>
@@ -53,8 +53,7 @@ export function Schedule({ classes, location, mini, loaded, name, full_link, vie
           </Link>
         )}
       </BottomLink>
-    </div>
-  );
+      </div>);
 
   return (
     <ScheduleBlock className="schedule" view={view}>
@@ -62,7 +61,9 @@ export function Schedule({ classes, location, mini, loaded, name, full_link, vie
         innerSchedule
       ) : (
         <LoadBlock>
-            {loaded ? '...' : <img src="/static/ajax-loader.gif" />}
+            {`SCHEDULE UNDER MAINTENANCE - Please use the iPhone / Android Apps`}
+            {/* {loaded_classes ? `No classes for ${name.replace('Upcoming Classes for ','')} for this period.` : <img src="/static/ajax-loader.gif" />} */}
+
         </LoadBlock>
       )}
     </ScheduleBlock>

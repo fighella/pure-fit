@@ -5,7 +5,8 @@ export default function ScheduleWrapper(WrappedComponent, PureData) {
     constructor(props) {
       super(props);
       this.state = {
-        classes: []
+        classes: [],
+        loaded_classes: false
       };
     }
     componentDidMount() {
@@ -38,6 +39,7 @@ export default function ScheduleWrapper(WrappedComponent, PureData) {
         <WrappedComponent
           name="name"
           classes={this.state.classes}
+          loaded_classes={this.state.loaded_classes}
           {...this.props}
         />
       );

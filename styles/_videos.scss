@@ -1,4 +1,5 @@
 .mini-video { 
-  div { opacity: 0.8; filter: saturate(0.2); }
-  background:$pure-red;
+  position: relative;
+  margin-bottom: 1em;
+  div { opacity: 1; }
 }

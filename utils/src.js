@@ -69,6 +69,14 @@ export default class PureData {
     };
   }
 
+
+  get workshop() {
+    return {
+      base: this.endpoint('workshops'),
+      filters: [{ id: this.props.id },{ handle: this.props.handle }, { teacher: ''}]
+    };
+  }
+
   get pricing() {
     return {
       base: this.endpoint('pricing'),

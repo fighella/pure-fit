@@ -116,9 +116,7 @@ const SubNav = props => {
   if (
     active_menu_item !== '' &&
     active_menu_item !== 'Contact' &&
-    active_menu_item !== 'Team' &&
-    active_menu_item !== 'Stream' &&
-    active_menu_item !== 'Pure Online'
+    active_menu_item !== 'Team'
   ) {
     mega_display = (
       <div

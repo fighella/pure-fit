@@ -17,7 +17,7 @@ import PureData from '../../utils/src';
 import { EvolveConfig } from '../evolve/config';
 import ScheduleWrapper from '../ScheduleWrapper';
 import Hero from '../Hero';
-import {withRouter} from 'next/router'
+import { ScheduleBanner } from '../schedule/Banner';
 import { AppContent as t } from '../../data/content';
 
 const [style] = [EvolveConfig.style];
@@ -139,9 +139,10 @@ class SchedulePage extends Component {
           subtitle={'3 Studios. 1 Pass.'}
           faded
         />
+          <ScheduleBanner />
         <div
           style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
-        >
+        >          
           <LocationSelector>
             <Dropdown
               size="lg"
