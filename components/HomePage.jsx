@@ -15,7 +15,7 @@ import { AboutPureStrap } from './AboutPureStrap';
 import { SingleColWrapper } from './SingleColWrapper';
 import ScheduleWrapper from '../components/ScheduleWrapper';
 
-const instaToken = '20307571.1677ed0.dd4b54d1b0c34463b9dd2c0c2adffcdc';
+const instaToken = '20307571.1677ed0.820c05f9cc724e7a97f743020470b81f'; // 20307571.1677ed0.dd4b54d1b0c34463b9dd2c0c2adffcdc';
 const NewToYogaWrapped = SingleColWrapper(NewToYogaStrap);
 const BlogCollectionWrapped = SingleColWrapper(BlogCollection);
 const InstafeedWrapped = SingleColWrapper(Instafeed);
