@@ -52,7 +52,7 @@
     "start": "NODE_ENV=production node server.js",
     "now-build": "next build",
     "deploy": "now",
-    "deploy-production": "now && now alias www.purefitottawa.com && now rm pure-node --safe --yes"
+    "deploy-production": "now && now alias www.purefitottawa.com && now rm pure-fit --safe --yes"
   },
   "author": "",
   "license": "ISC"
