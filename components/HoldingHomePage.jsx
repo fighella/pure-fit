@@ -82,7 +82,8 @@ const Holder = styled.div`
   background: #333;
   text-align: center;
   color: #fff;
-  font-size: 10vw;
+  font-size: 8vw;
+  line-height: 1em;
 `
 
 export default HoldingHomePage;
