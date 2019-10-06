@@ -1,5 +1,5 @@
 {
-  "name": "pure-next",
+  "name": "pure-fit",
   "version": "2.0.0",
   "description": "",
   "main": "index.js",
@@ -52,7 +52,7 @@
     "start": "NODE_ENV=production node server.js",
     "now-build": "next build",
     "deploy": "now",
-    "deploy-production": "now && now alias www.pureyogaottawa.com && now rm pure-node --safe --yes"
+    "deploy-production": "now && now alias www.purefitottawa.com && now rm pure-node --safe --yes"
   },
   "author": "",
   "license": "ISC"

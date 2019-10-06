@@ -4,9 +4,9 @@
     { "src": "*.html", "use": "@now/static" },
     { "src": "next.config.js", "use": "@now/next" }
   ],
-  "name": "pure-node",
+  "name": "pure-fit",
   "alias": [
-    "www.pureyogaottawa.com"
+    "www.purefitottawa.com"
   ],
   "routes": [
     { "src": "/team/(?<id>[^/]*)", "dest": "/team_show?handle=$id" },

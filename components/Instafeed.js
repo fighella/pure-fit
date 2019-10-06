@@ -49,6 +49,7 @@ export class Instafeed extends Component {
 // }
 // GET TOCKENS PIXEL UNION
 // FOREVER TOKEN:: EAAGdFGrmdfgBANjaK548EEPy8v9I485wcUvxp48LZAtuw0JY2ASHFiLamplZAkjOkru9EOXDmR3VSZAEMzGdAGRqLhdWduXsCnLiuMRZCc39DlGBn5ZCLdJbdFeQm5m9PwGgU0PZCkOQ8TWlmpJWQLPcjG9FEQg9bohlSSl7Kn5llgYJg6GeIngOuUUASCsmTedZCgSNCFhKgZDZD
+
 const InstaContent = styled.div`
   padding: 3em 0;
   text-align: center;
