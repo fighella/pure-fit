@@ -16,7 +16,7 @@ export class AboutPureStrap extends Component {
           </Flexcol>
         </Flexbox>
         <p>{t.home.tagline}</p>
-        <CTA href="/new">{t.new_to_yoga_strap_cta}</CTA>
+        <CTA href="/">{t.new_to_yoga_strap_cta}</CTA>
       </Strap>
 
     );

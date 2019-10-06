@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/Layout';
-import HomePage from '../components/HomePage';
+import HoldingHomePage from '../components/HoldingHomePage';
+// import HomePage from '../components/HomePage';
 import Head from 'next/head';
 
 
@@ -17,5 +18,5 @@ export default () => <Layout>
     <meta property="og:url" content="https://www.purefitottawa.com" />
     <meta property="og:image" content="https://pureyogaprod.s3.amazonaws.com/uploads/blog/hero_image/2/pureyogapants1.jpg" /> 
   </Head>
-  <HomePage classes={[]} loaded_classes={false}/>
+  <HoldingHomePage classes={[]} loaded_classes={false}/>
   </Layout>

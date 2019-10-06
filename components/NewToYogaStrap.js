@@ -9,7 +9,7 @@ export class NewToYogaStrap extends Component {
       <Strap>
         <Title>{t.new_to_yoga_strap}</Title>
         <SubTitle>{t.new_to_yoga_strap_subtitle}</SubTitle>
-        <CTA href="/new">{t.new_to_yoga_strap_cta}</CTA>
+        <CTA href="/">{t.new_to_yoga_strap_cta}</CTA>
       </Strap>
     );
   }

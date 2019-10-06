@@ -40,7 +40,7 @@ export const AppContent = {
   mindbody_link:
     'https://clients.mindbodyonline.com/classic/ws?studioid=21952',
   title: 'Ottawa Fitness Studio',
-  new_to_yoga: 'New to Pure Fit? Find out more...',
+  new_to_yoga: 'Coming 2020',
   hot_yoga_schedule: 'Pure Fit Class Schedule',
   book_a_class: 'BOOK A CLASS',
   one_pass: '1 pass. 4 studios. Find your class.',

@@ -19,7 +19,8 @@ import PureData from '../utils/src';
 const Blog = new BlogData(NavBlog, PureData);
 
 const AppNav = {
-  main: [
+  main: [],
+  new_main: [
     {
       name: 'Home',
       link: '/',
@@ -182,19 +183,19 @@ const AppNav = {
     }
   ],
   footer: [
-    { name: 'About Pure Yoga', link: '/about' },
-    { name: 'Faqs', link: '/faqs' },
-    { name: 'Karma', link: '/karma' },
-    {
-      name: 'Mindbody Login',
-      link:
-        'https://clients.mindbodyonline.com/classic/ws?studioid=21952'
-    },
-    { name: 'Westboro', link: '/location/westboro' },
-    { name: 'Centretown', link: '/location/centretown' },
-    { name: 'Downtown', link: '/location/downtown' },
-    { name: 'Toronto', link: 'https://www.pureyogatoronto.com' },
-    { name: 'Contact', link: '/contact' }
+    // { name: 'About Pure Fit', link: '/about' },
+    // { name: 'Faqs', link: '/faqs' },
+    // { name: 'Karma', link: '/karma' },
+    // {
+    //   name: 'Mindbody Login',
+    //   link:
+    //     'https://clients.mindbodyonline.com/classic/ws?studioid=21952'
+    // },
+    // { name: 'Westboro', link: '/location/westboro' },
+    // { name: 'Centretown', link: '/location/centretown' },
+    // { name: 'Downtown', link: '/location/downtown' },
+    // { name: 'Toronto', link: 'https://www.pureyogatoronto.com' },
+    { name: 'Contact', link: 'https://www.pureyogaottawa.com/contact' }
   ]
 };
 

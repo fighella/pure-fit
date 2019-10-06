@@ -19,7 +19,7 @@ const TopStrap = () => {
           <LeftStrap width={dimensions.width}>
             <HideMobile width={dimensions.width}>{t.title}</HideMobile>
             <Spacer width={dimensions.width} />
-            <NewToYogaLink href="/new">{t.new_to_yoga}</NewToYogaLink>
+            <NewToYogaLink href="/">{t.new_to_yoga}</NewToYogaLink>
           </LeftStrap>
           <RightStrap width={dimensions.width}>
             <Socials />

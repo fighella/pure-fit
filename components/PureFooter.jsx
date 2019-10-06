@@ -35,7 +35,7 @@ const Footer = () => (
         </a>
       </Col>
       <Col md={3} xs={12} className="footer-links">
-        &copy; 2019 Pure Yoga Ottawa
+        &copy; 2019 Pure Fit Ottawa
       </Col>
     </Row>
   </Container>
