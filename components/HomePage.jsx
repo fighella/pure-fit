@@ -24,9 +24,7 @@ const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
 const HomePage = props => {
   const schedule_locs = [
-    { location: 'Pure Yoga Westboro', days: 3 },
     { location: 'Pure Yoga Centretown', days: 3 },
-    { location: 'Pure Yoga Downtown', days: 3 }
   ];
   const schedule_columns = schedule_locs
   .map(schedule => {

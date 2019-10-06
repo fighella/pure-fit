@@ -7,8 +7,8 @@ export class AboutPureStrap extends Component {
   render() {
     return (
       <Strap>
-        <Title>Discover Pure Yoga Ottawa</Title>
-        <SubTitle>Ottawa's hot yoga experience</SubTitle>
+        <Title>Discover Pure Fit Ottawa</Title>
+        <SubTitle>Ottawa's Newest Fitness Experience</SubTitle>
         <Flexbox>
           <Flexcol dangerouslySetInnerHTML={{ __html: t.home.about_pure }} />
           <Flexcol>
@@ -18,19 +18,7 @@ export class AboutPureStrap extends Component {
         <p>{t.home.tagline}</p>
         <CTA href="/new">{t.new_to_yoga_strap_cta}</CTA>
       </Strap>
-      //          <Strap>
-      //          <div>
-      //            <div>
-      //          <Title>Centretown, Downtown &amp; Westboro</Title>
-      //          <SubTitle>{t.new_to_yoga_strap_subtitle}</SubTitle>
-      //          </div><div>
-      //          <p>
-      //  We at Pure Yoga Ottawa have created a space for EveryBODY...every shape, size, age, and status, employed, or in between jobs, student, or retiree, single or divorcee, mother, father, grandparent - you get the idea.
-      //  Come join the community, where we can all grow together.
-      //  </p>
-      //          </div>
-      //          </div>
-      //        </Strap>
+
     );
   }
 }

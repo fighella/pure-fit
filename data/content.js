@@ -11,12 +11,12 @@ const brand = 'Pure Yoga Ottawa';
 
 const socialLinks = {
   facebook: {
-    link: 'https://www.facebook.com/PureYogaOttawa',
+    link: 'https://www.facebook.com/PureFitOttawa',
     icon: faFacebook
   },
-  twitter: { link: 'https://twitter.com/pureyogaottawa', icon: faTwitter },
+  twitter: { link: 'https://twitter.com/purefitottawa', icon: faTwitter },
   instagram: {
-    link: 'https://www.instagram.com/pureyogaottawa/?hl=en',
+    link: 'https://www.instagram.com/purefitottawa/?hl=en',
     icon: faInstagram
   },
   vimeo: { link: '', icon: '' },
@@ -39,20 +39,20 @@ export const AppContent = {
   login,
   mindbody_link:
     'https://clients.mindbodyonline.com/classic/ws?studioid=21952',
-  title: 'Ottawa Hot Yoga Studio',
-  new_to_yoga: 'New to yoga? Find out more...',
-  hot_yoga_schedule: 'Hot Yoga Schedule',
+  title: 'Ottawa Fitness Studio',
+  new_to_yoga: 'New to Pure Fit? Find out more...',
+  hot_yoga_schedule: 'Pure Fit Class Schedule',
   book_a_class: 'BOOK A CLASS',
-  one_pass: '1 pass. 3 studios. Find your class.',
+  one_pass: '1 pass. 4 studios. Find your class.',
   apps: 'Get the schedule on your phone.',
   footnote:
     'Please note: We encourage you to be in studio 10 minutes before class starts to secure your position.',
   nav: {
     new_to_yoga: {
-      title: 'NEW TO PURE YOGA OTTAWA?',
+      title: 'NEW TO PURE FIT OTTAWA?',
       sub_title: 'Our intro month is just $45',
       content:
-        'We welcome you to come and see how Pure Yoga can help you grow and transform. Our intro month is just $45 and lets you try as many classes as you like!'
+        'We welcome you to come and see how Pure Fit a can help you grow and transform. Our intro month is just $45 and lets you try as many classes as you like!'
     },
     workshops: {
       title: 'Workshops/Training/Retreats',
@@ -66,14 +66,14 @@ export const AppContent = {
     button: 'Sign Up'
   },
   // HOMEPAGE STUFF
-  new_to_yoga_strap: 'New to Yoga?',
-  new_to_yoga_strap_subtitle: 'Pure Yoga is a space for everybody.',
+  new_to_yoga_strap: 'New to Pure Fit?',
+  new_to_yoga_strap_subtitle: 'Pure Fit is a space for everybody.',
   new_to_yoga_strap_cta: 'Learn more',
-  evolve_your_practice: 'Evolve your practice.',
-  evolve_your_practice_subtitle: 'Share in our passion for yoga.',
+  evolve_your_practice: 'Evolve your body.',
+  evolve_your_practice_subtitle: 'Share in our passion for fitness.',
   // PAGES CONTENT
   home: {
-    page_title: `${brand} - Westboro, Centretown, Downtown | Hot Yoga Studio`,
+    page_title: `${brand} - Westboro, Centretown, Downtown | Fitness Studio`,
     banners: [{}],
     about_pure: `<p>Whether you come to Pure Yoga Ottawa for a workout or stress relief, ultimately, yoga is about growth and transformation.</p>
     <p> At Pure Yoga we are completely dedicated to the evolution of our students. With our amazing team of highly trained teachers, you are always in the best hands.</p>`,

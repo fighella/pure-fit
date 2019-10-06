@@ -24,9 +24,7 @@ const [style] = [EvolveConfig.style];
 const zone = 'Etc/GMT';
 
 const schedules = [
-  { location: 'Pure Yoga Westboro', days: 3 },
   { location: 'Pure Yoga Centretown', days: 3 },
-  { location: 'Pure Yoga Downtown', days: 3 }
 ];
 const startDate = moment.tz(new Date(), zone);
 const dayOne = startDate.clone();

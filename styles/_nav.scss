@@ -12,13 +12,14 @@
   }
 }
 
-.navbar-light .navbar-nav .nav-link {
-  color: $pure-black;
-  font-weight: 600;
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 1px;
 }
 
 .nav-item:hover { 
   cursor: pointer; color: $pure-blue;
 }
 .nav-item .nav-link { font-weight: 450; }
-.nav-item a.nav-link.active { border-bottom: 2px solid #333; }
+.nav-item a.nav-link.active { border-bottom: 2px solid #fff; }

@@ -32,7 +32,13 @@ const AppNav = {
       has_mega: true,
       mega: <NavSchedule />
     },
-  
+    {
+      name: 'Workshops',
+      link: '/evolve',
+      has_mega: true,
+      mega: <NavEvolve />,
+      sub_nav: '(Workshops and Training)'
+    },
     {
       name: 'Pricing',
       link: '/pricing',

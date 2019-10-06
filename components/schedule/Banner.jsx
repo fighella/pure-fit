@@ -3,12 +3,13 @@ import styled from 'styled-components';
 import textile from 'textile-js';
 
 const contentful = require('contentful');
-const SPACE_ID = 'hmbn1d6s90j4'
-const ACCESS_TOKEN = 'ad22c819dfadabb93437878e689131d7e64b841bc6d5ee52f333c02fcfee5d8f'
-const client = contentful.createClient({
-  space: SPACE_ID,
-  accessToken: ACCESS_TOKEN
-})
+const FIT_SPACE_ID = "qt03r4b2rdnc";
+const FIT_ACCESS_TOKEN =
+  "wUysDGvbczx4bTZ3zvzq1ELlBvql7W09jMc4_qZeggo";
+const fit_client = contentful.createClient({
+  space: FIT_SPACE_ID,
+  accessToken: FIT_ACCESS_TOKEN
+});
 
 export class ScheduleBanner extends Component {
 constructor(props) {
@@ -23,7 +24,7 @@ componentDidMount() {
 }
 grabBanner = async () => {
     try {
-      const response = await client.getEntry('5oddNzFdcZIv3fGU0I2PFj')
+      const response = await fit_client.getEntry('5oddNzFdcZIv3fGU0I2PFj')
       let json = await response;
       this.setState({
         message: json.fields.scheduleMessage,

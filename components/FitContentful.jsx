@@ -21,7 +21,7 @@ const fit_client = contentful.createClient({
   accessToken: FIT_ACCESS_TOKEN
 });
 
-export class Contentful extends Component {
+export class FitContentful extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -35,7 +35,7 @@ export class Contentful extends Component {
   fetchVideos = async () => {
     console.log(this.props.teacher);
     try {
-      const response = await client.getEntries({
+      const response = await fit_client.getEntries({
         content_type: "video",
         'fields.active': true,
         'fields.mainTeacher.sys.contentType.sys.id': 'teacher',
@@ -56,7 +56,7 @@ export class Contentful extends Component {
   };
   grabEntry = async () => {
     try {
-      const response = await client.getEntry(this.props.entry);
+      const response = await fit_client.getEntry(this.props.entry);
       let json = await response;
       this.setState({
         message: json.fields.scheduleMessage,
