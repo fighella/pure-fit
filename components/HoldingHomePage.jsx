@@ -78,11 +78,11 @@ const FootNote = styled.p`
 `;
 
 const Holder = styled.div`
-  padding: 30vh 2em;
+  padding: 20vh 2em 25vh 2em;
   background: #333;
   text-align: center;
   color: #fff;
-  font-size: 4em;
+  font-size: 10vw;
 `
 
 export default HoldingHomePage;
