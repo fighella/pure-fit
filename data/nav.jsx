@@ -88,23 +88,12 @@ const AppNav = {
         />
       ),
       link: '/login',
-      has_mega: true,
+    has_mega: true,
       mega: <NavLogin />
     }
   ],
   locations: [
-    {
-      name: 'Pure Yoga Westboro',
-      link: 'westboro'
-    },
-    {
-      name: 'Pure Yoga Centretown',
-      link: 'centretown'
-    },
-    {
-      name: 'Pure Yoga Downtown',
-      link: 'downtown'
-    },
+
     {
       name: 'Pure Fit Ottawa',
       link: 'fit'
@@ -124,11 +113,11 @@ const AppNav = {
   ],
   classes: [
     {
-      name: 'Intro Month',
+      name: 'Intro 2 Weeks',
       mega: (
         <NavPricing
-          name="Intro Month"
-          price="$45"
+          name="Intro 2 Weeks"
+          price="$60"
           description="Any Class. Any Studio. Any Time."
           sub_title="Perfect for New to Yoga or New to Pure. Come join us."
         />
@@ -139,7 +128,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Monthly Unlimited"
-          price="$150"
+          price="$220"
           sub_title="One Month Unlimited. Start whenever you like."
           description="Any Class. Any Studio. Any Time."
           terms=""
@@ -151,7 +140,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Pure Membership"
-          price="$110/mo"
+          price="$180/mo"
           description="Any Class. Any Studio. Any Time."
           sub_title="Save over 30% for unlimited Yoga."
           terms="(Automatic auto-renew Payment)."
@@ -163,7 +152,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Class Packs"
-          price="5 Classes: $85. 10 Classes: $157"
+          price="5 Classes: $135. 10 Classes: $250"
           sub_title="5 or 10 Class Packs Available."
           description="Any Class. Any Studio. Any Time."
         />
@@ -174,7 +163,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Drop In"
-          price="$20"
+          price="$35"
           sub_title="Book In Advance or Just Turn Up."
           description="Any Class. Any Studio. Any Time."
         />
@@ -184,18 +173,24 @@ const AppNav = {
   footer: [
     { name: 'About Pure Fit', link: '/about' },
     { name: 'Faqs', link: '/faqs' },
-    { name: 'Karma', link: '/karma' },
     {
       name: 'Mindbody Login',
       link:
-        'https://clients.mindbodyonline.com/classic/ws?studioid=21952'
+        'https://clients.mindbodyonline.com/classic/ws?studioid=920410'
     },
-    { name: 'Westboro', link: '/location/westboro' },
-    { name: 'Centretown', link: '/location/centretown' },
-    { name: 'Downtown', link: '/location/downtown' },
-    { name: 'Toronto', link: 'https://www.pureyogatoronto.com' },
-    { name: 'Contact', link: 'https://www.pureyogaottawa.com/contact' }
+    { name: 'Pure Yoga Ottawa', link: 'https://pureyogaottawa.com' },
+    { name: 'Pure Yoga Toronto', link: 'https://www.pureyogatoronto.com' },
+    { name: 'Contact', link: '/contact' }
+  ],
+  main: [
+    { name: 'Home', link: '/' },
+    { name: 'Schedule', link: '/schedule' },
+    { name: 'Team', link: '/team' },
+    { name: 'Pricing', link: '/pricing' },
+    { name: 'Faqs', link: '/faqs' },
+    { name: 'Contact', link: '/contact' }
   ]
+
 };
 
 export default AppNav;

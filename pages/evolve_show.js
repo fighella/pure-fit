@@ -136,7 +136,7 @@ const EvolveShow = ({ workshops, id, router }) => {
       <Layout>
         <Head>
           <title>
-            {workshops[0].title} | Pure Yoga Ottawa Workshops, Events and Training
+            {workshops[0].title} | Pure Fit Ottawa Workshops, Events and Training
           </title>
           <meta property="og:image" content={workshops[0].hero_image ? workshops[0].hero_image.url : ''} />
           <meta property="og:type" content="article" />

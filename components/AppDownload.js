@@ -1,9 +1,11 @@
 import React from 'react';
 import { Container, Row, Col } from 'reactstrap';
+import { ScheduleDownloadBlock } from './layout/helpers';
 import { AppContent as t } from '../data/content';
 
 export const AppDownload = () => {
   return (
+    <ScheduleDownloadBlock>
     <Container>
       <Row>
         <Col style={{ textAlign: 'center' }}>
@@ -25,5 +27,6 @@ export const AppDownload = () => {
         </Col>
       </Row>
     </Container>
+    </ScheduleDownloadBlock>
   );
 };

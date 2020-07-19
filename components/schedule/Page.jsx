@@ -24,19 +24,18 @@ const [style] = [EvolveConfig.style];
 const zone = 'Etc/GMT';
 
 const schedules = [
-  { location: 'Pure Yoga Centretown', days: 3 },
+  { location: 'Pure Fit', days: 7 },
 ];
 const startDate = moment.tz(new Date(), zone);
-const dayOne = startDate.clone();
-const nextWeek = startDate.clone();
+// const dayOne = startDate.clone();
+// const nextWeek = startDate.clone();
 const dateFilters = [
-  { days: 1, day: startDate, dayText: 'Today ' },
-  { days: 1, day: dayOne.add('1', 'days'), dayText: 'Tomorrow' },
-  { days: 3, day: startDate, dayText: 'Next 3 Days' },
-  { days: 7, day: startDate, dayText: 'Next 7 Days' },
-  { days: 7, day: nextWeek.add('7', 'days'), dayText: 'Next Week' }
+  { days: 7, day: startDate, dayText: 'Today ' },
+  // { days: 1, day: dayOne.add('1', 'days'), dayText: 'Tomorrow' },
+  // { days: 3, day: startDate, dayText: 'Next 3 Days' },
+  // { days: 7, day: startDate, dayText: 'Next 7 Days' },
+  // { days: 7, day: nextWeek.add('7', 'days'), dayText: 'Next Week' }
 ];
-
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
 class SchedulePage extends Component {
@@ -48,7 +47,7 @@ class SchedulePage extends Component {
       classes: [],
 
       location: this.props.router && this.props.router.query && this.props.router.query.location
-        ? `Pure Yoga ${this.props.router.query.location
+        ? `Pure Fit ${this.props.router.query.location
             .charAt(0)
             .toUpperCase() + this.props.router.query.location.slice(1)}`
         : 'All Locations',
@@ -73,7 +72,7 @@ class SchedulePage extends Component {
   }
   thisLocation = e => {
     return (
-      this.state.location === 'All Locations' ||
+      this.state.location === 'Pure Fit' ||
       (e.location === this.state.location && this.state.day !== 1000)
     );
   };
@@ -132,38 +131,16 @@ class SchedulePage extends Component {
     return (
       <div style={style.body}>
         <Hero
-          imgs={['team_126']}
-          title={'Practice'}
-          subtitle={'3 Studios. 1 Pass.'}
-          faded
+          custom_imgs={['https://s3.ca-central-1.amazonaws.com/purefitottawa.com/images/fit_109.jpg']}
+          title={'Sweat.'}
+          subtitle={'Fitness done different.'}
+          compact
         />
           <ScheduleBanner />
         <div
           style={{ width: '100%', display: 'flex', justifyContent: 'center' }}
         >          
-          <LocationSelector>
-            <Dropdown
-              size="lg"
-              isOpen={this.state.dropdownOpen}
-              toggle={this.toggle}
-            >
-              <DropdownToggle caret>{this.state.location}</DropdownToggle>
-              <DropdownMenu>
-                <DropdownItem onClick={this.selectDropdown}>
-                  All Locations
-                </DropdownItem>
-                <DropdownItem onClick={this.selectDropdown}>
-                  Pure Yoga Westboro
-                </DropdownItem>
-                <DropdownItem onClick={this.selectDropdown}>
-                  Pure Yoga Centretown
-                </DropdownItem>
-                <DropdownItem onClick={this.selectDropdown}>
-                  Pure Yoga Downtown
-                </DropdownItem>
-              </DropdownMenu>
-            </Dropdown>
-          </LocationSelector>
+     
           &nbsp;
           <DaySelector>
             <Dropdown
@@ -184,15 +161,16 @@ class SchedulePage extends Component {
         </div>
         <AppDownload />
         <Strap>
-          <Title>Centretown, Downtown &amp; Westboro</Title>
+          <Title>Pure Fit Ottawa - Centretown</Title>
           <SubTitle>{t.new_to_yoga_strap_subtitle}</SubTitle>
           <br />
           <p style={{ lineHeight: '2em' }}>
-            We at Pure Yoga Ottawa have created a space for EveryBODY...every
-            shape, size, age, and status, employed, or in between jobs, student,
-            or retiree, single or divorcee, mother, father, grandparent - you
-            get the idea. Come join the community, where we can all grow
-            together.
+          Where fitness meets lifestyle. At Pure Fit we train not only to be stronger
+physically, but mentally. We work, sweat and play hard, training for healthier
+living. With an intelligent approach to small group fitness classes, we help you
+get the results that you want.</p> <p style={{ lineHeight: '2em' }}>At Pure we're committed to the evolution of
+YOU, helping you reach your goals and to feel better one sweat session at a
+time.
           </p>
         </Strap>
       </div>

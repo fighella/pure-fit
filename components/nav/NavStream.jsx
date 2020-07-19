@@ -55,7 +55,7 @@ export class NavStream extends Component {
     return (
       <Row>
         <Col xs={3}>
-          <h3>+ Pure Yoga Online</h3>
+          <h3>+ Pure Fit Online</h3>
           <p>
             <ul>
               <li>
@@ -65,7 +65,7 @@ export class NavStream extends Component {
               + New classes added regularly
               </li>
               <li>
-                + Join the Pure Yoga FB Community
+                + Join the Pure Fit FB Community
               </li>
               <li>
                 </li>

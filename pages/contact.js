@@ -23,14 +23,14 @@ class ContactPage extends Component {
       secretcode: '123',
       username: 'username',
       from_page: 'pureyogaottawa',
-      enquiry_type: 'Pure Yoga Westboro'
+      enquiry_type: 'Pure Fit Westboro'
     };
   }
 
   render() {
     const helpLinks = [
       { name: 'Faqs', link: '/faqs' },
-      { name: 'New to Yoga', link: '/new' },
+      // { name: 'New to Pure Fit', link: '/new' },
       { name: 'Mindbody Login', link: 'https://clients.mindbodyonline.com/asp/su1.asp?fl=true&tabID=2' }
     ];
 
@@ -109,7 +109,10 @@ class ContactPage extends Component {
     return (
       <Layout>
       <div style={{ background: '#fff' }}>
-        <Hero imgs={['team_137']} title={t.title} compact faded />
+        <Hero custom_imgs={['https://s3.ca-central-1.amazonaws.com/purefitottawa.com/images/fit_177.jpg']}
+          title={'Contact.'}
+          subtitle={'359 Bank Street.'}
+          compact />
         <FlexRow>
           <FlexCol>
             <div>

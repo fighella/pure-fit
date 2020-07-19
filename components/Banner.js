@@ -1,24 +1,12 @@
 import React, { Component } from 'react';
-// import Measure from 'react-measure';
 import {
 Carousel,
 CarouselItem,
 CarouselControl,
 CarouselIndicators
 } from 'reactstrap';
-import PureData from '../utils/src';
-// import FitContentful from './FitContentful';
-import styled from 'styled-components';
-
-const contentful = require("contentful");
-
-const FIT_SPACE_ID = "qt03r4b2rdnc";
-const FIT_ACCESS_TOKEN =
-  "wUysDGvbczx4bTZ3zvzq1ELlBvql7W09jMc4_qZeggo";
-const fit_client = contentful.createClient({
-  space: FIT_SPACE_ID,
-  accessToken: FIT_ACCESS_TOKEN
-});
+import { BannerTitle, BannerButton } from '../components/layout/helpers';
+import { getContentfulEntries } from '../components/contentful/Content';
 
 export class Banner extends Component {
 constructor(props) {
@@ -35,24 +23,11 @@ constructor(props) {
   this.onExited = this.onExited.bind(this);
 }
 componentDidMount() {
-  // this.grabSlides();
   this.grabSlidesContentful();
-
 }
 grabSlidesContentful = async () => {
-  console.log('Grabbin')
-  try {
-    const response = await fit_client.getEntries({ content_type: 'banner'   })
-    let json = await response;
-    this.setState({
-      items: json.items.reverse()
-    })
-    console.log(this.state.items)
-  } catch { 
-    console.log('noFetchErrors()')
-  } 
-
-
+  this.setState({ items: [] })
+  console.log(getContentfulEntries('banner',this));
 };
 
 onExiting() {
@@ -110,9 +85,9 @@ render() {
         <div className="sliderActions carousel-caption">
           <BannerTitle>{item_img.title}</BannerTitle>
           <h4>{item_img.subTitle}</h4>
-          <a className="btn" href={item_img.link}>
+          <BannerButton href={item_img.link}>
             {item_img.callToAction}
-          </a>
+          </BannerButton>
         </div>
       </CarouselItem>
     );
@@ -147,14 +122,3 @@ render() {
   );
 }
 }
-
-
-
-
-const BannerTitle = styled.h3`
-  @media (max-width: 376px) {
-    font-size: 60px !important;
-    letter-spacing: 2px !important;
-  }
-
-`

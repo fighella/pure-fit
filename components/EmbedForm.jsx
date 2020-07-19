@@ -63,7 +63,7 @@ class EmbedForm extends Component {
               ></TextArea>
             </p>
             <p>
-              <Checkbox field="state-subscribed" id="state-subscribed" value='checked' /> Yes, I'd also like to hear more from Pure Yoga Ottawa.
+              <Checkbox field="state-subscribed" id="state-subscribed" value='checked' /> Yes, I'd also like to hear more from Pure Fit Ottawa.
             </p>
             <SendButton
               onClick={() => new ContactForm(this.state).sendForm()}

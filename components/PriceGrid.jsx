@@ -12,12 +12,12 @@ const t = AppContent.members;
 const PriceGrid = props => {
   const { featured_pricing, standard_pricing } = props;
   const featured = featured_pricing.reverse().map((price, index) => (
-    <Col key={'featured_' + index} xs={12} md={4}>
+    <Col key={'featured_' + index} xs={12} md={3}>
       <PriceCard price={price} />
     </Col>
   ));
   const standard = standard_pricing.map((price, index) => (
-    <Col key={'standard_' + index} xs={12} md={4}>
+    <Col key={'standard_' + index} xs={12} md={3}>
       <PriceCard price={price} />
     </Col>
   ));
@@ -25,12 +25,12 @@ const PriceGrid = props => {
     <Layout>
       <Head>
         <title>
-          Yoga Memberships &amp; Class Packs | Pricing, Student and Seniors Info | Pure Yoga Ottawa
+          Yoga Memberships &amp; Class Packs | Pricing, Student and Seniors Info | Pure Fit Ottawa
         </title>
-        <meta property="og:title" content={`Join the Pure Yoga Community | Pure Yoga Ottawa`}/>
+        <meta property="og:title" content={`Join the Pure Fit Community | Pure Fit Ottawa`}/>
         <meta property="og:type" content="article" />
-        <meta property="og:description" content="Yoga for Everybody. Memberships and Class Packs to suit you." />
-        <meta property="og:url" content="https://www.pureyogaottawa.com/pricing/" />
+        <meta property="og:description" content="Fitness for Everybody. Memberships and Class Packs to suit you." />
+        <meta property="og:url" content="https://www.purefitottawa.com/pricing/" />
       </Head>
     <Container>
       <div className="page-header">
@@ -41,19 +41,19 @@ const PriceGrid = props => {
       </div>
       <Row>{featured}</Row>
       <br />
-      <div className="page-header">
+      {/* <div className="page-header">
         <div className="schedule-heading">
           <h2 className="superHeader">{t.class_packages}</h2>
           <p>{t.class_packages_subtitle}</p>
         </div>
-      </div>
+      </div> */}
       <Row>{standard}</Row>
       <div className="page-header" style={{ maxWidth: 800, margin: '0 auto' }}>
         <div className="schedule-heading">
           <h2 className="superHeader">{t.students_seniors}</h2>
           <br />
           <p>{t.discounts}</p>
-          <h2 className="superHeader">Ages 14+ Welcome.</h2>
+          <h2 className="superHeader">Ages 16+ Welcome.</h2>
           <p>{t.age}</p>
           <h2 className="superHeader">Gift Cards</h2>
           <p>{t.gift_cards} <a href="/gift-cards" style={{ color: 'palevioletred' }}>Learn more &raquo;</a></p>
@@ -159,14 +159,15 @@ class PriceCard extends Component {
 const Card = styled.div`
   text-align: center;
   background: #fff;
-  box-shadow: 0 0 32px #efefef;
-  border-radius: 8px;
+  box-shadow: 0 0 32px #333;
+
   overflow: hidden;
   padding: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin-bottom: 20px;
 `;
 
 const CardTitle = styled.strong`
@@ -183,7 +184,7 @@ const CardTitle = styled.strong`
     color: #fff;
     font-size: 1.1em;
   }
-  background: ${colors.pink};
+  background: #111;
   width: 100%;
 `;
 
@@ -213,22 +214,22 @@ const CardDesc = styled.p`
 
 const TermsLink = styled.span`
   ${fonts.highlight};
-  color: ${colors.blue};
+
   cursor: pointer;
 `;
 const LearnMoreLink = styled.span`
   ${fonts.primary};
   text-transform: none;
-  color: ${colors.pink};
+  color: #666;
   letter-spacing: 1px;
   font-weight: 300;
   padding: 1em;
   cursor: pointer;
   span {
-    border-bottom: 1px solid ${colors.pink};
+    border-bottom: 1px solid #666;
     transition: all 0.5s;
     &:hover {
-      background: ${colors.pink};
+      background: #999;
       color: #fff;
     }
   }
@@ -241,10 +242,10 @@ const BookNow = styled.a`
   letter-spacing: 1px;
   font-size: 1em;
   text-align: center;
-  background: ${colors.blue};
+  background: #000;
   margin: 1em;
   padding: 1em;
-  border-radius: 8px;
+
   color: #fff;
   transition: all 0.5s;
   &:hover {

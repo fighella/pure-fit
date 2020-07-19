@@ -9,7 +9,7 @@
     "www.purefitottawa.com"
   ],
   "routes": [
-    { "src": "/team/(?<id>[^/]*)", "dest": "/team_show?handle=$id" },
+    { "src": "/team/(?<handle>[^/]*)/(?<id>[^/]*)", "dest": "/team_show?handle=$handle&id=$id" },
     { "src": "/team/(?<id>[^/]*)/embed", "dest": "/team_frame?handle=$id" },
     { "src": "/journals/(?<id>[^/]*)", "dest": "/journals_show?handle=$id" },
     { "src": "/evolve/(?<id>[^/]*)/(?<handle>[^/]*)", "dest": "/evolve_show?id=$id&handle=$handle" },
@@ -17,13 +17,13 @@
     { "src": "/location/(?<id>[^/]*)", "dest": "/location?location=$id" },
     { "src": "/class_styles/(?<id>[^/]*)", "dest": "/class_styles_show?handle=$id" },
     { "src": "/online/(?<id>[^/]*)", "dest": "/online_show?handle=$id" },
-    { "src": "/intro", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/new" } },
-    { "src": "/packages", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/pricing" } },
-    { "src": "/workshops", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/evolve" } },
-    { "src": "/hot-yoga-schedule", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/schedule" } },
-    { "src": "/pure-team", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/team" } },
-    { "src": "/pure-team/(?<id>[^/]*)", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/team/$id" } },
-    { "src": "/p/contact-us", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/contact" } },
-    { "src": "/yoga-class-styles/(?<id>[^/]*)", "status": 301, "headers": { "Location": "https://www.pureyogaottawa.com/class_styles/$id" } }
+    { "src": "/intro", "status": 301, "headers": { "Location": "https://www.purefitottawa.com/new" } },
+    { "src": "/packages", "status": 301, "headers": { "Location": "https://www.purefitottawa.com/pricing" } },
+    { "src": "/workshops", "status": 301, "headers": { "Location": "https://www.purefitottawa.com/evolve" } },
+    { "src": "/hot-yoga-schedule", "status": 301, "headers": { "Location": "https://www.purefitottawa.com/schedule" } },
+    { "src": "/pure-team", "status": 301, "headers": { "Location": "https://www.purefitottawa.com/team" } },
+    { "src": "/pure-team/(?<id>[^/]*)", "status": 301, "headers": { "Location": "https://www.purefitottawa.com/team/$id" } },
+    { "src": "/p/contact-us", "status": 301, "headers": { "Location": "https://www.purefitottawa.com/contact" } },
+    { "src": "/yoga-class-styles/(?<id>[^/]*)", "status": 301, "headers": { "Location": "https://www.purefitottawa.com/class_styles/$id" } }
   ]
 }

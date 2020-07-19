@@ -96,7 +96,7 @@ export default class Show extends Component {
       <div style={{ background: 'rgba(240,240,240,0.9)' }}>
         <Hero
           imgs={[loc]}
-          title={'Pure Yoga ' + loc}
+          title={'Pure Fit ' + loc}
           subtitle={loc_data.address}
           compact
         />
@@ -113,7 +113,7 @@ export default class Show extends Component {
               <span id="classes" />
               <ScheduleWrapped
                 name={'Upcoming Classes in ' + loc_pretty}
-                location={'Pure Yoga ' + loc_pretty}
+                location={'Pure Fit ' + loc_pretty}
                 day={new Date()}
                 days={2}
                 full_link={true}

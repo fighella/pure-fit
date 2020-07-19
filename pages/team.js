@@ -9,31 +9,32 @@ import Hero from '../components/Hero';
 import Layout from '../components/Layout';
 import { AppContent } from '../data/content';
 import Head from 'next/head';
+import { getContentfulPage } from '../components/contentful/Content';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 // import Measure from 'react-measure';
 const t = AppContent.team;
 
-const Index = () => (
+const TeamPage = (props) => { console.log(props);
+  return(
   <Layout>
    <Head>
-        <title>
-          Your Yoga Teachers | Pure Yogis and Instructors | Pure Yoga Ottawa
-        </title>
-        <meta property="og:title" content={`Ottawa's Favorite Yoga Team | Pure Yoga Ottawa`}/>
-        <meta property="og:type" content="profile" />
-        <meta property="og:description" content={t.page_title}/>
-        <meta property="og:url" content="https://www.pureyogaottawa.com/team" />
-        <meta property="og:image" content="https://s3.amazonaws.com/pureyogaottawa.com/website/team-photos/team_457.jpg" />
-    
-      </Head>
+      <title>
+        Your Pure Fit Team | Pure Fit Instructors | Pure Fit Ottawa
+      </title>
+      <meta property="og:title" content={`Your Pure Fit Team | Pure Fit Instructors | Pure Fit Ottawa`}/>
+      <meta property="og:type" content="profile" />
+      <meta property="og:description" content={t.page_title}/>
+      <meta property="og:url" content="https://www.purefitottawa.com/team" />
+      <meta property="og:image" content="https://s3.ca-central-1.amazonaws.com/purefitottawa.com/images/fit_102.jpg" />
+    </Head>
 
 
-  <div style={{ background: '#fff' }}>
+  <div style={{ background: '#111' }}>
     <Hero
-      imgs={['team_39']}
+      custom_imgs={['https://s3.ca-central-1.amazonaws.com/purefitottawa.com/images/fit_103.jpg']}
       title={t.title}
       subtitle={t.subtitle}
       compact
-      faded
     />
     <Header>{t.contents.title}</Header>
     <SubHeader>{t.contents.subtitle}</SubHeader>
@@ -41,27 +42,31 @@ const Index = () => (
       <Row>
         <Col xs={12} md={6}>
           <Zoom bottom>
-            <ColP>{t.contents.paragraphs[0]}</ColP>
+            <ColP>
+            { documentToReactComponents(props.teaser) }
+            {/* {t.contents.paragraphs[0]} */}
+            </ColP>
           </Zoom>
         </Col>
-        <Col xs={12} md={6}>
+        {/* <Col xs={12} md={6}>
           <Zoom bottom>
             <ColP>{t.contents.paragraphs[1]}</ColP>
           </Zoom>
-        </Col>
+        </Col> */}
       </Row>
     </Container>
-    <Header>{t.team_heading}</Header>
-    <TeamBlock />
-    <Header>{t.video_heading}</Header>
-    <CenterBlock>
-      <VideoBlock />
-    </CenterBlock>
-    <p style={{ display: 'block', textAlign: 'center' }}>Watch the video</p>
+    <TeamBlock teachers={props.content.teachers} />
+  
     <br />
   </div>
   </Layout>
-);
+)};
+
+TeamPage.getInitialProps = function() {
+  return getContentfulPage('7JJfWnbmuletB0XiaJbrwC');
+}
+
+export default TeamPage;
 
 const VideoBlock = () => (
   <Vimeo
@@ -83,6 +88,7 @@ const Header = styled.h1`
   max-width: 60%;
   margin: 0.5em auto;
   ${fonts.highlight}
+  color: #efefef;
 `;
 
 const SubHeader = styled.h3`
@@ -99,6 +105,8 @@ const SubHeader = styled.h3`
   letter-spacing: 0.05em;
   line-height: 2em;
   font-weight: 300;
+  color: #efefef;
+
 `;
 
 const ColP = styled.p`
@@ -111,6 +119,8 @@ const ColP = styled.p`
   letter-spacing: 0.05em;
   line-height: 2em;
   font-weight: 300;
+  color: #efefef;
+
 `;
 
 const CenterBlock = styled.div`
@@ -120,4 +130,3 @@ const CenterBlock = styled.div`
   justify-content: center;
 `;
 
-export default Index;

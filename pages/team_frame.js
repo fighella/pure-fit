@@ -24,7 +24,7 @@ function Teacher({ teacher }) {
     <Layout hideLayout>
       <Head>
         <title>
-          {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Yoga Ottawa
+          {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Fit Ottawa
         </title>
         <style>
           @import url('https://fonts.googleapis.com/css?family=Comfortaa');
@@ -33,7 +33,7 @@ function Teacher({ teacher }) {
         <FlexRow>
           <FlexCol>
             <ScheduleWrapped
-              name={`Upcoming Classes for ${teacher.first_name} at Pure Yoga Ottawa`}
+              name={`Upcoming Classes for ${teacher.first_name} at Pure Fit Ottawa`}
               teacher={teacher.title}
               days={14}
               full_link={false}

@@ -12,7 +12,7 @@ export class AboutPureStrap extends Component {
         <Flexbox>
           <Flexcol dangerouslySetInnerHTML={{ __html: t.home.about_pure }} />
           <Flexcol>
-            <ImgHolder bg="https://s3.amazonaws.com/pureyogaottawa.com/website/team-photos/team_221.jpg" />
+            <ImgHolder bg="https://s3.ca-central-1.amazonaws.com/purefitottawa.com/images/fit_100.jpg " />
           </Flexcol>
         </Flexbox>
         <p>{t.home.tagline}</p>

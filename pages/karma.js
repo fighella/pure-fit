@@ -22,12 +22,12 @@ const KarmaPage = (props) => {
       <Layout>
           <Head>
         <title>
-          Karma Yogi | Work for Yoga | Pure Yoga Ottawa
+          Karma Yogi | Work for Yoga | Pure Fit Ottawa
         </title>
-        <meta property="og:title" content={`Karma Yogi Program | Be the community | Pure Yoga Ottawa`}/>
+        <meta property="og:title" content={`Karma Yogi Program | Be the community | Pure Fit Ottawa`}/>
         <meta property="og:type" content="article" />
         <meta property="og:description" content="Karma Volunteers" />
-        <meta property="og:url" content="https://www.pureyogaottawa.com/karma/" />
+        <meta property="og:url" content="https://www.purefitottawa.com/karma/" />
       </Head>
       <div style={{ background: '#fff' }}>
         <Hero imgs={['team_187']} title={title}  compact />

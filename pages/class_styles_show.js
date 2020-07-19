@@ -31,7 +31,7 @@ class ClassStyle extends Component {
     const doc_title = [
       class_style.title,
       'Class Style',
-      'Pure Yoga Ottawa'
+      'Pure Fit Ottawa'
     ].join(' | ');
     const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
     const loaded = class_style ? (

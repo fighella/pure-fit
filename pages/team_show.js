@@ -4,8 +4,6 @@ import textile from 'textile-js';
 import Favorite from '../components/Favorite';
 import Hero from '../components/Hero';
 import PureData from '../utils/src';
-import { AppHelpers } from '../utils/tools'
-import fetch from 'isomorphic-unfetch'
 import { fonts } from '../styles/variables';
 import Head from 'next/head';
 import Instaview from '../components/Instaview';
@@ -17,98 +15,100 @@ import { Instafeed } from '../components/Instafeed';
 import Layout from '../components/Layout';
 import { SingleColWrapper } from '../components/SingleColWrapper';
 import {withRouter} from 'next/router'
+import { getContentfulPage } from '../components/contentful/Content';
+import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const InstafeedWrapped = SingleColWrapper(Instafeed);
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
 
-const Show = (props) => (
+const Show = (props) => { 
+  console.log(props);
+  return(
   <div style={{ background: '#f5f5f5' }}>
-    <Teacher teacher={props.teacher} />
+    <Teacher teacher={props.content} />
   </div>
-);
+)};
 
 // https://stackoverflow.com/questions/12931828/convert-returned-json-object-properties-to-lower-first-camelcase
 function Teacher({ teacher }) {
   const workshops_data = []
   const workshops = workshops_data ? (
     <EvolveRow
-      title={`${teacher.first_name}'s Upcoming Workshops, Training & Retreats`}
+      title={`${teacher.firstName}'s Upcoming Workshops, Training & Retreats`}
       workshops={workshops_data}
     />
   ) : (
     false
   );
-  const iv = <Instaview bg={teacher.pose_2.background_image.url} name={teacher.first_name}><ScheduleWrapped
+  const iv = <Instaview bg={ '' } name={teacher.name}><ScheduleWrapped
       name={false}
-      teacher={teacher.title}
+      teacher={teacher}
       days={7}
       full_link={false}
       view={'insta'}
     /></Instaview>
   
   const [insta, setInsta] = useState(false);
-
+    const headshot = teacher && teacher.headshot ? <HeadShot headshot={teacher.headshot.fields.file.url}/> : ''
   const loaded = teacher ? (
-    <Layout>
+    <Layout >
       <Head>
         <title>
-          {teacher.first_name} {teacher.last_name} | {teacher.position} | Pure Yoga Ottawa
+          {teacher.firstName} {teacher.lastName} | {teacher.position} | Pure Fit Ottawa
         </title>
-        <meta property="og:title" content={`${teacher.first_name} ${teacher.last_name} | ${teacher.position} | Pure Yoga Ottawa`}/>
+        <meta property="og:title" content={`${teacher.firstName} ${teacher.lastName} | ${teacher.position} | Pure Fit Ottawa`}/>
         <meta property="og:type" content="profile" />
-        <meta property="profile:first_name" content={teacher.first_name} />
-        <meta property="og:description" content={`Hi, I'm ${teacher.first_name} - ${teacher.position} at Pure Yoga Ottawa. Come join me for some Hot Yoga.`}/>
-        <meta property="og:url" content={`https://www.pureyogaottawa.com/team/${teacher.slug}`} />
-        <meta property="og:image" content={teacher.headshot.card.url} />
+        <meta property="profile:first_name" content={teacher.firstName} />
+        <meta property="og:description" content={`Hi, I'm ${teacher.firstName} - ${teacher.position} at Pure Fit Ottawa. Come join me to sweat.`}/>
+        <meta property="og:url" content={`https://www.purefitottawa.com/team/${teacher.teacherKey}`} />
+        {/* <meta property="og:image" content={teacher.headshot.card.url} /> */}
         <style>
           @import url('https://fonts.googleapis.com/css?family=Comfortaa');
         </style>
       </Head>
         {insta ? <span onClick={() => setInsta(false)}>{iv}</span> : false}
          <Hero
-          custom_imgs={[teacher.pose_1.background_image.url]}
-          title=""
+          custom_imgs={[teacher.photos[0].fields.file.url]}
+          title={teacher.firstName}
           subtitle=""
           compact
           close="/team"
+          
         />
-        <HeadShot headshot={teacher.headshot.card.url} />
-        <HeadRow>
+        {headshot}
+        <HeadRow >
           <Title>
             {teacher.title}
             <Favorite id={[teacher.id].join('-')} favorite_type="tr" />
           </Title>
-          <SubTitle>{teacher.position}</SubTitle>
+          <SubTitle>     {teacher.name} &bull; {teacher.position}</SubTitle>
         </HeadRow>
-        <FlexRow>
+        <FlexRow style={{ backgroundColor: '#111'}}>
           <FlexCol>
-            <TeacherDescription
-              dangerouslySetInnerHTML={{
-                __html: textile(teacher.description)
-              }}
-            />
+            <TeacherDescription>
+                          { documentToReactComponents(teacher.description) }
+              </TeacherDescription>
           </FlexCol>
           <FlexCol>
             <ScheduleWrapped
-              name={`Upcoming Classes for ${teacher.first_name}`}
-              teacher={teacher.title}
+              name={`Upcoming Classes for ${teacher.firstName}`}
+              teacher={teacher.name}
               days={14}
               full_link={false}
             />
             <br />
-            <span onClick={() => setInsta(true)}>📷</span>
+            <span onClick={() => setInsta(true)}></span>
           </FlexCol>
         </FlexRow>
         {workshops}
-        <Contentful content_type='video' title={`Can't make a class? Find ${teacher.first_name} on Pure Online`} teacher={teacher.title}/>
         {teacher.instagram_token ? (
           <InstafeedWrapped
-            title={`${teacher.first_name} on Instagram`}
+            title={`${teacher.firstName} on Instagram`}
             fluid
             fullWidth
             const
-            accessToken={teacher.instagram_token}
+            accessToken={teacher.instagramToken}
           />
         ) : (
           false
@@ -119,14 +119,16 @@ function Teacher({ teacher }) {
             margin: '0 auto',
             textAlign: 'center',
             padding: '2em',
-            background: '#fff'
+            background: '#111',
+            color: '#fff',
+           
           }}
         >
           <a href="/team" style={{ color: '#333', textAlign: 'center' }}>
             MEET THE TEAM{' '}
-          </a>{' '}
+          </a>
           &raquo;
-          {teacher.title}
+          {teacher.name}
         </div>
     </Layout>
   ) : (
@@ -135,34 +137,18 @@ function Teacher({ teacher }) {
   return <div>{loaded}</div>;
 }
 
-Show.getInitialProps = async function(context) {
-  const { handle } = context.query;
-  try {
-    const response = await fetch(AppHelpers.mbParams({ teacher: handle }, 'teachers'));
-    let json = await response.json();
-    console.log('Teachin',json.teachers)
-    return {
-      teacher: json.teachers,
-    }
-  } catch {
-    console.log(handle)
-    console.log('noFetchError();');
-  }
+Show.getInitialProps = function({query}) {
+    return getContentfulPage(query.id);
 }
 
-// TeacherProfile.propTypes = {
-//   teacherData: PropTypes.arrayOf.isRequired,
-//   workshopsData: PropTypes.arrayOf.isRequired
-// };
-
-const TeacherDescription = styled.div``;
+const TeacherDescription = styled.div`text-align: center;  b { font-weight: 700; } }`;
 
 const HeadShot = styled.div`
   position: relative;
   z-index: 2;
   border: 4px solid #fff;
   padding: 4px;
-  background-color: #fff;
+  background: #111;
   box-shadow: 0 0 5px #ccc;
   margin: 0 auto;
   margin-top: -70px;
@@ -182,27 +168,31 @@ const Title = styled.h1`
 
 const SubTitle = styled.h3`
   ${fonts.highlight};
-  font-size: 1.4em;
+  font-size: 2em;
 `;
 
 const HeadRow = styled.div`
   padding: 2em;
   text-align: center;
   margin: 0 auto;
+  background: #111;
+  color: #fff;
 `;
 
 const FlexRow = styled.div`
   display: flex;
   flex-wrap: wrap;
+  background: #111;
 `;
 
 const FlexCol = styled.div`
-  width: 50%;
+  width: 100%;
   padding: 3em;
   text-align: left;
   height: 100%;
   p {
     font-size: 1.1em; line-height: 1.4em;
+    color: #fff;
     white-space: pre-wrap;
     font-family: futura-pt;
     font-style: normal;

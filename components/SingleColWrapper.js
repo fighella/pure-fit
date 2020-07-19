@@ -1,23 +1,16 @@
 import React from 'react';
-import { Container } from 'reactstrap';
-import styled from 'styled-components';
+import { DarkBlock, CustomContainer } from './layout/helpers';
 
 export function SingleColWrapper(WrappedComponent) {
   return class extends React.Component {
     render() {
       return (
+        <DarkBlock>
         <CustomContainer fluid={this.props.fluid}>
           <WrappedComponent {...this.props} />
         </CustomContainer>
+        </DarkBlock>
       );
     }
   };
 }
-
-const CustomContainer = styled(Container)`
-  padding: ${props => (props.fullWidth ? 0 : false)};
-  @media (max-width: 800px) {
-    min-width: 98% !important;
-    max-width: 98% !important;
-  }
-`;

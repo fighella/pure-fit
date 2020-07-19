@@ -106,12 +106,12 @@ class Index extends Component {
       <Layout>
         <Head>
         <title>
-         Evolve Your Practice | Yoga Workshops, Teacher Training &amp; Retreats | Pure Yoga Ottawa
+         Evolve Your Practice | Yoga Workshops, Teacher Training &amp; Retreats | Pure Fit Ottawa
         </title>
-        <meta property="og:title" content={`Evolve Your Practice With Us | Pure Yoga Ottawa`}/>
+        <meta property="og:title" content={`Evolve Your Practice With Us | Pure Fit Ottawa`}/>
         <meta property="og:type" content="article" />
         <meta property="og:description" content="Yoga Workshops, Yoga Training, Teacher Training &amp; Retreats." />
-        <meta property="og:url" content="https://www.pureyogaottawa.com/evolve" />
+        <meta property="og:url" content="https://www.purefitottawa.com/evolve" />
       </Head>
       <div style={{ overflow: 'hidden'}}>
         <Hero

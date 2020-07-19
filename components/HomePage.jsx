@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import { FootNote, ScheduleBlock } from './layout/helpers';
 import PropTypes from 'prop-types';
 import { Row, Col } from 'reactstrap';
 import { ScheduleBanner } from './schedule/Banner';
@@ -15,7 +15,7 @@ import { AboutPureStrap } from './AboutPureStrap';
 import { SingleColWrapper } from './SingleColWrapper';
 import ScheduleWrapper from '../components/ScheduleWrapper';
 
-const instaToken = '1933711431.1677ed0.7f028f409a604f289fe188f0319619e5'; //20307571.1677ed0.dd4b54d1b0c34463b9dd2c0c2adffcdc';
+const instaToken = '1933711431.1677ed0.7f028f409a604f289fe188f0319619e5';
 const NewToYogaWrapped = SingleColWrapper(NewToYogaStrap);
 const BlogCollectionWrapped = SingleColWrapper(BlogCollection);
 const InstafeedWrapped = SingleColWrapper(Instafeed);
@@ -24,50 +24,50 @@ const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
 const HomePage = props => {
   const schedule_locs = [
-    { location: 'Pure Yoga Centretown', days: 3 },
+    { location: 'Pure Fit', days: 7 },
   ];
   const schedule_columns = schedule_locs
   .map(schedule => {
     return (
       <Col
         key={`schedule_${schedule.location}`}
-        style={{ maxWidth: '95%', margin: '0 auto 1em' }}
+        style={{ maxWidth: '100%', margin: '0 auto 1em' }}
       >
         <ScheduleWrapped
           name={schedule.location}
           location={schedule.location}
           day={'Today'}
-          days={1}
+          days={7}
           full_link={true}
         />
       </Col>
     );
   });
   const schedule = (
-    <div id="schedule" style={{ maxWidth: '98%', margin: '0 auto' }}>
-      <div className="page-header">
-        <div className="schedule-heading">
-          <h2 className="superHeader">{t.hot_yoga_schedule}</h2>
-          <p>{t.one_pass}</p>
+    <ScheduleBlock>
+      <div id="schedule">
+        <div className="page-header">
+          <div className="schedule-heading">
+            <h2 className="superHeader">{t.hot_yoga_schedule}</h2>
+            <p>{t.one_pass}</p>
+          </div>
+          <ScheduleBanner />
         </div>
-        <ScheduleBanner />
+        <Row>
+          {schedule_columns}
+        </Row>
+        <FootNote>{t.footnote}</FootNote>
       </div>
-      <Row>
-      {schedule_columns}
-      </Row>
-      <FootNote>{t.footnote}</FootNote>
-    </div>
+    </ScheduleBlock>
   );
   const sections = [
     <Banner key={1} />,
     schedule,
     <AppDownload />,
-    <NewToYogaWrapped fluid fullWidth />,
-    <BlogCollectionWrapped />,
     <AboutPureStrapWrapped />,
     <InstafeedWrapped fluid fullWidth const accessToken={instaToken} />
   ].map(section => section);
-  return <div style={{ background: '#F5F7F3' }}>{sections}</div>;
+  return <div style={{ background: '#1D1F24' }}>{sections}</div>;
 };
 
 HomePage.propTypes = {
@@ -75,11 +75,5 @@ HomePage.propTypes = {
   loaded_classes: PropTypes.shape.isRequired
 };
 
-const FootNote = styled.p`
-  font-size: 12px;
-  margin: 1em auto;
-  text-align: center;
-  font-style: italic;
-`;
 
 export default HomePage;
