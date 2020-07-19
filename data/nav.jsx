@@ -125,11 +125,11 @@ const AppNav = {
   ],
   classes: [
     {
-      name: 'Intro Month',
+      name: 'Intro 2 Weeks',
       mega: (
         <NavPricing
-          name="Intro Month"
-          price="$45"
+          name="Intro 2 Weeks"
+          price="$60"
           description="Any Class. Any Studio. Any Time."
           sub_title="Perfect for New to Yoga or New to Pure. Come join us."
         />
@@ -140,7 +140,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Monthly Unlimited"
-          price="$150"
+          price="$220"
           sub_title="One Month Unlimited. Start whenever you like."
           description="Any Class. Any Studio. Any Time."
           terms=""
@@ -152,7 +152,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Pure Membership"
-          price="$110/mo"
+          price="$180/mo"
           description="Any Class. Any Studio. Any Time."
           sub_title="Save over 30% for unlimited Yoga."
           terms="(Automatic auto-renew Payment)."
@@ -164,7 +164,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Class Packs"
-          price="5 Classes: $85. 10 Classes: $157"
+          price="5 Classes: $135. 10 Classes: $250"
           sub_title="5 or 10 Class Packs Available."
           description="Any Class. Any Studio. Any Time."
         />
@@ -175,7 +175,7 @@ const AppNav = {
       mega: (
         <NavPricing
           name="Drop In"
-          price="$20"
+          price="$35"
           sub_title="Book In Advance or Just Turn Up."
           description="Any Class. Any Studio. Any Time."
         />
@@ -200,3 +200,5 @@ const AppNav = {
 };
 
 export default AppNav;
+
+
