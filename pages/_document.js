@@ -29,11 +29,11 @@ export default class MyDocument extends Document {
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
 j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-MJWD2S');`}}></script>
-          <meta content="Pure Yoga Ottawa" name="author" />
+})(window,document,'script','dataLayer','GTM-NM9D62M');`}}></script>
+          <meta content="Pure Fit Ottawa" name="author" />
           <meta content="width=device-width, initial-scale=1.0" name="viewport" />
           <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-          <meta property="og:site_name" content="Pure Yoga Ottawa" />
+          <meta property="og:site_name" content="Pure Fit Ottawa" />
          
           <meta property="fb:admins" content="873990164" />
           <meta property="fb:app_id" content="312000085528745" />
@@ -52,7 +52,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         </Head>
         <body>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJWD2S"
+        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NM9D62M"
           height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
           <Main />
           <NextScript />

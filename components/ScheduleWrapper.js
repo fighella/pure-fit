@@ -37,6 +37,7 @@ export default function ScheduleWrapper(WrappedComponent, PureData) {
     render() {
       return (
         <WrappedComponent
+
           name="name"
           classes={this.state.classes}
           loaded_classes={this.state.loaded_classes}

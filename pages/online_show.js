@@ -26,12 +26,12 @@ const OnlineShowPage = (props) => {
       <Layout>
           <Head>
         <title>
-          Pure Yoga Online | Yoga Anywhere | Pure Yoga Ottawa
+          Pure Fit Online | Yoga Anywhere | Pure Fit Ottawa
         </title>
-        <meta property="og:title" content={`Pure Yoga Online | Online Yoga Anywhere | Pure Yoga Ottawa`}/>
+        <meta property="og:title" content={`Pure Fit Online | Online Yoga Anywhere | Pure Fit Ottawa`}/>
         <meta property="og:type" content="article" />
-        <meta property="og:description" content="Pure Yoga Online - Monthly Streaming Subscriptions" />
-        <meta property="og:url" content="https://www.pureyogaottawa.com/online/" />
+        <meta property="og:description" content="Pure Fit Online - Monthly Streaming Subscriptions" />
+        <meta property="og:url" content="https://www.purefitottawa.com/online/" />
       </Head>
       <div style={{ background: '#fff', textAlign: 'center' }}>
         <Hero imgs={['team_142']} title={title} subtitle={'Stream Anywhere Anytime.'} compact />

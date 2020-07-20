@@ -12,7 +12,8 @@ const Blocks = props => {
 
   const cols = data.map(content => {
     let block;
-    if (content.workshop_type === 'Workshop' || content.workshop_type === 'Training') {
+    if(content){
+      if (content && (content.workshop_type === 'Workshop' || content.workshop_type === 'Training')) {
       block = (
         <WorkshopBlock
           type={content.workshop_type}
@@ -38,6 +39,7 @@ const Blocks = props => {
           blockWidth={blockWidth}
         />
       );
+      }
     }
     return <FlexCol sideBar={props.sideBar}>{block}</FlexCol>;
   });

@@ -37,6 +37,6 @@ function directionsLink(loc, dest) {
     'https://www.google.com/maps/dir/?api=1&destination_place_id=' +
     loc +
     '&destination=' +
-    encodeURI('Pure Yoga ' + dest);
+    encodeURI('Pure Fit ' + dest);
   return base;
 }

@@ -22,12 +22,12 @@ const GiftCardsPage = (props) => {
       <Layout>
           <Head>
         <title>
-          Give the Gift of Yoga | Gift Cards | Pure Yoga Ottawa
+          Give the Gift of Yoga | Gift Cards | Pure Fit Ottawa
         </title>
-        <meta property="og:title" content={`Gift Cards | Give the gift of Yoga | Pure Yoga Ottawa`}/>
+        <meta property="og:title" content={`Gift Cards | Give the gift of Yoga | Pure Fit Ottawa`}/>
         <meta property="og:type" content="article" />
         <meta property="og:description" content="Yoga Gift Cards" />
-        <meta property="og:url" content="https://www.pureyogaottawa.com/gift-cards/" />
+        <meta property="og:url" content="https://www.purefitottawa.com/gift-cards/" />
       </Head>
       <div style={{ background: '#fff' }}>
         <Hero imgs={['team_201']} title={title}  compact />
@@ -40,7 +40,7 @@ const GiftCardsPage = (props) => {
                   __html: marked(bodu)
                 }} />
             </div>
-            <Link target="_blank" href={'https://clients.mindbodyonline.com/asp/main_shop.asp?pMode=2&tabID=3'}><SmallBtn href='https://clients.mindbodyonline.com/asp/main_shop.asp?pMode=2&tabID=3'>Buy Pure Yoga Gift Card Online</SmallBtn></Link>
+            <Link target="_blank" href={'https://clients.mindbodyonline.com/asp/main_shop.asp?pMode=2&tabID=3'}><SmallBtn href='https://clients.mindbodyonline.com/asp/main_shop.asp?pMode=2&tabID=3'>Buy Pure Fit Gift Card Online</SmallBtn></Link>
           </FlexCol>
         </FlexRow>
       </div>

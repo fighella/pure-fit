@@ -19,8 +19,7 @@ import PureData from '../utils/src';
 const Blog = new BlogData(NavBlog, PureData);
 
 const AppNav = {
-  main: [],
-  new_main: [
+  main: [
     {
       name: 'Home',
       link: '/',
@@ -89,23 +88,12 @@ const AppNav = {
         />
       ),
       link: '/login',
-      has_mega: true,
+    has_mega: true,
       mega: <NavLogin />
     }
   ],
   locations: [
-    {
-      name: 'Pure Yoga Westboro',
-      link: 'westboro'
-    },
-    {
-      name: 'Pure Yoga Centretown',
-      link: 'centretown'
-    },
-    {
-      name: 'Pure Yoga Downtown',
-      link: 'downtown'
-    },
+
     {
       name: 'Pure Fit Ottawa',
       link: 'fit'
@@ -183,20 +171,26 @@ const AppNav = {
     }
   ],
   footer: [
-    // { name: 'About Pure Fit', link: '/about' },
-    // { name: 'Faqs', link: '/faqs' },
-    // { name: 'Karma', link: '/karma' },
-    // {
-    //   name: 'Mindbody Login',
-    //   link:
-    //     'https://clients.mindbodyonline.com/classic/ws?studioid=21952'
-    // },
-    // { name: 'Westboro', link: '/location/westboro' },
-    // { name: 'Centretown', link: '/location/centretown' },
-    // { name: 'Downtown', link: '/location/downtown' },
-    // { name: 'Toronto', link: 'https://www.pureyogatoronto.com' },
-    { name: 'Contact', link: 'https://www.pureyogaottawa.com/contact' }
+    { name: 'About Pure Fit', link: '/about' },
+    { name: 'Faqs', link: '/faqs' },
+    {
+      name: 'Mindbody Login',
+      link:
+        'https://clients.mindbodyonline.com/classic/ws?studioid=920410'
+    },
+    { name: 'Pure Yoga Ottawa', link: 'https://pureyogaottawa.com' },
+    { name: 'Pure Yoga Toronto', link: 'https://www.pureyogatoronto.com' },
+    { name: 'Contact', link: '/contact' }
+  ],
+  main: [
+    { name: 'Home', link: '/' },
+    { name: 'Schedule', link: '/schedule' },
+    { name: 'Team', link: '/team' },
+    { name: 'Pricing', link: '/pricing' },
+    { name: 'Faqs', link: '/faqs' },
+    { name: 'Contact', link: '/contact' }
   ]
+
 };
 
 export default AppNav;

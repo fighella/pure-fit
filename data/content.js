@@ -7,7 +7,7 @@ import {
   faYoutube
 } from '@fortawesome/free-brands-svg-icons';
 
-const brand = 'Pure Yoga Ottawa';
+const brand = 'Pure Fit Ottawa';
 
 const socialLinks = {
   facebook: {
@@ -38,12 +38,12 @@ export const AppContent = {
   socialLinks,
   login,
   mindbody_link:
-    'https://clients.mindbodyonline.com/classic/ws?studioid=21952',
-  title: 'Ottawa Fitness Studio',
-  new_to_yoga: 'Coming 2020',
+    'https://clients.mindbodyonline.com/classic/ws?studioid=920410',
+  title: 'Ottawa Fitness Studio - 359 Bank St - Beside Pure Yoga',
+  new_to_yoga: 'We are Open!',
   hot_yoga_schedule: 'Pure Fit Class Schedule',
   book_a_class: 'BOOK A CLASS',
-  one_pass: '1 pass. 4 studios. Find your class.',
+  one_pass: '7 Day Booking Window.',
   apps: 'Get the schedule on your phone.',
   footnote:
     'Please note: We encourage you to be in studio 10 minutes before class starts to secure your position.',
@@ -75,9 +75,11 @@ export const AppContent = {
   home: {
     page_title: `${brand} - Westboro, Centretown, Downtown | Fitness Studio`,
     banners: [{}],
-    about_pure: `<p>Whether you come to Pure Yoga Ottawa for a workout or stress relief, ultimately, yoga is about growth and transformation.</p>
-    <p> At Pure Yoga we are completely dedicated to the evolution of our students. With our amazing team of highly trained teachers, you are always in the best hands.</p>`,
-    tagline: 'Come join the community, where we can all grow together.'
+    about_pure: `<p>Where fitness meets lifestyle. At Pure Fit we train not only to be stronger
+    physically, but mentally.</p><p>We work, sweat and play hard, training for healthier
+    living. With an intelligent approach to small group fitness classes, we help you
+    get the results that you want.</p>`,
+    tagline: 'At Pure we\'re committed to the evolution of YOU, helping you reach your goals and to feel better one sweat session at a time.'
   },
   class_styles: {
     title: 'Class Styles'
@@ -123,15 +125,15 @@ export const AppContent = {
     },
     intro: {
       title: 'Introductory Offer',
-      promo: 'Pure Yoga Intro Month Special',
+      promo: 'Pure Fit Intro Month Special',
       price: '45',
       deal:
         '1 month of unlimited yoga (that’s right: any class, any time) for one whole month. You can start your month whenever you like, and you will get 30 days (from that day) to do try as many classes you want.',
       link:
-        'http://clients.mindbodyonline.com/ws.asp?studioid=21952&stype=41&prodid=60',
+        'http://clients.mindbodyonline.com/ws.asp?studioid=920410&stype=41&prodid=60',
       contents: [
-        'We welcome you to come and see how Pure Yoga can help you grow and transform.',
-        'Whether you come to Pure Yoga Ottawa for a workout or stress relief, we are completely dedicated to the evolution of our students. With our amazing team of highly trained teachers, you are always in the best hands.',
+        'We welcome you to come and see how Pure Fit can help you grow and transform.',
+        'Whether you come to Pure Fit Ottawa for a workout or stress relief, we are completely dedicated to the evolution of our students. With our amazing team of highly trained teachers, you are always in the best hands.',
         '<a href="/faqs">Frequently Asked Questions</a>'
       ]
     },
@@ -187,19 +189,19 @@ export const AppContent = {
     }
   },
   team: {
-    title: 'Pure Yogis',
-    page_title: `Meet your team | Pure Yogis | ${brand}`,
+    title: 'Your Trainers',
+    page_title: `Meet your team | Pure Fit | ${brand}`,
     contents: {
       title: 'We love what we do.',
       subtitle: 'And we want to share our passion with you.',
       paragraphs: [
-        'At Pure Yoga Ottawa we are completely dedicated to the evolution of our students. With our amazing team of highly trained teachers, you are always in the best hands. Our experienced teachers are among the best and most passionate in Canada and beyond, and their energy and enthusiasm for yoga is infectious!',
+        'At Pure Fit Ottawa we are completely dedicated to the evolution of our students. With our amazing team of highly trained teachers, you are always in the best hands. Our experienced teachers are among the best and most passionate in Canada and beyond, and their energy and enthusiasm for yoga is infectious!',
         'Yoga is a journey. Each of our teachers has their own unique and creative style, a product of who taught them, where they have travelled and practiced yoga, and the inspiration that has resonated with them along the way. And so this is passed on to you, and the journey continues…'
       ]
     },
     team_heading: 'YOUR TEAM',
     video_heading: 'The People of Pure',
-    subtitle: 'Good Vibes'
+    subtitle: 'We Do Things Differently.'
   },
   members: {
     path: '/pricing',
@@ -207,19 +209,19 @@ export const AppContent = {
     page_title: `Join Our Community | Yoga for Everybody | ${brand}`,
     subtitle: 'Yoga, For Everyone',
     memberships: 'Membership Packages',
-    memberships_subtitle: 'One Pass. 3 Studios',
+    memberships_subtitle: 'Fitness.',
     class_packages: 'Class Packages',
     class_packages_subtitle: 'Afraid of commitment?',
     call_to_action: 'Book Now',
     students_seniors: 'STUDENT/SENIOR DISCOUNTS',
     discounts:
-      'Full time students and seniors receive $15 off of any class package.  Check in studio for student auto renew membership prices. Valid Student ID must be provided.',
-      age: 'Age 14 and older. 17 and under require parent/guardian signature.',
-      gift_cards: 'Pure Yoga Gift Cards make the perfect gift. Our Gift Cards can be used on classes, workshops and in-studio merch like yoga gear and clothing. They can be purchased online @ Mindbody or in studio.'
+      'Full time students and seniors receive $15 off of any class package. Check in studio for student auto renew membership prices. Valid Student ID must be provided.',
+      age: 'Age 16 and older. 17 and under require parent/guardian signature.',
+      gift_cards: 'Pure Fit Gift Cards make the perfect gift. Our Gift Cards can be used on classes, personal training etc. They can be purchased online @ Mindbody or in studio.'
   },
   stream: {
     title: 'Anywhere',
-    page_title: `Pure Yoga Online | Workshops, Training, Retreats | ${brand}`,
+    page_title: `Pure Fit Online | Workshops, Training, Retreats | ${brand}`,
     subtitle: ''
   },
   journal: {
@@ -260,14 +262,14 @@ export const AppContent = {
           'A yoga mat (available to rent), A couple of towels (available to rent). A water bottle<li>Comfortable clothing to wear to class. A change of clothes (you will get sweaty!)'
       },
       {
-        question: 'How much does it cost to come to Pure Yoga? ',
+        question: 'How much does it cost to come to Pure Fit? ',
         answer:
-          'If you’re new to Pure Yoga, we have an amazing “Intro Month” special where you can come to unlimited classes for just $45 for one month. We also have single class drop in fees, class packages and memberships available, as well as students and seniors discounts - please visit our pricing page for more information. '
+          'If you’re new to Pure Fit, we have an amazing “Intro Month” special where you can come to unlimited classes for just $45 for one month. We also have single class drop in fees, class packages and memberships available, as well as students and seniors discounts - please visit our pricing page for more information. '
       },
       {
         question: 'Do I need to buy a membership for each of your studios? ',
         answer:
-          'No, once you purchase a Pure Yoga membership you can choose to come to any of our studios '
+          'No, once you purchase a Pure Fit membership you can choose to come to any of our studios '
       },
       {
         question: 'Do you hire mats, and how much does it cost? ',
@@ -325,25 +327,25 @@ export const AppContent = {
           'Yes, we allow pregnant and breastfeeding women to practice yoga at our studios. Many women enjoy practicing yoga throughout their pregnancy, and if you feel comfortable to do so, and have the go-ahead from your doctor or midwife, you’re welcome to practice with us. Please always inform your teacher if you are pregnant.'
       },
       {
-        question: 'What can I expect from Pure Yoga?',
+        question: 'What can I expect from Pure Fit?',
         answer:
-          'We’re a fun, friendly and inclusive place. When you come to practice with us, we’ll encourage you along your yoga path, and provide a happy place that you’ll use to support your healthy and positive lifestyle. What you’ll find at Pure Yoga is a welcoming environment where classes are tailored to all levels, led by some of Canada’s most experienced and passionate teachers.'
+          'We’re a fun, friendly and inclusive place. When you come to practice with us, we’ll encourage you along your yoga path, and provide a happy place that you’ll use to support your healthy and positive lifestyle. What you’ll find at Pure Fit is a welcoming environment where classes are tailored to all levels, led by some of Canada’s most experienced and passionate teachers.'
       },
       {
-        question: 'How old do I need to be to do yoga at Pure Yoga?',
+        question: 'How old do I need to be to do yoga at Pure Fit?',
         answer:
           'You must be over 14 years or older. Between 14 to 17 you will need a parent/guardian to sign off.',
       },
     ]
   },
   about: {
-    title: 'About Pure Yoga.',
-    page_title: 'About Pure Yoga',
+    title: 'About Pure Fit.',
+    page_title: 'About Pure Fit',
     what_is: {
-      title: 'About Pure Yoga.',
+      title: 'About Pure Fit.',
       contents: [
-        'Pure Yoga was founded by lifelong best friends Amber Stratton and Jen Dalgleish. Their vision was to bring their community not just a great yoga studio, but a lifestyle. A place where every student feels at home, a place to grow the love for the practice as well as give students the tools for healthy living both on and off the mat.',
-        'Pure is not just studio about yoga, it is about lifestyle and community. With the opening of their first studio in Westboro in 2012, this dream became a reality, and Ottawa finally had a world-class yoga studio. Pure Yoga quickly expanded to open the Centretown and Downtown locations and in 2015 Pure Kitchen Vegetarian Food and Juice Bar was born, followed quickly by 3 more locations in the city. This was the perfect compliment as to what it means to live the Pure way.'
+        'Pure Fit was founded by lifelong best friends Amber Stratton and Jen Dalgleish. Their vision was to bring their community not just a great yoga studio, but a lifestyle. A place where every student feels at home, a place to grow the love for the practice as well as give students the tools for healthy living both on and off the mat.',
+        'Pure is not just studio about yoga, it is about lifestyle and community. With the opening of their first studio in Westboro in 2012, this dream became a reality, and Ottawa finally had a world-class yoga studio. Pure Fit quickly expanded to open the Centretown and Downtown locations and in 2015 Pure Kitchen Vegetarian Food and Juice Bar was born, followed quickly by 3 more locations in the city. This was the perfect compliment as to what it means to live the Pure way.'
       ],
       imgs: [
         'https://s3.amazonaws.com/pureyogaottawa.com/website/about/2.jpg',
@@ -363,12 +365,12 @@ export const AppContent = {
     benefits: {
       title: "Ottawa's Yogi Community",
       contents: [
-        'Today Pure Yoga remains a favourite destination for Ottawa’s yogi community. A huge range of class styles are taught at all locations, led by experienced and passionate teachers from Ottawa and beyond, including founders Jen and Amber. As well as scheduled yoga classes, Pure Yoga also offers an exciting range of workshop events for yogis to evolve their practice, as well as teacher training programs, both here in Ottawa and abroad. Pure Yoga leads a series of yoga retreats throughout the year, with destinations including Costa Rica and Australia. Pure Yoga is also available online for you to practice with your favourite teachers at home, on your travels, or when you can’t make it into the studio.'
+        'Today Pure Fit remains a favourite destination for Ottawa’s yogi community. A huge range of class styles are taught at all locations, led by experienced and passionate teachers from Ottawa and beyond, including founders Jen and Amber. As well as scheduled yoga classes, Pure Fit also offers an exciting range of workshop events for yogis to evolve their practice, as well as teacher training programs, both here in Ottawa and abroad. Pure Fit leads a series of yoga retreats throughout the year, with destinations including Costa Rica and Australia. Pure Fit is also available online for you to practice with your favourite teachers at home, on your travels, or when you can’t make it into the studio.'
       ]
     },
     sweat: {
       contents: [
-        'At Pure we feel yoga should be an uplifting, fun part of your life. We want to help you to develop your passion, and live and love the ‘Pure’ lifestyle. Whether you’re a local, a visitor, student, teenager or a grandparent, we want Pure Yoga to become YOUR happy place. Come and join our community, we look forward to welcoming you.'
+        'At Pure we feel yoga should be an uplifting, fun part of your life. We want to help you to develop your passion, and live and love the ‘Pure’ lifestyle. Whether you’re a local, a visitor, student, teenager or a grandparent, we want Pure Fit to become YOUR happy place. Come and join our community, we look forward to welcoming you.'
       ],
       imgs: [
         'https://s3.amazonaws.com/pureyogaottawa.com/website/about/8.jpg',

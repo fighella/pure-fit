@@ -8,6 +8,7 @@
   "alias": [
     "www.purefitottawa.com"
   ],
+
   "rewrites": [
     { "source": "/team/:id", "destination": "/team_show?handle=$id" },
     { "source": "/team/:id/embed", "destination": "/team_frame?handle=$id" },
@@ -27,5 +28,6 @@
     { "source": "/pure-team/:id/(.*)", "permanent": true, "destination":  "https://www.pureyogaottawa.com/team/$id" },
     { "source": "/p/contact-us", "permanent": true, "destination":  "https://www.pureyogaottawa.com/contact" },
     { "source": "/yoga-class-styles/:id/(.*)", "permanent": true, "destination":  "https://www.pureyogaottawa.com/class_styles/$id" }
+
   ]
 }

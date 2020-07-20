@@ -76,12 +76,12 @@ class Index extends Component {
       <Layout>
           <Head>
         <title>
-          Pure Yoga Community Journal | Yoga, Food, Wine, Life | Pure Yoga Ottawa
+          Pure Fit Community Journal | Yoga, Food, Wine, Life | Pure Fit Ottawa
         </title>
-        <meta property="og:title" content={`Pure Yoga Journal`}/>
+        <meta property="og:title" content={`Pure Fit Journal`}/>
         <meta property="og:type" content="articles" />
-        <meta property="og:description" content="Discover the story behind Pure Yoga Ottawa" />
-        <meta property="og:url" content="https://www.pureyogaottawa.com/journals/" />
+        <meta property="og:description" content="Discover the story behind Pure Fit Ottawa" />
+        <meta property="og:url" content="https://www.purefitottawa.com/journals/" />
       </Head>
       <div style={style.body}>
         <Hero

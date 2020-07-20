@@ -107,7 +107,7 @@ class LoginPage extends Component {
           {this.state.logged_in}
         </small>
         <p>
-          <a href="https://clients.mindbodyonline.com/classic/ws?studioid=21952"></a>Login to Mindbody Direct here.
+          <a href="https://clients.mindbodyonline.com/classic/ws?studioid=920410"></a>Login to Mindbody Direct here.
         </p>
       </div>
       </Layout>

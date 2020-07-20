@@ -15,12 +15,12 @@ class NewPage extends Component {
       <Layout>
           <Head>
         <title>
-          New To Yoga | Want to try Yoga, but Never Tried? | Pure Yoga Ottawa
+          New To Yoga | Want to try Yoga, but Never Tried? | Pure Fit Ottawa
         </title>
-        <meta property="og:title" content={`Discover Hot Yoga | Ottawa's Favorite Yoga | Pure Yoga Ottawa`}/>
+        <meta property="og:title" content={`Discover Hot Yoga | Ottawa's Favorite Yoga | Pure Fit Ottawa`}/>
         <meta property="og:type" content="article" />
         <meta property="og:description" content="Discover the benefits of Hot Yoga." />
-        <meta property="og:url" content="https://www.pureyogaottawa.com/new/" />
+        <meta property="og:url" content="https://www.purefitottawa.com/new/" />
       </Head>
       <div style={{ background: '#fff' }}>
         <TopBanner />

@@ -43,9 +43,9 @@ app.prepare()
     app.render(req, res, actualPage, queryParams)
   })
 
-  server.get('/team/:handle', (req, res) => {
+  server.get('/team/:handle/:id', (req, res) => {
     const actualPage = '/team_show'
-    const queryParams = { handle: req.params.handle }
+    const queryParams = { handle: req.params.handle, id: req.params.id }
     app.render(req, res, actualPage, queryParams)
   })
 

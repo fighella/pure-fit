@@ -76,7 +76,7 @@ export class ClassSummary extends Component {
     const end_t = moment.tz(this.props.yoga_class.end_time, zone);
     come_early_message = 'Please arrive 10 mins before class.';
     _event = {
-      title: `${class_title} w/ ${teacher_name} -- @ Pure Yoga`,
+      title: `${class_title} w/ ${teacher_name} -- @ Pure Fit`,
       description: `${class_description} \n\n ${come_early_message}`,
       location: `${location_name}, Ottawa, Ontario`,
       startTime: start_t.add(5, 'hours'),

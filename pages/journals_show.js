@@ -26,7 +26,7 @@ const Show = ({ blog, router }) => {
     const disqusShortname = 'pureyogaottawa';
     const disqusConfig = {
       url:
-        'https://www.pureyogaottawa.com/journals/' + router.query.handle,
+        'https://www.purefitottawa.com/journals/' + router.query.handle,
       identifier: router.query.handle,
       title: 'Pure Journal.'
     };
@@ -129,7 +129,7 @@ const Show = ({ blog, router }) => {
     );
     return(<Layout> <Head>
       <title>
-        {post.title} | Pure Yoga Ottawa Journal
+        {post.title} | Pure Fit Ottawa Journal
       </title>
       <meta property="og:image" content={post.hero_image ? post.hero_image.url : ''} />
       <meta property="og:type" content="article" />

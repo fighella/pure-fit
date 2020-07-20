@@ -8,7 +8,7 @@ export default class PureData {
     this.src =
       env === 'local'
         ? 'http://localhost:5000/api/v1/'
-        : 'https://cdn.pureyogaottawa.com/api/v1/';
+        : 'https://purefitcdn.herokuapp.com/api/v1/';
   }
 
   get classes() {
