@@ -63,7 +63,6 @@ const HomePage = props => {
       <ul>
       <li>Classes pre-registration only. </li>
       <li>5 day booking window to sign up for classes</li>
-      <li>Late cancellations fee. If you no-show or late cancel you will be charged</li>
       <li>Please arrive NO MORE than 15min prior to classes</li>
       <li>Do not enter the building if you or someone you live with has any covid 19 symptoms </li>
       <li>If you have been travelling we ask that you do not return to practice until you have quarantined for 2 weeks</li>
@@ -73,13 +72,15 @@ const HomePage = props => {
       <li>You will be required to wear a mask until class time begins</li>
       <li>You will be required to sanitize your hands upon entering the building</li>
       <li>Our practice rooms will NOT have the heat on</li>
-      <li> Our room will maintain a minimum of 6 feet of physical distancing from a standing position</li>
+      <li>Our room will maintain a minimum of 6 feet of physical distancing from a standing position</li>
       <li>Minimal use of changerooms</li>
       <li>No showers for the time being</li>
       <li>No cash will be accepted, all booking will be online</li>
       <li>The heat will be off until further notice</li>
+      <li>Late cancellations fee. If you no-show or late cancel you will be charged*. <br/><small>Important: Members will be charged $20 and if you are on a class package or drop in, your class will be used.</small></li>
+      </ul>
         
-      </ul></CovidBanner>,
+     </CovidBanner>,
         
 
         <Row>
