@@ -127,8 +127,8 @@ const CovidBanner = styled.div`
   @media (max-width: 768px) {
     ul { display: flex; width: 100%; flex-wrap: wrap; }
   ul li {  width: 100%; margin-right: 4%; display: block; margin-bottom: 12px; position: relative;  }
-  p { color: #333; text-align: center; padding: 20px;}
   }
+  p { color: #333; text-align: center; padding: 20px;}
 `
 
 export default HomePage;
