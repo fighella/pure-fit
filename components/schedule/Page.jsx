@@ -47,14 +47,12 @@ class SchedulePage extends Component {
       classes: [],
 
       location: this.props.router && this.props.router.query && this.props.router.query.location
-        ? `Pure Fit ${this.props.router.query.location
-            .charAt(0)
-            .toUpperCase() + this.props.router.query.location.slice(1)}`
+        ? `Pure Fit`
         : 'All Locations',
       dropdownOpen: false,
       day: moment(new Date(), zone).format('YYYY-MM-DD'),
-      days: 1,
-      dayText: 'Today',
+      days: 7,
+      dayText: '7 days',
       dayDropdownOpen: false
     };
   }
@@ -77,7 +75,7 @@ class SchedulePage extends Component {
     );
   };
   thisDay = e => {
-    return this.state.dayText === 'Today' || e.day === this.state.day;
+    return this.state.dayText === '7 days' || e.day === this.state.day;
   };
 
   selectDropdown = event => {
@@ -96,7 +94,6 @@ class SchedulePage extends Component {
 
   render() {
     const schedule_columns = schedules
-      .filter(this.thisLocation)
       .map(schedule => {
         return (
           <Col
@@ -105,13 +102,13 @@ class SchedulePage extends Component {
             }`}
             style={{ maxWidth: '95%', margin: '0 auto 1em' }}
           >
-            <ScheduleWrapped
-              name={schedule.location}
-              location={schedule.location}
-              day={this.state.day}
-              days={this.state.days}
-              full_link={true}
-            />
+          <ScheduleWrapped
+          name={schedule.location}
+          location={'Pure Fit'}
+          day={'Today'}
+          days={7}
+          full_link={true}
+        />
           </Col>
         );
       });
@@ -142,7 +139,7 @@ class SchedulePage extends Component {
         >          
      
           &nbsp;
-          <DaySelector>
+          {/* <DaySelector>
             <Dropdown
               size="lg"
               isOpen={this.state.dayDropdownOpen}
@@ -151,9 +148,10 @@ class SchedulePage extends Component {
               <DropdownToggle caret>{this.state.dayText}</DropdownToggle>
               <DropdownMenu>{datePicker}</DropdownMenu>
             </Dropdown>
-          </DaySelector>
+          </DaySelector> */}
         </div>
         <div id="schedule" style={{ zIndex: 100, position: 'relative' }}>
+          <h1 style={{ textAlign: 'center', textTransform: 'uppercase', margin: 12 }}>Schedule</h1>
           <Container fluid>
             <Row>{schedule_columns}</Row>
           </Container>
