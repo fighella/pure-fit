@@ -56,7 +56,7 @@ const TeacherProfile = styled.div`
 
 const TeacherImg = styled.div`
   background-size: cover;
-  background-image: url(${props => props.bg_img.fields.file ? props.bg_img.fields.file.url : false});
+  background-image: url(${props => props.bg_img && props.bg_img.fields && props.bg_img.fields.file ? props.bg_img.fields.file.url : false});
   background-position: center center;
   width: 100%;
   padding-top: 110%;

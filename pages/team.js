@@ -11,6 +11,7 @@ import { AppContent } from '../data/content';
 import Head from 'next/head';
 import { getContentfulPage } from '../components/contentful/Content';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
+
 // import Measure from 'react-measure';
 const t = AppContent.team;
 
