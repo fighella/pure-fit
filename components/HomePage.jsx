@@ -78,7 +78,7 @@ const HomePage = props => {
       <li>No cash will be accepted, all booking will be online</li>
       <li>The heat will be off until further notice</li>
       </ul>
-      <p>Late cancellations fee. If you no-show or late cancel you will be charged*. <br/><small>Important: Members will be charged $20 and if you are on a class package or drop in, your class will be used.</small></p>
+      <p>Late cancellations fee. If you no-show or late cancel you will be charged*. <br/><small>Important: Members will be charged $30 and if you are on a class package or drop in, your class will be used.</small></p>
         
      </CovidBanner>,
         
