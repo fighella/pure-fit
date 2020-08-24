@@ -51,13 +51,14 @@ export const FaqElement = styled.li`
   transition: all 0.5s;
   margin: 0;
   padding: 0;
-  color: ${PureBrand.omDarkBlue};
+  color: #fff;
   list-style: none;
   font-size: 18px;
 
+
   padding: 1em;
   ${props =>
-    props.open ? 'border-left: 6px solid ' + PureBrand.omCoral + '; padding-left: 2em;' : ''}
+    props.open ? 'border-left: 6px solid #333' + '; padding-left: 2em;' : ''}
 `;
 export const Faqs = styled.ul`
   margin: 1em auto;

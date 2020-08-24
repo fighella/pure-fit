@@ -95,8 +95,7 @@ const HomePage = props => {
     <Banner key={1} />,
     schedule,
     <AppDownload />,
-    <AboutPureStrapWrapped />,
-    <InstafeedWrapped fluid fullWidth const accessToken={instaToken} />
+    <AboutPureStrapWrapped />
   ].map(section => section);
   return <div style={{ background: '#1D1F24' }}>{sections}</div>;
 };
