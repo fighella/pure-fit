@@ -12,8 +12,9 @@ const t = AppContent.members;
 const PriceGrid = props => {
   const { featured_pricing, standard_pricing } = props;
   const featured = featured_pricing.reverse().map((price, index) => (
-    <Col key={'featured_' + index} xs={12} md={3}>
+    <Col key={'featured_' + index} xs={12} md={4}>
       <PriceCard price={price} />
+      <Spacer></Spacer>
     </Col>
   ));
   const standard = standard_pricing.map((price, index) => (
@@ -33,6 +34,7 @@ const PriceGrid = props => {
         <meta property="og:url" content="https://www.purefitottawa.com/pricing/" />
       </Head>
     <Container>
+    
       <div className="page-header">
         <div className="schedule-heading">
           <h2 className="superHeader">{t.memberships}</h2>
@@ -48,6 +50,7 @@ const PriceGrid = props => {
         </div>
       </div> */}
       <Row>{standard}</Row>
+      <PricingTerms>
       <div className="page-header" style={{ maxWidth: 800, margin: '0 auto' }}>
         <div className="schedule-heading">
           <h2 className="superHeader">{t.students_seniors}</h2>
@@ -59,6 +62,7 @@ const PriceGrid = props => {
           <p>{t.gift_cards} <a href="/gift-cards" style={{ color: 'palevioletred' }}>Learn more &raquo;</a></p>
         </div>
       </div>
+      </PricingTerms>
     </Container>
     </Layout>
   );
@@ -160,14 +164,13 @@ const Card = styled.div`
   text-align: center;
   background: #fff;
   box-shadow: 0 0 32px #333;
-
   overflow: hidden;
   padding: 0;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 20px;
+  border-bottom: 24px solid #000;
 `;
 
 const CardTitle = styled.strong`
@@ -184,7 +187,7 @@ const CardTitle = styled.strong`
     color: #fff;
     font-size: 1.1em;
   }
-  background: #111;
+  background: #333;
   width: 100%;
 `;
 
@@ -268,5 +271,15 @@ const FlexRow = styled.div`
 const FlexCol = styled.div`
   width: ${props => props.width}%;
 `;
+
+const PricingTerms = styled.div`
+  * { color: #fff; }
+`
+
+const Spacer = styled.div`
+  display: block;
+  height: 22px;
+
+`
 
 export default PriceGrid;

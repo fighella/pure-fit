@@ -96,10 +96,10 @@ function TeacherProfile({ teacher_data, workshops_data }) {
             background: '#fff'
           }}
         >
-          <a href="/team" style={{ color: '#333', textAlign: 'center' }}>
+          <a href="/team" style={{ color: '#ccc', textAlign: 'center' }}>
             MEET THE TEAM{' '}
           </a>{' '}
-          &raquo;
+          &raquo;{' '}
           {teacher.title}
         </div>
       </React.Fragment>

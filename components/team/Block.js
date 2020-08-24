@@ -30,7 +30,7 @@ const TeacherRow = styled.div`
 `;
 
 const TeacherCol = styled.div`
-  width: 33%;
+  width: 25%;
   @media (max-width: 700px) {
     width: 100%;
   }

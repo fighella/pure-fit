@@ -124,10 +124,10 @@ function Teacher({ teacher }) {
            
           }}
         >
-          <a href="/team" style={{ color: '#333', textAlign: 'center' }}>
+          <a href="/team" style={{ color: '#ccc', textAlign: 'center' }}>
             MEET THE TEAM{' '}
           </a>
-          &raquo;
+          &raquo;{' '}
           {teacher.name}
         </div>
     </Layout>
@@ -164,6 +164,7 @@ const Title = styled.h1`
   ${fonts.primary};
   font-size: 2em;
   font-weight: 450;
+  color: #fff;
 `;
 
 const SubTitle = styled.h3`
@@ -183,6 +184,7 @@ const FlexRow = styled.div`
   display: flex;
   flex-wrap: wrap;
   background: #111;
+  color: #fff;
 `;
 
 const FlexCol = styled.div`
