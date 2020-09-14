@@ -74,7 +74,6 @@ const HomePage = props => {
       <li>Our practice rooms will NOT have the heat on</li>
       <li>Our room will maintain a minimum of 6 feet of physical distancing from a standing position</li>
       <li>Minimal use of changerooms</li>
-      <li>No showers for the time being</li>
       <li>No cash will be accepted, all booking will be online</li>
       <li>The heat will be off until further notice</li>
       </ul>
