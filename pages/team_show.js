@@ -156,7 +156,7 @@ const HeadShot = styled.div`
   width: 140px;
   overflow: hidden;
   background-image: url(${props => props.headshot});
-  background-size: contain;
+  background-size: cover;
   border-radius: 50%;
 `;
 
