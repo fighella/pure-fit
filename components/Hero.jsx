@@ -91,7 +91,7 @@ const HeroComponent = styled(FlexCenterCol)`
   background-color: rgba(0, 0, 0, 0.7);
   background-size: cover;
   background-image: url(${props => props.imgs});
-  background-position: center center;
+  background-position: center 25%;
   font-size: ${props => (props.width >= 500 ? '18px' : '10px')};
 `;
 
