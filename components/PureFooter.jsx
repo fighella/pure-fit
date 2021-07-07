@@ -13,6 +13,7 @@ const footerLinks = AppNav.footer.map(link => (
 const Footer = () => (
   <React.Fragment>
     <NewsletterStrap />
+    
   <Container id="footer" fluid>
     <Row>
       <Col md={9} xs={12} className="footer-links">
