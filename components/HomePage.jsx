@@ -61,23 +61,27 @@ const HomePage = props => {
       <div><h4>COVID 19 Information. Please Read: Important Information about our reopening.</h4></div>
 
       <ul>
-      <li>Classes pre-registration only. </li>
-      <li>5 day booking window to sign up for classes</li>
-      <li>Please arrive NO MORE than 15min prior to classes</li>
-      <li>Do not enter the building if you or someone you live with has any covid 19 symptoms </li>
-      <li>If you have been travelling we ask that you do not return to practice until you have quarantined for 2 weeks</li>
-      <li>Maintain physical distancing between staff and students at all times</li>
-      <li>Show up ready to practice. There will be no use of studio mats, towels or props at this time.</li>
-      <li>Come with a full water bottle</li>
-      <li>You will be required to wear a mask until class time begins</li>
-      <li>You will be required to sanitize your hands upon entering the building</li>
-      <li>Our practice rooms will NOT have the heat on</li>
-      <li>Our room will maintain a minimum of 6 feet of physical distancing from a standing position</li>
-      <li>Minimal use of changerooms</li>
-      <li>No cash will be accepted, all booking will be online</li>
-      <li>The heat will be off until further notice</li>
+      <li>Class size is set at 50% capacity, with 2 metres of physical distancing.</li>
+
+<li>Masks must be worn in studio at all times until class begins.</li>
+
+<li>Classes are open to local members only. No visitors or travelers from outside the Ottawa-Gatineau region will be permitted in class at this time.</li>
+
+<li>Pre-registration required - no walk-ins. Online booking opens 5 days in advance at 12:00AM.</li>
+
+<li>Doors will open 15 minutes before class. Please do not arrive any earlier.</li>
+
+<li>Cancellation policy: All bookings must be cancelled at least 8 hours before class. Late cancellations will be subject to a $20 fee. No-shows will be subject to a $25 fee.</li>
+
+<li>Waitlist in effect. Waitlist spots are treated like a regular booking - cancel your waitlist spot if you can no longer attend.</li>
+
+<li>Change rooms and showers are open. Shower towels available for rent.</li>
+
+<li>COVID cleaning procedures remain in place using hospital-grade disinfectant. Thorough cleaning in between every class and hand sanitizer provided throughout the studio.</li>
+
+<li>COVID basics: Do not attend class if you are sick, if you have been in contact with someone who's been sick, or if you have traveled internationally in the last 14 days.</li>
       </ul>
-      <p>Late cancellations fee. If you no-show or late cancel you will be charged*. <br/><small>Important: Members will be charged $30 and if you are on a class package or drop in, your class will be used.</small></p>
+
         
      </CovidBanner>,
         
