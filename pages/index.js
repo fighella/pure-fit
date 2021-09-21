@@ -5,7 +5,7 @@ import HomePage from '../components/HomePage';
 import Head from 'next/head';
 
 
-export default () => <Layout>
+const Index = () => <Layout>
   <Head>
     <meta charSet="utf-8" />
     <title>
@@ -20,3 +20,6 @@ export default () => <Layout>
   </Head>
   <HomePage classes={[]} loaded_classes={false}/>
   </Layout>
+
+
+export default Index;

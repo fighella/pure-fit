@@ -8,17 +8,11 @@ import { Schedule } from './Schedule';
 import { AppContent as t } from '../data/content';
 import PureData from '../utils/src';
 import { AppDownload } from './AppDownload';
-import { NewToYogaStrap } from './NewToYogaStrap';
-import BlogCollection from './BlogCollection';
 import { AboutPureStrap } from './AboutPureStrap';
 import { SingleColWrapper } from './SingleColWrapper';
 import ScheduleWrapper from '../components/ScheduleWrapper';
 import styled from 'styled-components';
 
-
-const instaToken = '1933711431.1677ed0.7f028f409a604f289fe188f0319619e5';
-const NewToYogaWrapped = SingleColWrapper(NewToYogaStrap);
-const BlogCollectionWrapped = SingleColWrapper(BlogCollection);
 const AboutPureStrapWrapped = SingleColWrapper(AboutPureStrap);
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 

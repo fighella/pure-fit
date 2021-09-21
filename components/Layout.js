@@ -4,6 +4,10 @@ import Footer from './PureFooter';
 
 
 
-export default ({children,hideLayout}) => <div style={{ background: '#111'}}>
+const Layout = ({children,hideLayout}) => <div style={{ background: '#111'}}>
     {hideLayout || <Header/>}{children}{hideLayout || <Footer/>}
-  </div>
+  </div>;
+
+
+
+export default Layout;

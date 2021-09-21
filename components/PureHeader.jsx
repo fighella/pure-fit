@@ -4,11 +4,14 @@ import TopStrap from '../components/TopStrap'
 import PureNavBar from '../components/PureNavBar'
 
 
-export default () => <div>
+const PureHeader = () => <div>
     <TopStrap />
     <PureNavBar classes={[]} loaded={false} />
-  </div>
+  </div>;
 
-  const Mep = styled.div`
-    color: red;
-  `
+
+export default PureHeader;
+
+const Mep = styled.div`
+  color: red;
+`

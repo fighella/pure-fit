@@ -1,5 +1,4 @@
-import Document, { Html,Head, Main, NextScript } from 'next/document';
-// Import styled components ServerStyleSheet
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 
@@ -31,8 +30,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
 })(window,document,'script','dataLayer','GTM-NM9D62M');`}}></script>
           <meta content="Pure Fit Ottawa" name="author" />
-          <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-          <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
           <meta property="og:site_name" content="Pure Fit Ottawa" />
          
           <meta property="fb:admins" content="873990164" />

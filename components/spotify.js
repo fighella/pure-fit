@@ -1,6 +1,6 @@
 import SpotifyPlayer from 'react-spotify-player';
 
-export default (props) => { 
+const Spotify = props => { 
   const size = {
     width: '100%',
     height: 300,
@@ -18,6 +18,8 @@ return(
 />
 </div>
 )};
+
+export default Spotify;
 
 
 // size may also be a plain string using the presets 'large' or 'compact'

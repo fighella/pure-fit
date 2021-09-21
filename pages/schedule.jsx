@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import SchedulePage from '../components/schedule/Page';
 import Head from 'next/head'
 
-export default () => <Layout>
+const Schedule = () => <Layout>
     <Head>
         <title>
           Pure Fit Class Schedule | Classes &amp; Training Timetable | Pure Fit Ottawa
@@ -15,4 +15,6 @@ export default () => <Layout>
         <meta property="og:image" content="https://s3.amazonaws.com/pureyogaottawa.com/website/team-photos/team_147.jpg" />
       </Head>
   <SchedulePage />
-  </Layout>
+  </Layout>;
+
+export default Schedule;
