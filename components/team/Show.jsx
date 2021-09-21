@@ -11,10 +11,8 @@ import { fonts } from '../css_variables';
 import { Schedule } from '../Schedule';
 import EvolveRow from '../evolve/row';
 import ScheduleWrapper from '../ScheduleWrapper';
-import { Instafeed } from '../Instafeed';
 import { SingleColWrapper } from '../SingleColWrapper';
 
-const InstafeedWrapped = SingleColWrapper(Instafeed);
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
 const Show = ({ match }) => (
@@ -76,17 +74,6 @@ function TeacherProfile({ teacher_data, workshops_data }) {
           </FlexCol>
         </FlexRow>
         {workshops}
-        {teacher.instagram_token ? (
-          <InstafeedWrapped
-            title={`${teacher.first_name} on Instagram`}
-            fluid
-            fullWidth
-            const
-            accessToken={teacher.instagram_token}
-          />
-        ) : (
-          false
-        )}
         <div
           style={{
             fontWeight: 'normal',

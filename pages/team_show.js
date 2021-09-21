@@ -9,16 +9,12 @@ import Head from 'next/head';
 import Instaview from '../components/Instaview';
 import { Schedule } from '../components/Schedule';
 import EvolveRow from '../components/evolve/row';
-import { Contentful } from '../components/Contentful';
 import ScheduleWrapper from '../components/ScheduleWrapper';
-import { Instafeed } from '../components/Instafeed';
 import Layout from '../components/Layout';
-import { SingleColWrapper } from '../components/SingleColWrapper';
 import {withRouter} from 'next/router'
 import { getContentfulPage } from '../components/contentful/Content';
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
-const InstafeedWrapped = SingleColWrapper(Instafeed);
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
 
@@ -102,17 +98,6 @@ function Teacher({ teacher }) {
           </FlexCol>
         </FlexRow>
         {workshops}
-        {teacher.instagram_token ? (
-          <InstafeedWrapped
-            title={`${teacher.firstName} on Instagram`}
-            fluid
-            fullWidth
-            const
-            accessToken={teacher.instagramToken}
-          />
-        ) : (
-          false
-        )}
         <div
           style={{
             fontWeight: 'normal',
