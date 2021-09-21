@@ -58,7 +58,7 @@ const HomePage = props => {
 
  
         <CovidBanner>
-      <div><h4>COVID 19 Information. Please Read: Important Information about our reopening.</h4></div>
+      <div><h4>Effective September 22nd 2021, everyone attending class at Pure Yoga and Pure Fit will need to be fully vaccinated. Proof of vaccination must be shown prior to class, either by email to westboro@pureyogaottawa.com or at the front desk.</h4></div>
 
       <ul>
       <li>Class size is set at 50% capacity, with 2 metres of physical distancing.</li>
