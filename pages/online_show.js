@@ -3,7 +3,6 @@ import Layout from '../components/Layout';
 import styled from 'styled-components';
 import { fonts, colors } from '../styles/variables';
 import Head from 'next/head';
-import { Row, Col } from 'reactstrap';
 import ReactPlayer from 'react-player';
 import Hero from '../components/Hero';
 import marked from 'marked';

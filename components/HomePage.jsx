@@ -16,7 +16,7 @@ import styled from 'styled-components';
 const AboutPureStrapWrapped = SingleColWrapper(AboutPureStrap);
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
-const HomePage = props => {
+function HomePage(props) {
   const schedule_locs = [
     { location: 'Pure Fit', days: 7 },
   ];

@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import textile from "textile-js";
 import Link from 'next/link'
 import ReactPlayer from 'react-player';
 

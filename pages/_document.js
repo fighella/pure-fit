@@ -3,6 +3,7 @@ import { ServerStyleSheet } from 'styled-components';
 
 
 export default class MyDocument extends Document {
+  
   static getInitialProps({ renderPage }) {
     // Step 1: Create an instance of ServerStyleSheet
     const sheet = new ServerStyleSheet();
@@ -49,8 +50,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
         </Head>
         <body>
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NM9D62M"
-          height="0" width="0" style={{ display: 'none', visibility: 'hidden' }}></iframe></noscript>
           <Main />
           <NextScript />
         </body>
