@@ -185,6 +185,7 @@ const AppNav = {
   main: [
     { name: 'Home', link: '/' },
     { name: 'Schedule', link: '/schedule' },
+    { name: 'Workshops', link: '/workshops' },
     { name: 'Team', link: '/team' },
     { name: 'Pricing', link: '/pricing' },
     { name: 'Faqs', link: '/faqs' },
