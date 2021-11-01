@@ -62,8 +62,8 @@ const SubTitle = styled.h3`
 `;
 
 const CTA = styled.a`
-  background: ${colors.red};
-  color: #fff;
+  background: #fff;
+  color: #000;
   ${fonts.primary};
   padding: 10px 15px;
   margin-top: 1em;
