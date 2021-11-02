@@ -19,15 +19,5 @@
     { "source": "/class_styles/:id/", "destination": "/class_styles_show?handle=$id" },
     { "source": "/online/:id/(.*)", "destination": "/online_show?handle=$id" }
   ],
-  "redirects": [
-    { "source": "/intro", "permanent": true, "destination":  "https://www.pureyogaottawa.com/new" },
-    { "source": "/packages", "permanent": true, "destination":  "https://www.pureyogaottawa.com/pricing" },
-    { "source": "/workshops", "permanent": true, "destination":  "https://www.pureyogaottawa.com/evolve" },
-    { "source": "/hot-yoga-schedule", "permanent": true, "destination":  "https://www.pureyogaottawa.com/schedule" },
-    { "source": "/pure-team", "permanent": true, "destination":  "https://www.pureyogaottawa.com/team" },
-    { "source": "/pure-team/:id/(.*)", "permanent": true, "destination":  "https://www.pureyogaottawa.com/team/$id" },
-    { "source": "/p/contact-us", "permanent": true, "destination":  "https://www.pureyogaottawa.com/contact" },
-    { "source": "/yoga-class-styles/:id/(.*)", "permanent": true, "destination":  "https://www.pureyogaottawa.com/class_styles/$id" }
-
-  ]
+  "redirects": []
 }
