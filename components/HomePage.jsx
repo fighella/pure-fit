@@ -57,33 +57,7 @@ const HomePage = props => {
         </div>
 
  
-        <CovidBanner>
-      <div><h4>COVID 19 Information. Please Read: Important Information about our reopening.</h4></div>
-
-      <ul>
-      <li>Class size is set at 50% capacity, with 2 metres of physical distancing.</li>
-
-<li>Masks must be worn in studio at all times until class begins.</li>
-
-<li>Classes are open to local members only. No visitors or travelers from outside the Ottawa-Gatineau region will be permitted in class at this time.</li>
-
-<li>Pre-registration required - no walk-ins. Online booking opens 5 days in advance at 12:00AM.</li>
-
-<li>Doors will open 15 minutes before class. Please do not arrive any earlier.</li>
-
-<li>Cancellation policy: All bookings must be cancelled at least 8 hours before class. Late cancellations will be subject to a $20 fee. No-shows will be subject to a $25 fee.</li>
-
-<li>Waitlist in effect. Waitlist spots are treated like a regular booking - cancel your waitlist spot if you can no longer attend.</li>
-
-<li>Change rooms and showers are open. Shower towels available for rent.</li>
-
-<li>COVID cleaning procedures remain in place using hospital-grade disinfectant. Thorough cleaning in between every class and hand sanitizer provided throughout the studio.</li>
-
-<li>COVID basics: Do not attend class if you are sick, if you have been in contact with someone who's been sick, or if you have traveled internationally in the last 14 days.</li>
-      </ul>
-
-        
-     </CovidBanner>,
+     
         
 
         <Row>
