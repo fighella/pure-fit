@@ -127,7 +127,7 @@ export const BookInHeaderButton = styled.a`
   font-size: 10px;
   font-weight: 500;
   padding: 3px 22px;
-  background: #333;
+  background: #ffffff;
 `;
 
 export const ScheduleBlock = styled(StandardBlock)``;

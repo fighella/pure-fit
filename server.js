@@ -6,7 +6,7 @@ const app = next({ dev })
 const handle = app.getRequestHandler()
 
 const redirects = [
-  { from: '/workshops', to: '/evolve' },
+  // { from: '/workshops', to: '/evolve' },
 ]
 
 app.prepare()
