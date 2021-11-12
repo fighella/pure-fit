@@ -16,11 +16,11 @@ import styled from 'styled-components';
 const AboutPureStrapWrapped = SingleColWrapper(AboutPureStrap);
 const ScheduleWrapped = ScheduleWrapper(Schedule, PureData);
 
-function HomePage(props) {
+const HomePage = (props) => {
   const schedule_locs = [
     { location: 'Pure Fit', days: 7 },
-  ];
-  const schedule_columns = schedule_locs
+];
+const schedule_columns = schedule_locs
   .map(schedule => {
     return (
       <Col
@@ -47,16 +47,10 @@ function HomePage(props) {
           </div>
           <ScheduleBanner />
         </div>
-
- 
-     
-        
-
         <Row>
           {schedule_columns}
         </Row>
         <FootNote>{t.footnote}</FootNote>
-
       </div>
     </ScheduleBlock>
   );

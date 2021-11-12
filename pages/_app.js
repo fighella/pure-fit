@@ -1,5 +1,7 @@
 import React from 'react'
-import App, {Container} from 'next/app'
+import App from 'next/app'
+import '../styles/custom.scss'
+
 
 export default class MyApp extends App {
   static async getInitialProps({ Component, router, ctx }) {
@@ -14,8 +16,7 @@ export default class MyApp extends App {
 
   render () {
     const {Component, pageProps} = this.props
-    return <Container>
-      <Component {...pageProps} />
-    </Container>
+    return <Component {...pageProps} />
   }
 }
+
