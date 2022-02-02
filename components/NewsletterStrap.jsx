@@ -72,7 +72,7 @@ const CustomForm = () => (
       
       <h3>Land Acknowledgement</h3>
     <p>
-At Pure we acknowledge that we move, practice & teach on the unceded and traditional land of the Algonquin Anishinabe, now known as Ottawa. This acknowledgment only becomes meaningful when combined with accountable relationships and informed actions. This acts only as a first step in honouring the unsurrendered land we operate on. We continue to honour the people, elders, and indigenous ancestors of this land.</p>
+At Pure we acknowledge that we move, practice & teach on the unceded and traditional land of the Algonquin Anishinabe, now known as Ottawa. This acknowledgment only becomes meaningful when combined with accountable relationships and informed actions. This acts only as a first step in honouring the unsurrendered land we operate on. We continue to honour the people, elders, and Indigenous ancestors of this land.</p>
 </div>
   </div>
 );
