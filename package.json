@@ -33,7 +33,7 @@
     "moment-timezone": "^0.5.23",
     "next": "latest",
     "next-cookies": "^1.1.0",
-    "node-sass": "^6.0.1",
+    "node-sass": "^7.0.0",
     "postcss": "^8.1.4",
     "prop-types": "^15.6.2",
     "react": "^16.8.1",
