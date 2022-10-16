@@ -35,7 +35,7 @@ const PriceGrid = props => {
       </Head>
     <Container>
     
-      <div className="page-header">
+      <div className="page-header pricing">
         <div className="schedule-heading">
           <h2 className="superHeader">{t.memberships}</h2>
           <p>{t.memberships_subtitle}</p>

@@ -22,8 +22,8 @@ const PriceGrid = props => {
   ));
   return (
     <Container>
-      <div className="page-header">
-        <div className="schedule-heading">
+      <div className="page-header pricing">
+        <div className="schedule-heading" style="color: #fff;">
           <h2 className="superHeader">{t.memberships}</h2>
           <p>{t.memberships_subtitle}</p>
         </div>
